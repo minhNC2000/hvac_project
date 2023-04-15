@@ -15,7 +15,7 @@ const DefaultLayout = () => {
         <Routes>
           {publicRoutes}
           {privateroutes}
-          <Route path="*" element={Error404} />
+          <Route path="*" element={<Error404 />} />
         </Routes>
         <Footer />
       </main>
