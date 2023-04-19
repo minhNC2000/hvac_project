@@ -7,6 +7,7 @@ import { privateroutes } from "../../Routes/privateroutes";
 
 import Error404 from "../../Error/Error404";
 
+import "../../Assets/Styles/Style.scss"
 const DefaultLayout = () => {
   return (
     <div>
