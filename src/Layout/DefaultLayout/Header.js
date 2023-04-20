@@ -35,7 +35,7 @@ const Header = () => {
                     />
                     <span>Week day: 08:00 am to 18:00 pm</span>
                   </li>
-                  <li>
+                  <li className="tag-li_header">
                     <FontAwesomeIcon
                       icon={faEnvelope}
                       size="lg"
@@ -94,22 +94,22 @@ const Header = () => {
                 <div className="header__menu">
                   <ul>
                     <li>
-                      <a href="#">Home</a>
+                      <a href="/">Home</a>
                     </li>
                     <li>
-                      <a href="#">Cars</a>
+                      <a href="/cars">Cars</a>
                     </li>
                     <li>
-                      <a href="#">Blog</a>
+                      <a href="/blog">Blog</a>
                     </li>
                     <li>
-                      <a href="#">Pages</a>
+                      <a href="/pages">Pages</a>
                     </li>
                     <li>
-                      <a href="#">About</a>
+                      <a href="/gioi-thieu">About</a>
                     </li>
                     <li>
-                      <a href="#">Contact</a>
+                      <a href="/lien-he">Contact</a>
                     </li>
                   </ul>
                 </div>

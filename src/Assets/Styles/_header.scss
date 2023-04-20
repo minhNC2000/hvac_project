@@ -2,7 +2,7 @@ $padding: 14px 0 12px;
 .header {
   .header__top {
     background-color: #323232;
-font-weight: 600;
+    font-weight: 600;
     color: #ffffff;
     text-align: left;
 
@@ -13,6 +13,9 @@ font-weight: 600;
       margin-right: -15px;
       .header__top__widget {
         padding: $padding;
+        .tag-li_header {
+          margin-left: 35px;
+        }
         span {
           vertical-align: super;
         }
@@ -30,7 +33,7 @@ font-weight: 600;
           padding: $padding;
           a {
             color: #ffffff;
-            margin: 0 5px;
+            margin: 0 10px;
           }
         }
       }
