@@ -1,42 +1,39 @@
-.breadcumb-option {
-  background: url("https://preview.colorlib.com/theme/hvac/img/breadcrumb-bg.jpg");
-  text-align: center;
-  padding: 70px 0 60px;
-  .breadcrumb__text {
-    h1 {
-      color: #ffffff;
-      font-weight: 700;
-      font-size: 46px;
-      margin-bottom: 6px;
-    }
-    .breadcumb__links {
-      a {
-        color: #ffffff;
-        margin-right: 18px;
-        display: inline-block;
-        position: relative;
-        &::after {
-          position: absolute;
-          right: -15px;
-          top: 0px;
-          content: " > ";
-        }
-        svg {
-          color: #db2d2e;
-          margin-right: 5px;
-        }
-      }
-      span {
-        color: #727171;
-        display: inline-block;
-      }
-    }
-  }
-}
-.spad {
-  padding-top: 100px;
-  padding-bottom: 100px;
-}
+// .breadcumb-option {
+//   background: url("https://preview.colorlib.com/theme/hvac/img/breadcrumb-bg.jpg");
+//   text-align: center;
+//   padding: 70px 0 60px;
+//   .breadcrumb__text {
+//     h1 {
+//       color: #ffffff;
+//       font-weight: 700;
+//       font-size: 46px;
+//       margin-bottom: 6px;
+//     }
+//     .breadcumb__links {
+//       a {
+//         color: #ffffff;
+//         margin-right: 18px;
+//         display: inline-block;
+//         position: relative;
+//         &::after {
+//           position: absolute;
+//           right: -15px;
+//           top: 0px;
+//           content: " > ";
+//         }
+//         svg {
+//           color: #db2d2e;
+//           margin-right: 5px;
+//         }
+//       }
+//       span {
+//         color: #727171;
+//         display: inline-block;
+//       }
+//     }
+//   }
+// }
+
 .contact {
   .row {
     .contact__text {
@@ -73,14 +70,22 @@
     .contact__form {
       form {
         input {
-          width: 100%;
           height: 46px;
-          font-size: 15px;
+          width: 100%;
           color: #727171;
           border-radius: 2px;
           padding-left: 20px;
           border: 1px solid rgba(0, 0, 0, 0.1);
           margin-bottom: 30px;
+        }
+        .form-input_name {
+          display: inline-block;
+          width: 100%;
+          margin-right: 30px;
+        }
+        .form-input_email {
+          display: inline-block;
+          width: 100%;
         }
         textarea {
           width: 100%;

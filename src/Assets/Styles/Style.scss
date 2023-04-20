@@ -7,13 +7,52 @@
 li {
   list-style: none;
   display: inline-block;
-  
+
   font-size: 15px;
 }
 a {
   text-decoration: none;
-  color : #000;
+  color: #000;
 }
 html {
   font-size: 15px;
+}
+.breadcumb-option {
+  background: url("https://preview.colorlib.com/theme/hvac/img/breadcrumb-bg.jpg");
+  text-align: center;
+  padding: 70px 0 60px;
+  .breadcrumb__text {
+    h1 {
+      color: #ffffff;
+      font-weight: 700;
+      font-size: 46px;
+      margin-bottom: 6px;
+    }
+    .breadcumb__links {
+      a {
+        color: #ffffff;
+        margin-right: 18px;
+        display: inline-block;
+        position: relative;
+        &::after {
+          position: absolute;
+          right: -15px;
+          top: 0px;
+          content: " > ";
+        }
+        svg {
+          color: #db2d2e;
+          margin-right: 5px;
+        }
+      }
+      span {
+        color: #727171;
+        display: inline-block;
+      }
+    }
+  }
+}
+.spad {
+  padding-top: 100px;
+  padding-bottom: 100px;
 }

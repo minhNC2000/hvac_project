@@ -59,10 +59,10 @@ export const Contact = () => {
                 <div className="contact__form">
                   <form action="#">
                     <div className="row">
-                      <Grid item lg={6}>
+                      <Grid item lg={6} className="form-input_name">
                         <input type="text" placeholder="Name" />
                       </Grid>
-                      <Grid item lg={6}>
+                      <Grid item lg={5} className="form-input_email">
                         <input type="email" placeholder="Email" />
                       </Grid>
                     </div>
