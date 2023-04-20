@@ -11,7 +11,11 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import "../../Assets/Styles/_footer.scss";
 import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
-import { faHeart, faPhone } from "@fortawesome/free-solid-svg-icons";
+import {
+  faHeart,
+  faPhone,
+  faAngleRight,
+} from "@fortawesome/free-solid-svg-icons";
 
 const Footer = () => {
   return (
@@ -90,9 +94,126 @@ const Footer = () => {
                 </div>
               </div>
             </Grid>
-            <Grid item lg={2} md={3}></Grid>
-            <Grid item lg={2} md={3}></Grid>
-            <Grid item lg={3} md={6}></Grid>
+            <Grid item lg={2} md={3} className="footer_link-offset">
+              <div className="footer__widget">
+                <h3>Infomations</h3>
+                <ul>
+                  <li>
+                    <a href="#">
+                      <FontAwesomeIcon icon={faAngleRight} />
+                      Purchase
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      {" "}
+                      <FontAwesomeIcon icon={faAngleRight} />
+                      Payment
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <FontAwesomeIcon icon={faAngleRight} />
+                      Shipping
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <FontAwesomeIcon icon={faAngleRight} />
+                      Return
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </Grid>
+            <Grid item lg={2} md={3}>
+              <div className="footer__widget">
+                <h3>Infomations</h3>
+                <ul>
+                  <li>
+                    <a href="#">
+                      <FontAwesomeIcon icon={faAngleRight} />
+                      Hatchback
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <FontAwesomeIcon icon={faAngleRight} />
+                      Sedan
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <FontAwesomeIcon icon={faAngleRight} />
+                      SUV
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <FontAwesomeIcon icon={faAngleRight} />
+                      Crossover
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </Grid>
+            <Grid item lg={3} md={6}>
+              <div className="footer__brand">
+                <h3>Top Brand</h3>
+                <ul>
+                  <li>
+                    <a href="#">
+                      <FontAwesomeIcon icon={faAngleRight} />
+                      Abarth
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <FontAwesomeIcon icon={faAngleRight} />
+                      Acura
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <FontAwesomeIcon icon={faAngleRight} />
+                      Alfa Romeo
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <FontAwesomeIcon icon={faAngleRight} />
+                      Audi
+                    </a>
+                  </li>
+                </ul>
+                <ul>
+                  <li>
+                    <a href="#">
+                      <FontAwesomeIcon icon={faAngleRight} />
+                      BMW
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <FontAwesomeIcon icon={faAngleRight} />
+                      Chevrolet
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <FontAwesomeIcon icon={faAngleRight} />
+                      Ferrari
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <FontAwesomeIcon icon={faAngleRight} />
+                      Honda
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </Grid>
           </Grid>
         </div>
         <div className="footer__copyright__text">

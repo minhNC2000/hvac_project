@@ -1,5 +1,6 @@
 footer {
   background-image: url("https://preview.colorlib.com/theme/hvac/img/footer-bg.jpg");
+
   color: #fff;
   .footer__contact {
     padding-bottom: 60px;
@@ -48,6 +49,7 @@ footer {
       padding-bottom: 20px;
     }
     p {
+      width: 95%;
       color: #8d8d8d;
       margin-bottom: 25px;
     }
@@ -62,6 +64,53 @@ footer {
       }
     }
   }
+  .footer_link-offset {
+    margin-left: 8.33%;
+  }
+  .footer__widget {
+    margin-bottom: 30px;
+    line-height: 36px;
+    h3 {
+      color: #ffffff;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    ul {
+      li {
+        display: block;
+        a {
+          color: #8d8d8d;
+        }
+        svg {
+          margin-right: 3px;
+        }
+      }
+    }
+  }
+  .footer__brand {
+    margin-bottom: 30px;
+    line-height: 36px;
+    overflow: hidden;
+    margin-bottom: 30px;
+    h3 {
+      color: #ffffff;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+    ul {
+      width: 50%;
+      float: left;
+      li {
+        a {
+          color: #8d8d8d;
+        }
+        svg {
+          margin-right: 3px;
+        }
+      }
+    }
+  }
   .footer__copyright__text {
     p {
       font-size: 15px;
@@ -70,8 +119,7 @@ footer {
       font-weight: 400;
       line-height: 25px;
       margin: 0 0 15px 0;
-      svg
-      {
+      svg {
         margin: 0 5px;
       }
       a {
