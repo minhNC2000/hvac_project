@@ -10,6 +10,7 @@ import {
   faPhone,
   faCartPlus,
   faMagnifyingGlass,
+  faBars,
 } from "@fortawesome/free-solid-svg-icons";
 import {
   faFacebookF,
@@ -76,6 +77,7 @@ const Header = () => {
           </div>
         </Container>
       </div>
+
       <Container maxWidth="lg">
         <div className="row">
           <Grid container spacing={1}>
@@ -131,9 +133,13 @@ const Header = () => {
                   </div>
                 </div>
               </div>
+              <div className="canvas__open">
+          <FontAwesomeIcon icon={faBars} />
+        </div>
             </Grid>
           </Grid>
         </div>
+        
       </Container>
     </header>
   );
