@@ -14,8 +14,9 @@ a {
   text-decoration: none;
   color: #000;
 }
-html {
+html,body {
   font-size: 15px;
+  height: 100%;
 }
 .breadcumb-option {
   background: url("https://preview.colorlib.com/theme/hvac/img/breadcrumb-bg.jpg");

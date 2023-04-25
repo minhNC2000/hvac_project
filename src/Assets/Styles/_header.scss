@@ -92,26 +92,26 @@ $padding: 14px 0 12px;
 }
 
 //Responsive----------------------
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-  .canvas__open {
-    display: block !important;
-    font-size: 22px;
-    color: #323232;
-    height: 35px;
-    width: 35px;
-    line-height: 35px;
-    text-align: center;
-    border: 1px solid #323232;
-    border-radius: 2px;
-    cursor: pointer;
+// @media only screen and (min-width: 768px) and (max-width: 991px) {
+//   .canvas__open {
+//     display: block !important;
+//     font-size: 22px;
+//     color: #323232;
+//     height: 35px;
+//     width: 35px;
+//     line-height: 35px;
+//     text-align: center;
+//     border: 1px solid #323232;
+//     border-radius: 2px;
+//     cursor: pointer;
   
-    right: 15px;
-    top: 35px;
-  }
-}
+//     right: 15px;
+//     top: 35px;
+//   }
+// }
 
-@media only screen and (max-width: 991px) {
-  .header__nav {
-    display: none;
-  }
-}
+// @media only screen and (max-width: 991px) {
+//   .header__nav {
+//     display: none;
+//   }
+// }
