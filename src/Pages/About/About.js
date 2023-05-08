@@ -14,7 +14,7 @@ export const About = () => {
             <Grid container spacing={1}>
               <Grid item lg={12}>
                 <div className="breadcrumb__text">
-                  <h1>About us</h1>
+                  <h1>About Us</h1>
                   <div className="breadcumb__links">
                     <a href="/">
                       <FontAwesomeIcon icon={faHouse} />
