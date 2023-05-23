@@ -1,0 +1,46 @@
+.contact__text {
+  margin-bottom: 30px;
+  .section-title {
+    text-align: left;
+    margin-bottom: 36px;
+    h2 {
+      color: #353535;
+      font-weight: 600;
+      font-size: 40px;
+      margin-top: 5px;
+      margin-bottom: 16px;
+    }
+    p {
+      margin-bottom: 0;
+      font-size: 18px;
+      color: #727171;
+    }
+  }
+  ul {
+    li {
+      color: #353535;
+      line-height: 36px;
+      display: block;
+      span {
+        color: #727171;
+        width: 85px;
+        display: inline-block;
+      }
+    }
+  }
+}
+.contact__form {
+  form {
+    .site-btn {
+      color: #ffffff;
+      font-weight: 700;
+      display: block;
+      margin: 10px 0;
+      padding: 15px 45px 12px 45px;
+      background: #db2d2e;
+      border: none;
+      border-radius: 5px;
+    }
+    
+  }
+}

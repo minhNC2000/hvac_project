@@ -11,22 +11,20 @@ export const Cars = () => {
     <div>
       <div className="breadcumb-option">
         <Container maxWidth="lg">
-          <div className="row">
-            <Grid container spacing={1}>
-              <Grid item lg={12}>
-                <div className="breadcrumb__text">
-                  <h1>Car Listing</h1>
-                  <div className="breadcumb__links">
-                    <a href="/">
-                      <FontAwesomeIcon icon={faHouse} />
-                      Home
-                    </a>
-                    <span>About</span>
-                  </div>
+          <Grid container spacing={1}>
+            <Grid item lg={12}>
+              <div className="breadcrumb__text">
+                <h1>Car Listing</h1>
+                <div className="breadcumb__links">
+                  <a href="/">
+                    <FontAwesomeIcon icon={faHouse} />
+                    Home
+                  </a>
+                  <span>About</span>
                 </div>
-              </Grid>
+              </div>
             </Grid>
-          </div>
+          </Grid>
         </Container>
       </div>
     </div>

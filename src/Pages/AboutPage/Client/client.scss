@@ -1,0 +1,38 @@
+.client {
+  padding-bottom: 70px;
+  .row {
+    justify-content: center;
+    .section-title {
+      margin-bottom: 45px;
+      text-align: center;
+
+      span {
+        font-size: 15px;
+        color: #db2d2e;
+        font-weight: 600;
+      }
+      h2 {
+        color: #353535;
+        font-size: 40px;
+        font-weight: 600;
+        margin-top: 5px;
+        margin-bottom: 16px;
+      }
+    }
+    .client__item {
+      border: 1px solid #ebebeb;
+      margin: 0 13px 30px 13px;
+      height: 110px;
+      width: 262px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+    }
+  }
+}

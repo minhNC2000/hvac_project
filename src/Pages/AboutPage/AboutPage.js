@@ -3,29 +3,29 @@ import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHouse } from "@fortawesome/free-solid-svg-icons";
-import { Link } from 'react-router-dom'
-import useBreadcrumbs from 'use-react-router-breadcrumbs'
 
-import Form from "./FormSubmit/Form";
-import ShowRoomSection from "./ShowRoom/ShowRoomSection";
-
-
-export const Contact = () => {
+import About from "./About/About";
+import Call from "./Call/CallSection";
+import Team from "./Team/TeamSection";
+import TestimonialSection from "./Testimonial/TestimonialSection";
+import CounterSection from "./Counter/CounterSection";
+import ClientSection from "./Client/ClientSection";
+export const AboutPage = () => {
   return (
-    <div>
+    <>
       <div className="breadcumb-option">
         <Container maxWidth="lg">
           <div className="row">
             <Grid container spacing={1}>
               <Grid item lg={12}>
                 <div className="breadcrumb__text">
-                  <h1>Contact us</h1>
+                  <h1>About Us</h1>
                   <div className="breadcumb__links">
                     <a href="/">
                       <FontAwesomeIcon icon={faHouse} />
                       Home
                     </a>
-                    <span>Contact Us</span>
+                    <span>About us</span>
                   </div>
                 </div>
               </Grid>
@@ -33,14 +33,13 @@ export const Contact = () => {
           </div>
         </Container>
       </div>
-      <section className="contact spad">
-        <Container maxWidth="lg">
-          <div className="row">
-            <Form />
-          </div>
-        </Container>
-      </section>
-      <ShowRoomSection />
-    </div>
+
+      <About />
+      <Call />
+      <Team />
+      <TestimonialSection />
+      <CounterSection />
+      <ClientSection />
+    </>
   );
 };

@@ -1,0 +1,67 @@
+.set-bg-call {
+  background: url("https://preview.colorlib.com/theme/hvac/img/about/call-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top center;
+}
+.call {
+  .call__text {
+    .section-title {
+      text-align: left;
+      margin-bottom: 35px;
+      h2 {
+        color: #ffffff;
+        margin-bottom: 12px;
+        font-size: 40px;
+        font-weight: 700;
+        margin-top: 5px;
+      }
+      p {
+        color: #ffffff;
+        font-size: 17px;
+        font-weight: 450;
+      }
+    }
+    a {
+      font-size: 15px;
+      color: #ffffff;
+      font-weight: 700;
+      text-transform: uppercase;
+      padding: 6px 0;
+      border-bottom: 2px solid red;
+      position: relative;
+    }
+  }
+  .call__form {
+    .text_field {
+      margin-bottom: 25px;
+    }
+    #outlined-basic {
+      background-color: #ffffff;
+      border-radius: 5px;
+
+      width: 200px;
+      border: none;
+    }
+
+    .site-btn {
+      color: #ffffff;
+      font-weight: 700;
+      display: inline-block;
+      padding: 15px 45px 12px 45px;
+      background: #db2d2e;
+      border: none;
+      border-radius: 5px;
+      margin: 25px 0 0;
+      cursor: pointer;
+    }
+    .selection_form {
+      .select_service_form {
+        background-color: #ffffff;
+        margin: 0;
+        width: 230px;
+        border-radius: 5px;
+      }
+    }
+  }
+}

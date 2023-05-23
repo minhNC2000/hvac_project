@@ -106,6 +106,17 @@ const Header = () => {
                     </li>
                     <li>
                       <a href="/pages">Pages</a>
+                      <ul className="dropdown">
+                        <li>
+                          <a href="/gioi-thieu">About Us</a>
+                        </li>
+                        <li>
+                          <a href="./car-details.html">Car Details</a>
+                        </li>
+                        <li>
+                          <a href="/blog">Blog Details</a>
+                        </li>
+                      </ul>
                     </li>
                     <li>
                       <a href="/gioi-thieu">About</a>
@@ -134,12 +145,11 @@ const Header = () => {
                 </div>
               </div>
               <div className="canvas__open">
-          <FontAwesomeIcon icon={faBars} />
-        </div>
+                <FontAwesomeIcon icon={faBars} />
+              </div>
             </Grid>
           </Grid>
         </div>
-        
       </Container>
     </header>
   );

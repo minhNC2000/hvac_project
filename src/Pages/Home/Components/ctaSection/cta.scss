@@ -1,0 +1,33 @@
+.cta {
+  padding-bottom: 70px;
+
+  .cta__item {
+    position: relative;
+    z-index: 1;
+    padding: 50px 34px 65px;
+    border-radius: 2px;
+    margin-bottom: 30px;
+    &::before {
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.3);
+      content: "";
+      z-index: -1;
+      border-radius: 2px;
+    }
+    h4 {
+      color: #ffffff;
+      font-weight: 700;
+      margin-bottom: 6px;
+      font-size: 24px;
+    }
+    p {
+      color: #ffffff;
+      margin-bottom: 0;
+      font-weight: 400;
+    }
+  }
+}

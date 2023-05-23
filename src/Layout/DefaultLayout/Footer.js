@@ -31,20 +31,20 @@ const Footer = () => {
               </Grid>
               <Grid item lg={6} md={6}>
                 <div className="footer__contact__option">
-                  <div className="option__item__phone">
+                  <a className="option__item__phone" href="tel:(+12) 345 678 910">
                     <FontAwesomeIcon
                       icon={faPhone}
                       style={{ color: "#ffffff" }}
                     />
                     (+12) 345 678 910
-                  </div>
-                  <div className="option__item__email">
+                  </a>
+                  <a className="option__item__email" href="mailto:Colorlib@gmail.com">
                     <FontAwesomeIcon
                       icon={faEnvelope}
                       style={{ color: "#db2d2e" }}
                     />
                     Colorlib@gmail.com
-                  </div>
+                  </a>
                 </div>
               </Grid>
             </Grid>

@@ -1,6 +1,6 @@
 import React from "react";
 import { Home } from "../Pages/Home/Home";
-import { About } from "../Pages/About/About";
+import { AboutPage } from "../Pages/AboutPage/AboutPage";
 import { Route } from "react-router-dom";
 import { Contact } from "../Pages/Contact/Contact";
 import { Cars } from "../Pages/Cars/Cars";
@@ -12,7 +12,7 @@ export const publicRoutes = (
     <Route path="/cars" element={<Cars />} />
     <Route path="/blog" element={<Blog />} />
     <Route path="/pages" element={<Pages />} />
-    <Route path="/gioi-thieu" element={<About />} />
+    <Route path="/gioi-thieu" element={<AboutPage />} />
     <Route path="/lien-he" element={<Contact />} />
   </>
 );
