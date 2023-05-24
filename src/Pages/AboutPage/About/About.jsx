@@ -4,7 +4,8 @@ import Grid from "@mui/material/Grid";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHouse } from "@fortawesome/free-solid-svg-icons";
 
-import "./about.scss"
+import "./about.scss";
+
 const About = () => {
   return (
     <>
@@ -76,44 +77,43 @@ const About = () => {
                 </Grid>
               </div>
             </div>
-            <div className="row">
-              <Grid container spacing={1}>
-                <Grid item lg={12}>
-                  <div class="about__pic">
-                    <img
-                      src="https://preview.colorlib.com/theme/hvac/img/about/about-pic.jpg"
-                      alt=""
-                    />
-                  </div>
-                </Grid>
-                <Grid item lg={6} md={6} sm={6}>
-                  <div class="about__item">
-                    <h5>Our Mission</h5>
-                    <p>
-                      Now, I’m not like Robin, that weirdo from my cultural
-                      anthropology class; I think that advertising is something
-                      that has its place in our society; which for better or
-                      worse is structured along a marketplace economy. But,
-                      simply because I feel advertising has a right to exist,
-                      doesn’t mean that I like or agree with it, in its
-                    </p>
-                  </div>
-                </Grid>
-                <Grid item lg={6} md={6} sm={6}>
-                  <div class="about__item">
-                    <h5>Our Vision</h5>
-                    <p>
-                      Where do you register your complaints? How can you protest
-                      in any form against companies whose advertising techniques
-                      you don’t agree with? You don’t. And on another point of
-                      difference between traditional products and their
-                      advertising and those of the internet nature, simply
-                      ignoring internet advertising is
-                    </p>
-                  </div>
-                </Grid>
+
+            <Grid container spacing={1}>
+              <Grid item lg={12}>
+                <div class="about__pic">
+                  <img
+                    src="https://preview.colorlib.com/theme/hvac/img/about/about-pic.jpg"
+                    alt=""
+                  />
+                </div>
               </Grid>
-            </div>
+              <Grid item lg={6} md={6} sm={6}>
+                <div class="about__item">
+                  <h5>Our Mission</h5>
+                  <p>
+                    Now, I’m not like Robin, that weirdo from my cultural
+                    anthropology class; I think that advertising is something
+                    that has its place in our society; which for better or worse
+                    is structured along a marketplace economy. But, simply
+                    because I feel advertising has a right to exist, doesn’t
+                    mean that I like or agree with it, in its
+                  </p>
+                </div>
+              </Grid>
+              <Grid item lg={6} md={6} sm={6}>
+                <div class="about__item">
+                  <h5>Our Vision</h5>
+                  <p>
+                    Where do you register your complaints? How can you protest
+                    in any form against companies whose advertising techniques
+                    you don’t agree with? You don’t. And on another point of
+                    difference between traditional products and their
+                    advertising and those of the internet nature, simply
+                    ignoring internet advertising is
+                  </p>
+                </div>
+              </Grid>
+            </Grid>
           </div>
         </Container>
       </section>

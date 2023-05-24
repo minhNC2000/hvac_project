@@ -1,60 +1,60 @@
 .about {
-    padding-bottom: 70px;
-    .row {
-      .section-title {
-        margin-bottom: 75px;
-        text-align: center;
-        h2 {
-          color: #353535;
-          font-size: 40px;
-          font-weight: 700;
-          margin-top: 5px;
-          margin-bottom: 16px;
-        }
-      }
-      .about-title {
-        h2 {
-          line-height: 55px;
-          font-size: 39px;
-        }
-        p {
-          font-size: 17px;
-          line-height: 30px;
-          color: #6a6b7c;
-        }
+  padding-bottom: 70px;
+  .row {
+    .section-title {
+      margin-bottom: 75px;
+      text-align: center;
+      h2 {
+        color: #353535;
+        font-size: 40px;
+        font-weight: 700;
+        margin-top: 5px;
+        margin-bottom: 16px;
       }
     }
-    .about__feature {
-      .about__feature__item {
-        text-align: center;
-        margin-bottom: 30px;
-        padding: 0 20px;
-        img {
-          max-width: 100%;
-        }
-        h5 {
-          font-size: 20px;
-          color: #353535;
-          font-weight: 700;
-          margin-top: 30px;
-          margin-bottom: 15px;
-        }
+    .about-title {
+      h2 {
+        line-height: 55px;
+        font-size: 39px;
+      }
+      p {
+        font-size: 17px;
+        line-height: 30px;
+        color: #6a6b7c;
       }
     }
-    .about__pic {
-      margin-bottom: 50px;
-      img {
-        min-width: 100%;
-        border-radius: 10px;
-      }
-    }
-    .about__item {
+  }
+  .about__feature {
+    .about__feature__item {
+      text-align: center;
       margin-bottom: 30px;
+      padding: 0 20px;
+      img {
+        max-width: 100%;
+      }
       h5 {
         font-size: 20px;
         color: #353535;
         font-weight: 700;
+        margin-top: 30px;
         margin-bottom: 15px;
       }
     }
   }
+  .about__pic {
+    margin-bottom: 50px;
+    img {
+      min-width: 100%;
+      border-radius: 10px;
+    }
+  }
+  .about__item {
+    margin-bottom: 30px;
+    h5 {
+      font-size: 20px;
+      color: #353535;
+      font-weight: 700;
+      margin-bottom: 15px;
+    }
+  }
+}

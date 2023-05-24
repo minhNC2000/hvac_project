@@ -3,34 +3,15 @@ import React from "react";
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faHouse, faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
-
+import { faHouse } from "@fortawesome/free-solid-svg-icons";
+import Breadcrumbs from "../../Components/Breadcrumbs/Breadcrumbs";
 import "./blog.scss";
 import { Pagination } from "@mui/material";
 import Sidebar from "./SidebarSection/sidebar";
 export const Blog = () => {
   return (
     <>
-      <div className="breadcumb-option">
-        <Container maxWidth="lg">
-          <div className="row">
-            <Grid container spacing={1}>
-              <Grid item lg={12}>
-                <div className="breadcrumb__text">
-                  <h1>Lastest Blogs</h1>
-                  <div className="breadcumb__links">
-                    <a href="/">
-                      <FontAwesomeIcon icon={faHouse} />
-                      Home
-                    </a>
-                    <span>Our Blogs</span>
-                  </div>
-                </div>
-              </Grid>
-            </Grid>
-          </div>
-        </Container>
-      </div>
+      <Breadcrumbs currentPath={"latest blogs"} />
       <section className="blog spad">
         <Container maxWidth="lg">
           <div className="row">
@@ -68,7 +49,7 @@ export const Blog = () => {
                       <div className="blog__item__pic">
                         <img
                           src="https://preview.colorlib.com/theme/hvac/img/blog/blog-2.jpg"
-                          alt=""
+                          alt="" 
                         />
                         <ul>
                           <li>By Evelyn Lane</li>

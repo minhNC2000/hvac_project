@@ -6,6 +6,7 @@ import { Contact } from "../Pages/Contact/Contact";
 import { Cars } from "../Pages/Cars/Cars";
 import { Blog } from "../Pages/Blog/Blog";
 import { Pages } from "../Pages/Pages/Pages";
+
 export const publicRoutes = (
   <>
     <Route path="/" element={<Home />} />

@@ -10,29 +10,12 @@ import Team from "./Team/TeamSection";
 import TestimonialSection from "./Testimonial/TestimonialSection";
 import CounterSection from "./Counter/CounterSection";
 import ClientSection from "./Client/ClientSection";
+import Breadcrumbs from "../../Components/Breadcrumbs/Breadcrumbs";
+
 export const AboutPage = () => {
   return (
     <>
-      <div className="breadcumb-option">
-        <Container maxWidth="lg">
-          <div className="row">
-            <Grid container spacing={1}>
-              <Grid item lg={12}>
-                <div className="breadcrumb__text">
-                  <h1>About Us</h1>
-                  <div className="breadcumb__links">
-                    <a href="/">
-                      <FontAwesomeIcon icon={faHouse} />
-                      Home
-                    </a>
-                    <span>About us</span>
-                  </div>
-                </div>
-              </Grid>
-            </Grid>
-          </div>
-        </Container>
-      </div>
+      <Breadcrumbs currentPath={"about us"} />
 
       <About />
       <Call />

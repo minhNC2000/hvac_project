@@ -33,15 +33,14 @@
     }
   }
   .call__form {
-    .text_field {
-      margin-bottom: 25px;
-    }
-    #outlined-basic {
+  
+    #outlined-required {
       background-color: #ffffff;
       border-radius: 5px;
-
       width: 200px;
-      border: none;
+    }
+    .mb-25{
+      margin-bottom: 25px;
     }
 
     .site-btn {
@@ -59,7 +58,7 @@
       .select_service_form {
         background-color: #ffffff;
         margin: 0;
-        width: 230px;
+        width: 228px;
         border-radius: 5px;
       }
     }

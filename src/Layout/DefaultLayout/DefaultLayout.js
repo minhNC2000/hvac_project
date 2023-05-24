@@ -5,7 +5,7 @@ import { Routes, Route } from "react-router-dom";
 import { publicRoutes } from "../../Routes/publicRoutes";
 import { privateroutes } from "../../Routes/privateroutes";
 
-import Error404 from "../../Error/Error404";
+import Error404 from "../../Error/404/Error404";
 
 import "../../Assets/Styles/Style.scss"
 const DefaultLayout = () => {

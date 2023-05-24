@@ -10,7 +10,7 @@ import InputAdornment from "@mui/material/InputAdornment";
 import AccountCircle from "@mui/icons-material/AccountCircle";
 import EmailIcon from "@mui/icons-material/Email";
 import SubjectIcon from "@mui/icons-material/Subject";
-import SubtitlesIcon from "@mui/icons-material/Subtitles";
+import {  toast } from "react-toastify";
 import "./Form.scss";
 
 const blue = {
@@ -36,13 +36,14 @@ const grey = {
 
 const StyledTextarea = styled(TextareaAutosize)(
   ({ theme }) => `
-  width: 320px;
+  resize: none;
+  width: 100%;
   font-family: IBM Plex Sans, sans-serif;
   font-size: 0.875rem;
   font-weight: 400;
   line-height: 1.5;
   padding: 12px;
-  border-radius: 12px 12px 0 12px;
+  border-radius: 12px ;
   color: ${theme.palette.mode === "dark" ? grey[300] : grey[900]};
   background: ${theme.palette.mode === "dark" ? grey[900] : "#fff"};
   border: 1px solid ${theme.palette.mode === "dark" ? grey[700] : grey[200]};
@@ -86,6 +87,7 @@ const Form = () => {
   });
   const handleSubmit = (e) => {
     e.preventDefault();
+    
     if (value.name.text == "") {
       setValue({
         ...value,
@@ -132,27 +134,35 @@ const Form = () => {
         )
         .then(
           (result) => {
-            console.log("Đã gửi thành công");
+            toast.success("Đã gửi thành công", {
+              autoClose: 5000,
+              progress: undefined,
+              theme: "colored",
+            });
           },
           (error) => {
-            console.log("Thất bại");
+            toast.error("Thất bại", {
+              autoClose: 5000,
+              progress: undefined,
+              theme: "colored",
+            });
           }
         );
     }
   };
 
-  // const handleNameChange = (e) => {
-  //   setValue({ ...value, name: { ...value.name, text: e.target.value } });
-  // };
-  // const handleEmailChange = (e) => {
-  //   setValue({ ...value, name: { ...value.email, text: e.target.value } });
-  // };
-  // const handleSubjectChange = (e) => {
-  //   setValue({ ...value, name: { ...value.subject, text: e.target.value } });
-  // };
-  // const handleMessageChange = (e) => {
-  //   setValue({ ...value, name: { ...value.message, text: e.target.value } });
-  // };
+  const handleNameChange = (e) => {
+    setValue({ ...value, name: { ...value.name, text: e.target.value } });
+  };
+  const handleEmailChange = (e) => {
+    setValue({ ...value, email: { ...value.email, text: e.target.value } });
+  };
+  const handleSubjectChange = (e) => {
+    setValue({ ...value, subject: { ...value.subject, text: e.target.value } });
+  };
+  const handleMessageChange = (e) => {
+    setValue({ ...value, message: { ...value.message, text: e.target.value } });
+  };
   return (
     <Grid container spacing={1}>
       <Grid item lg={6} md={6}>
@@ -177,7 +187,7 @@ const Form = () => {
           </ul>
         </div>
       </Grid>
-      <Grid item lg={6} md={6} style={{paddingLeft : "70px"}}>
+      <Grid item lg={6} md={6} style={{ paddingLeft: "70px" }}>
         <div className="contact__form">
           <Box component="form" ref={form} onSubmit={handleSubmit}>
             <div className="row" style={{ marginBottom: "20px" }}>
@@ -188,12 +198,7 @@ const Form = () => {
                   id="outlined-required"
                   name="user_name"
                   label="Name"
-                  onChange={(e) =>
-                    setValue({
-                      ...value,
-                      name: { ...value.name, text: e.target.value },
-                    })
-                  }
+                  onChange={handleNameChange}
                   InputProps={{
                     startAdornment: (
                       <InputAdornment position="start">
@@ -218,12 +223,7 @@ const Form = () => {
                       </InputAdornment>
                     ),
                   }}
-                  onChange={(e) =>
-                    setValue({
-                      ...value,
-                      name: { ...value.email, text: e.target.value },
-                    })
-                  }
+                  onChange={handleEmailChange}
                 />
               </Grid>
             </div>
@@ -243,26 +243,17 @@ const Form = () => {
                   </InputAdornment>
                 ),
               }}
-              onChange={(e) =>
-                setValue({
-                  ...value,
-                  name: { ...value.subject, text: e.target.value },
-                })
-              }
+              onChange={handleSubjectChange}
             />
 
             <StyledTextarea
               label="Nhập tin nhắn"
+              minRows={4}
               maxRows={4}
               aria-label="maximum height"
               placeholder="Nhập tin nhắn"
               name="message"
-              onChange={(e) =>
-                setValue({
-                  ...value,
-                  name: { ...value.message, text: e.target.value },
-                })
-              }
+              onChange={handleMessageChange}
             />
             <Button type="submit" className="site-btn">
               Send

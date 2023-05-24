@@ -1,0 +1,33 @@
+.breadcumb-option {
+  background: url("https://preview.colorlib.com/theme/hvac/img/breadcrumb-bg.jpg");
+  text-align: center;
+  padding: 70px 0 60px;
+
+  .breadcrumb__text {
+    .MuiBreadcrumbs-separator {
+      color: #ffffff;
+    }
+    .navigate {
+      display: flex;
+      justify-content: center;
+    }
+    h1 {
+      color: #ffffff;
+      font-weight: 700;
+      font-size: 46px;
+      margin-bottom: 6px;
+      text-transform: capitalize;
+    }
+    .breadcumb__links {
+      svg {
+        color: #db2d2e;
+        margin-right: 5px;
+      }
+      span {
+        color: #ffffff;
+        display: inline-block;
+        position: relative;
+      }
+    }
+  }
+}
