@@ -11,7 +11,7 @@ const Chooseus = () => {
       <Container className="lg">
         <div className="row">
           <Grid container spacing={1}>
-            <Grid item lg={5}>
+            <Grid lg={5}>
               <div className="chooseus__text">
                 <div className="section-title">
                   <h2>Why People Choose Us</h2>
@@ -38,7 +38,9 @@ const Chooseus = () => {
                     vitae lacus varius pretium.
                   </li>
                 </ul>
-                <Button variant="contained">About Us</Button>
+                <Button variant="contained">
+                  <a href="/gioi-thieu">About Us</a>
+                </Button>
               </div>
             </Grid>
           </Grid>
@@ -48,7 +50,10 @@ const Chooseus = () => {
         className="chooseus__video set-bg"
         style={{ backgroundImage: 'url("undefined")' }}
       >
-        <img src="https://preview.colorlib.com/theme/hvac/img/chooseus-video.png" alt="" />
+        <img
+          src="https://preview.colorlib.com/theme/hvac/img/chooseus-video.png"
+          alt=""
+        />
         <a
           href="https://www.youtube.com/watch?v=Xd0Ok-MkqoE"
           className="play-btn video-popup"

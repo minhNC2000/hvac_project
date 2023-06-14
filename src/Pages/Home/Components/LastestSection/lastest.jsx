@@ -1,15 +1,25 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Unstable_Grid2";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRightLong } from "@fortawesome/free-solid-svg-icons";
 import "./lastest.scss";
 const Lastest = () => {
+  const [newblogs, setNewblog] = useState([]);
+
+  const apiUrl = "http://localhost:3004/blog-item";
+  useEffect(() => {
+    fetch(apiUrl)
+      .then((response) => response.json())
+      .then((data) => setNewblog(data))
+      .catch((err) => console.log(err));
+  }, []);
+
   return (
     <section className="lastest spad">
-      <Container classname="lg">
+      <Container className="lg">
         <Grid container spacing={1}>
-          <Grid item lg={12}>
+          <Grid lg={12}>
             <div className="section-title">
               <span>Our Blog</span>
               <h2>Latest News Updates</h2>
@@ -23,96 +33,31 @@ const Lastest = () => {
         </Grid>
         <div className="row">
           <Grid container spacing={1}>
-            <Grid item lg={4} md={6}>
-              <div className="latest__blog__item">
-                <div
-                  className="latest__blog__item__pic set-bg"
-                  data-setbg="https://preview.colorlib.com/theme/hvac/img/latest-blog/lb-1.jpg"
-                  style={{
-                    backgroundImage:
-                      'url("https://preview.colorlib.com/theme/hvac/img/latest-blog/lb-1.jpg")',
-                  }}
-                >
-                  <ul>
-                    <li>By Polly Williams</li>
-                    <li>Dec 19, 2018</li>
-                    <li>Comment</li>
-                  </ul>
+            {newblogs.map((newblog,index) => (
+              <Grid lg={4} md={6} key={index}  >
+                <div className="latest__blog__item">
+                  <div
+                    className="latest__blog__item__pic set-bg"
+                    style={{
+                      backgroundImage: `url("${newblog.image}")`,
+                    }}
+                  >
+                    <ul  >
+                      <li >By {newblog.writer}</li>
+                      <li>{newblog.date}</li>
+                      <li>Comment</li>
+                    </ul>
+                  </div>
+                  <div className="latest__blog__item__text">
+                    <h5>{newblog.title}</h5>
+                    <p>{newblog.content}</p>
+                    <a href="#">
+                      View More <FontAwesomeIcon icon={faArrowRightLong} />
+                    </a>
+                  </div>
                 </div>
-                <div className="latest__blog__item__text">
-                  <h5>Benjamin Franklin S Method Of Habit Formation</h5>
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Risus commodo viverra maecenas accumsan lacus vel
-                    facilisis.
-                  </p>
-                  <a href="#">
-                    View More <FontAwesomeIcon icon={faArrowRightLong} />
-                  </a>
-                </div>
-              </div>
-            </Grid>
-            <Grid item lg={4} md={6}>
-              <div className="latest__blog__item">
-                <div
-                  className="latest__blog__item__pic set-bg"
-                  data-setbg="https://preview.colorlib.com/theme/hvac/img/latest-blog/lb-2.jpg"
-                  style={{
-                    backgroundImage:
-                      'url("https://preview.colorlib.com/theme/hvac/img/latest-blog/lb-2.jpg")',
-                  }}
-                >
-                  <ul>
-                    <li>By Mattie Ramirez</li>
-                    <li>Dec 19, 2018</li>
-                    <li>Comment</li>
-                  </ul>
-                </div>
-                <div className="latest__blog__item__text">
-                  <h5>How To Set Intentions That Energize You</h5>
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Risus commodo viverra maecenas accumsan lacus vel
-                    facilisis.
-                  </p>
-                  <a href="#">
-                    View More <FontAwesomeIcon icon={faArrowRightLong} />
-                  </a>
-                </div>
-              </div>
-            </Grid>
-            <Grid item lg={4} md={6}>
-              <div className="latest__blog__item">
-                <div
-                  className="latest__blog__item__pic set-bg"
-                  data-setbg="https://preview.colorlib.com/theme/hvac/img/latest-blog/lb-3.jpg"
-                  style={{
-                    backgroundImage:
-                      'url("https://preview.colorlib.com/theme/hvac/img/latest-blog/lb-3.jpg")',
-                  }}
-                >
-                  <ul>
-                    <li>By Nicholas Brewer</li>
-                    <li>Dec 19, 2018</li>
-                    <li>Comment</li>
-                  </ul>
-                </div>
-                <div className="latest__blog__item__text">
-                  <h5>Burning Desire Golden Key Or Red Herring</h5>
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Risus commodo viverra maecenas accumsan lacus vel
-                    facilisis.
-                  </p>
-                  <a href="#">
-                    View More <FontAwesomeIcon icon={faArrowRightLong} />
-                  </a>
-                </div>
-              </div>
-            </Grid>
+              </Grid>
+            ))}
           </Grid>
         </div>
       </Container>

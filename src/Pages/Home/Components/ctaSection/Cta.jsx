@@ -8,7 +8,7 @@ const Cta = () => {
       <Container className="lg">
         <div className="row">
           <Grid container spacing={4}>
-            <Grid item lg={6} md={6}>
+          <Grid lg={6} md={6}>
               <div
                 className="cta__item set-bg"
                 data-setbg="https://preview.colorlib.com/theme/hvac/img/cta/cta-1.jpg"
@@ -24,7 +24,7 @@ const Cta = () => {
                 </p>
               </div>
             </Grid>
-            <Grid item lg={6} md={6}>
+          <Grid lg={6} md={6}>
               <div
                 className="cta__item set-bg"
                 data-setbg="https://preview.colorlib.com/theme/hvac/img/cta/cta-2.jpg"

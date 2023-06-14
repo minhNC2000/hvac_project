@@ -114,7 +114,7 @@ const Header = () => {
                           <a href="./car-details.html">Car Details</a>
                         </li>
                         <li>
-                          <a href="/blog">Blog Details</a>
+                          <a href="/blog-details">Blog Details</a>
                         </li>
                       </ul>
                     </li>

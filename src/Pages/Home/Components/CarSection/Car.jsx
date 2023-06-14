@@ -1,11 +1,12 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Unstable_Grid2";
-
 import { Carousel } from "react-responsive-carousel";
 import { boolean, number, text } from "@storybook/addon-knobs";
+import toCurrency from "../../../../Services/Utilities/toCurrency";
 import "./car.scss";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { useAPI } from "../../../../Services/Hooks";
 const tooglesGroupId = "Toggles";
 const valuesGroupId = "Values";
 
@@ -31,11 +32,18 @@ const getConfigurableProps = () => ({
 });
 
 const Car = () => {
+  const [records, setRecords] = useState([]);
+
+  const API = useAPI("cars");
+  useEffect(() => {
+    API.get().then(({ data }) => setRecords(data));
+  }, []);
+
   return (
     <section className="car spad">
       <Container className="lg">
         <Grid container spacing={1}>
-          <Grid item lg={12}>
+          <Grid lg={12}>
             <div className="section-title">
               <span>Our Car</span>
               <h2>Best Vehicle Offers</h2>
@@ -49,218 +57,55 @@ const Car = () => {
               </li>
             </ul>
           </Grid>
+
           <div className="row car-filter">
             <Grid container spacing={1}>
-              <Grid item lg={3} md={4} sm={6}>
-                <div className="car__item">
-                  <Carousel {...getConfigurableProps()}>
-                    <div className="slide1">
-                      <img
-                        src="https://preview.colorlib.com/theme/hvac/img/cars/car-1.jpg"
-                        alt=""
-                      />
-                    </div>
-                    <div className="slide2">
-                      <img
-                        src="https://preview.colorlib.com/theme/hvac/img/cars/car-2.jpg"
-                        alt=""
-                      />
-                    </div>
-                    <div className="slide3">
-                      <img
-                        src="https://preview.colorlib.com/theme/hvac/img/cars/car-3.jpg"
-                        alt=""
-                      />
-                    </div>
-                    <div className="slide4">
-                      <img
-                        src="https://preview.colorlib.com/theme/hvac/img/cars/car-4.jpg"
-                        alt=""
-                      />
-                    </div>
-                  </Carousel>
-                </div>
-                <div className="car__item__text">
-                  <div className="car__item__text__inner">
-                    <div className="label-date">2016</div>
-                    <h5>
-                      <a href="#">Porsche cayenne turbo s</a>
-                    </h5>
-                    <ul>
-                      <li>
-                        <span>35,000</span> mi
-                      </li>
-                      <li>Auto</li>
-                      <li>
-                        <span>700</span> hp
-                      </li>
-                    </ul>
+              {records.map((record) => (
+                <Grid lg={3} md={4} sm={6} key={record.id}>
+                  <div className="car__item">
+                    <Carousel {...getConfigurableProps()}>
+                      {record.image.map((img, index) => (
+                        <img src={img} alt={`slide${index}`} key={index}></img>
+                      ))}
+                    </Carousel>
                   </div>
-                  <div className="car__item__price">
-                    <span className="car-option">For Rent</span>
-                    <h6>
-                      $218<span>/Month</span>
-                    </h6>
+                  <div className="car__item__text">
+                    <div className="car__item__text__inner">
+                      <div className="label-date">{record.year}</div>
+                      <h5>
+                        <a href="#">{record.name}</a>
+                      </h5>
+                      <ul>
+                        <li>
+                          <span>{record.speed}</span> mi
+                        </li>
+                        <li>{record.category}</li>
+                        <li>
+                          <span>{record.HorsePower}</span> hp
+                        </li>
+                      </ul>
+                    </div>
+                    <div className="car__item__price">
+                      {record.status == "rent" ? (
+                        <span className="car-option">For {record.status}</span>
+                      ) : (
+                        <span className="car-option sale">
+                          For {record.status}
+                        </span>
+                      )}
+                      <h6>
+                        {record.status == "rent" ? (
+                          <>
+                            {toCurrency(record.price)} <span>/Month</span>
+                          </>
+                        ) : (
+                          <>{toCurrency(record.price)}</>
+                        )}
+                      </h6>
+                    </div>
                   </div>
-                </div>
-              </Grid>
-              <Grid item lg={3} md={4} sm={6}>
-                <div className="car__item">
-                  <Carousel {...getConfigurableProps()}>
-                    <div className="slide1">
-                      <img
-                        src="https://preview.colorlib.com/theme/hvac/img/cars/car-2.jpg"
-                        alt=""
-                      />
-                    </div>
-                    <div className="slide2">
-                      <img
-                        src="https://preview.colorlib.com/theme/hvac/img/cars/car-3.jpg"
-                        alt=""
-                      />
-                    </div>
-                    <div className="slide3">
-                      <img
-                        src="https://preview.colorlib.com/theme/hvac/img/cars/car-4.jpg"
-                        alt=""
-                      />
-                    </div>
-                    <div className="slide4">
-                      <img
-                        src="https://preview.colorlib.com/theme/hvac/img/cars/car-1.jpg"
-                        alt=""
-                      />
-                    </div>
-                  </Carousel>
-                </div>
-                <div className="car__item__text">
-                  <div className="car__item__text__inner">
-                    <div className="label-date">2020</div>
-                    <h5>
-                      <a href="#">Toyota camry asv50l-jeteku</a>
-                    </h5>
-                    <ul>
-                      <li>
-                        <span>35,000</span> mi
-                      </li>
-                      <li>Auto</li>
-                      <li>
-                        <span>700</span> hp
-                      </li>
-                    </ul>
-                  </div>
-                  <div className="car__item__price">
-                    <span className="car-option">For Sale</span>
-                    <h6>$73,900</h6>
-                  </div>
-                </div>
-              </Grid>
-              <Grid item lg={3} md={4} sm={6}>
-                <div className="car__item">
-                  <Carousel {...getConfigurableProps()}>
-                    <div className="slide1">
-                      <img
-                        src="https://preview.colorlib.com/theme/hvac/img/cars/car-3.jpg"
-                        alt=""
-                      />
-                    </div>
-                    <div className="slide2">
-                      <img
-                        src="https://preview.colorlib.com/theme/hvac/img/cars/car-4.jpg"
-                        alt=""
-                      />
-                    </div>
-                    <div className="slide3">
-                      <img
-                        src="https://preview.colorlib.com/theme/hvac/img/cars/car-1.jpg"
-                        alt=""
-                      />
-                    </div>
-                    <div className="slide4">
-                      <img
-                        src="https://preview.colorlib.com/theme/hvac/img/cars/car-2.jpg"
-                        alt=""
-                      />
-                    </div>
-                  </Carousel>
-                </div>
-                <div className="car__item__text">
-                  <div className="car__item__text__inner">
-                    <div className="label-date">2017</div>
-                    <h5>
-                      <a href="#">Bmw s1000rr 2019 m</a>
-                    </h5>
-                    <ul>
-                      <li>
-                        <span>35,000</span> mi
-                      </li>
-                      <li>Auto</li>
-                      <li>
-                        <span>700</span> hp
-                      </li>
-                    </ul>
-                  </div>
-                  <div className="car__item__price">
-                    <span className="car-option">For Rent</span>
-                    <h6>
-                      $299<span>/Month</span>
-                    </h6>
-                  </div>
-                </div>
-              </Grid>
-              <Grid item lg={3} md={4} sm={6}>
-                <div className="car__item">
-                  <Carousel {...getConfigurableProps()}>
-                    <div className="slide1">
-                      <img
-                        src="https://preview.colorlib.com/theme/hvac/img/cars/car-4.jpg"
-                        alt=""
-                      />
-                    </div>
-                    <div className="slide2">
-                      <img
-                        src="https://preview.colorlib.com/theme/hvac/img/cars/car-3.jpg"
-                        alt=""
-                      />
-                    </div>
-                    <div className="slide3">
-                      <img
-                        src="https://preview.colorlib.com/theme/hvac/img/cars/car-2.jpg"
-                        alt=""
-                      />
-                    </div>
-                    <div className="slide4">
-                      <img
-                        src="https://preview.colorlib.com/theme/hvac/img/cars/car-1.jpg"
-                        alt=""
-                      />
-                    </div>
-                  </Carousel>
-                </div>
-                <div className="car__item__text">
-                  <div className="car__item__text__inner">
-                    <div className="label-date">2019</div>
-                    <h5>
-                      <a href="#">Lamborghini huracan evo</a>
-                    </h5>
-                    <ul>
-                      <li>
-                        <span>35,000</span> mi
-                      </li>
-                      <li>Auto</li>
-                      <li>
-                        <span>700</span> hp
-                      </li>
-                    </ul>
-                  </div>
-                  <div className="car__item__price">
-                    <span className="car-option">For Rent</span>
-                    <h6>
-                      $120,000
-                    </h6>
-                  </div>
-                </div>
-              </Grid>
+                </Grid>
+              ))}
             </Grid>
           </div>
         </Grid>

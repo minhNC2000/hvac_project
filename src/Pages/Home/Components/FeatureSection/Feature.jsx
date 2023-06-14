@@ -9,7 +9,7 @@ const Feature = () => {
       <Container className="lg">
         <div className="row">
           <Grid container spacing={2} className="feature_body">
-            <Grid item lg={4}>
+            <Grid lg={4}>
               <div className="feature__text">
                 <div className="section-title">
                   <span>Our Feature</span>
@@ -28,7 +28,7 @@ const Feature = () => {
                   </p>
                 </div>
                 <div className="feature__text__btn">
-                  <a className="primary-btn" href="#">
+                  <a className="primary-btn" href="/gioi-thieu">
                     About Us
                   </a>
                   <a href="#" className="primary-btn partner-btn">
@@ -37,10 +37,10 @@ const Feature = () => {
                 </div>
               </div>
             </Grid>
-            <Grid item lg={4} >
+            <Grid lg={4}>
               <div className="row">
                 <Grid container spacing={1} mdOffset={1}>
-                  <Grid item lg={6} md={4} sm={6} className="feature_body-content">
+                  <Grid lg={6} md={4} sm={6} className="feature_body-content">
                     <div className="feature__item">
                       <div className="feature__item__icon">
                         <img
@@ -51,7 +51,7 @@ const Feature = () => {
                       <h6>Engine</h6>
                     </div>
                   </Grid>
-                  <Grid item lg={6} md={4} sm={6} className="feature_body-content">
+                  <Grid lg={6} md={4} sm={6} className="feature_body-content">
                     <div className="feature__item">
                       <div className="feature__item__icon">
                         <img
@@ -62,7 +62,7 @@ const Feature = () => {
                       <h6>Turbo</h6>
                     </div>
                   </Grid>
-                  <Grid item lg={6} md={4} sm={6} className="feature_body-content">
+                  <Grid lg={6} md={4} sm={6} className="feature_body-content">
                     <div className="feature__item">
                       <div className="feature__item__icon">
                         <img
@@ -73,7 +73,7 @@ const Feature = () => {
                       <h6>Cooling</h6>
                     </div>
                   </Grid>
-                  <Grid item lg={6} md={4} sm={6} className="feature_body-content">
+                  <Grid lg={6} md={4} sm={6} className="feature_body-content">
                     <div className="feature__item">
                       <div className="feature__item__icon">
                         <img
@@ -84,7 +84,7 @@ const Feature = () => {
                       <h6>Suspension</h6>
                     </div>
                   </Grid>
-                  <Grid item lg={6} md={4} sm={6}>
+                  <Grid lg={6} md={4} sm={6}>
                     <div className="feature__item">
                       <div className="feature__item__icon">
                         <img
@@ -95,7 +95,7 @@ const Feature = () => {
                       <h6>Electricial</h6>
                     </div>
                   </Grid>
-                  <Grid item lg={6} md={4} sm={6}>
+                  <Grid lg={6} md={4} sm={6}>
                     <div className="feature__item">
                       <div className="feature__item__icon">
                         <img

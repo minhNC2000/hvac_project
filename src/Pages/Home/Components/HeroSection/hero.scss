@@ -1,8 +1,6 @@
-.set-bg-hero {
+.set-bg {
   background: url("https://preview.colorlib.com/theme/hvac/img/hero-bg.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: top center;
+
 }
 .nav {
   display: -ms-flexbox;
@@ -75,12 +73,21 @@
       border: 1px solid #ffffff;
     }
   }
-  .hero-tab {
-    .nav-tabs {
-      border-bottom: none;
+  .hero__tab {
+    .nav {
+      
       .nav-item {
         margin-bottom: 5px;
         margin-right: 5px;
+        position: relative;
+        font-size: 15px;
+        font-weight: 700;
+        color: #323232;
+        text-transform: capitalize;
+        border-bottom: none;
+        border-radius: 2px;
+        background: #ffffff;
+
         .nav-link {
           position: relative;
           font-size: 15px;
@@ -104,6 +111,32 @@
             -o-transition: 0.3s;
             transition: 0.3s;
           }
+        }
+      }
+    }
+    .tab-content {
+      .css-19kzrtu {
+        padding: 0;
+      }
+      .hero__tab__form {
+        background: #ffffff;
+        padding: 42px 40px 50px;
+        border-radius: 2px;
+        h2 {
+          color: #323232;
+          font-weight: 700;
+          margin-bottom: 22px;
+        }
+        .select-list-item{
+          margin-left: 0;
+        }
+        #demo-simple-select-helper {
+          float: left;
+          -webkit-box-flex: 0;
+          -ms-flex: 0 0 50%;
+          flex: 0 0 50%;
+
+          width: 130px;
         }
       }
     }

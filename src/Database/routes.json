@@ -1,0 +1,4 @@
+{
+  "/cars?id=:id": "cars/:id",
+  "/blog-item?id=:id": "blog/:id"
+}

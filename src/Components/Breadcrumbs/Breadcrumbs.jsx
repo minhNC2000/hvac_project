@@ -1,7 +1,7 @@
 import React from "react";
 
-import { Breadcrumbs, Container, Typography } from "@mui/material";
-import Grid2 from "@mui/material/Unstable_Grid2/Grid2";
+import { Breadcrumbs, Container, Typography, Grid } from "@mui/material";
+
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHouse } from "@fortawesome/free-solid-svg-icons";
@@ -10,8 +10,8 @@ const breadcrumbs = ({ currentPath }) => {
   return (
     <div className="breadcumb-option">
       <Container maxWidth="lg">
-        <Grid2 container spacing={1}>
-          <Grid2 item lg={12}>
+        <Grid container spacing={1}>
+          <Grid item lg={12}>
             <div className="breadcrumb__text">
               <h1>{currentPath}</h1>
               <Breadcrumbs
@@ -30,7 +30,6 @@ const breadcrumbs = ({ currentPath }) => {
                   key="breadcrum-path"
                   color="text.primary"
                   className="breadcrumb__path"
-                  
                   sx={{
                     fontSize: "15px",
                     color: "#727171",
@@ -41,8 +40,8 @@ const breadcrumbs = ({ currentPath }) => {
                 </Typography>
               </Breadcrumbs>
             </div>
-          </Grid2>
-        </Grid2>
+          </Grid>
+        </Grid>
       </Container>
     </div>
   );

@@ -1,0 +1,250 @@
+{
+  "cars": [
+    {
+      "id": 1,
+      "name": "Porsche cayenne turbo s",
+      "year": 2016,
+      "category": "Auto",
+      "HorsePower": 700,
+      "speed": 35000,
+      "price": 218,
+      "status": "rent",
+      "image": [
+        "https://preview.colorlib.com/theme/hvac/img/cars/car-1.jpg",
+        "https://preview.colorlib.com/theme/hvac/img/cars/car-2.jpg",
+        "https://preview.colorlib.com/theme/hvac/img/cars/car-3.jpg",
+        "https://preview.colorlib.com/theme/hvac/img/cars/car-4.jpg"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Toyota camry asv50l-jeteku",
+      "year": 2020,
+      "category": "Auto",
+      "HorsePower": 700,
+      "speed": 35000,
+      "price": 73900,
+      "status": "sale",
+      "image": [
+        "https://preview.colorlib.com/theme/hvac/img/cars/car-1.jpg",
+        "https://preview.colorlib.com/theme/hvac/img/cars/car-2.jpg",
+        "https://preview.colorlib.com/theme/hvac/img/cars/car-3.jpg",
+        "https://preview.colorlib.com/theme/hvac/img/cars/car-4.jpg"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Bmw s1000rr 2019 m",
+      "year": 2017,
+      "category": "Auto",
+      "HorsePower": 700,
+      "speed": 35000,
+      "price": 299,
+      "status": "rent",
+      "image": [
+        "https://preview.colorlib.com/theme/hvac/img/cars/car-1.jpg",
+        "https://preview.colorlib.com/theme/hvac/img/cars/car-2.jpg",
+        "https://preview.colorlib.com/theme/hvac/img/cars/car-3.jpg",
+        "https://preview.colorlib.com/theme/hvac/img/cars/car-4.jpg"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Lamborghini huracan evo",
+      "year": 2019,
+      "category": "Auto",
+      "HorsePower": 700,
+      "speed": 35000,
+      "price": 120000,
+      "status": "sale",
+      "image": [
+        "https://preview.colorlib.com/theme/hvac/img/cars/car-1.jpg",
+        "https://preview.colorlib.com/theme/hvac/img/cars/car-2.jpg",
+        "https://preview.colorlib.com/theme/hvac/img/cars/car-3.jpg",
+        "https://preview.colorlib.com/theme/hvac/img/cars/car-4.jpg"
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Audi q8 2020",
+      "year": 2018,
+      "category": "Auto",
+      "HorsePower": 700,
+      "speed": 35000,
+      "price": 319,
+      "status": "rent",
+      "image": [
+        "https://preview.colorlib.com/theme/hvac/img/cars/car-1.jpg",
+        "https://preview.colorlib.com/theme/hvac/img/cars/car-2.jpg",
+        "https://preview.colorlib.com/theme/hvac/img/cars/car-3.jpg",
+        "https://preview.colorlib.com/theme/hvac/img/cars/car-4.jpg"
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Mustang shelby gt500",
+      "year": 2016,
+      "category": "Auto",
+      "HorsePower": 700,
+      "speed": 35000,
+      "price": 730900,
+      "status": "sale",
+      "image": [
+        "https://preview.colorlib.com/theme/hvac/img/cars/car-1.jpg",
+        "https://preview.colorlib.com/theme/hvac/img/cars/car-2.jpg",
+        "https://preview.colorlib.com/theme/hvac/img/cars/car-3.jpg",
+        "https://preview.colorlib.com/theme/hvac/img/cars/car-4.jpg"
+      ]
+    },
+    {
+      "id": 7,
+      "name": "Lamborghini aventador A90",
+      "year": 2020,
+      "category": "Auto",
+      "HorsePower": 700,
+      "speed": 35000,
+      "price": 422,
+      "status": "rent",
+      "image": [
+        "https://preview.colorlib.com/theme/hvac/img/cars/car-1.jpg",
+        "https://preview.colorlib.com/theme/hvac/img/cars/car-2.jpg",
+        "https://preview.colorlib.com/theme/hvac/img/cars/car-3.jpg",
+        "https://preview.colorlib.com/theme/hvac/img/cars/car-4.jpg"
+      ]
+    },
+    {
+      "id": 8,
+      "name": "Porsche cayenne turbo s",
+      "year": 2017,
+      "category": "Auto",
+      "HorsePower": 700,
+      "speed": 35000,
+      "price": 322,
+      "status": "rent",
+      "image": [
+        "https://preview.colorlib.com/theme/hvac/img/cars/car-1.jpg",
+        "https://preview.colorlib.com/theme/hvac/img/cars/car-2.jpg",
+        "https://preview.colorlib.com/theme/hvac/img/cars/car-3.jpg",
+        "https://preview.colorlib.com/theme/hvac/img/cars/car-4.jpg"
+      ]
+    }
+  ],
+  "services": [
+    {
+      "title": "what we offers",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor"
+    }
+  ],
+  "services-list": [
+    {
+      "title": "rental a car",
+      "image": "https://preview.colorlib.com/theme/hvac/img/services/services-1.png",
+      "text": "Consectetur adipiscing elit incididunt ut labore et dolore magna aliqua. Risus commodo viverra maecenas.",
+      "link": "#"
+    },
+    {
+      "title": "buying a car",
+      "image": "https://preview.colorlib.com/theme/hvac/img/services/services-2.png",
+      "text": "Consectetur adipiscing elit incididunt ut labore et dolore magna aliqua. Risus commodo viverra maecenas.",
+      "link": "#"
+    },
+    {
+      "title": "car maintenance",
+      "image": "https://preview.colorlib.com/theme/hvac/img/services/services-3.png",
+      "text": "Consectetur adipiscing elit incididunt ut labore et dolore magna aliqua. Risus commodo viverra maecenas.",
+      "link": "#"
+    },
+    {
+      "title": "support 24/7",
+      "image": "https://preview.colorlib.com/theme/hvac/img/services/services-4.png",
+      "text": "Consectetur adipiscing elit incididunt ut labore et dolore magna aliqua. Risus commodo viverra maecenas.",
+      "link": "#"
+    }
+  ],
+  "blog-item": [
+    {
+      "id": 1,
+      "image": "https://preview.colorlib.com/theme/hvac/img/latest-blog/lb-1.jpg",
+      "writer": "Polly Williams",
+      "date": "Dec 19, 2018",
+
+      "title": "Benjamin Franklin S Method Of Habit Formation ",
+      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Risus commodo viverra maecenas accumsan lacus vel facilisis.",
+      "comment": 8,
+      "detail_text": "WordPress, the premier free open-source blogging utility, has gone through several upgrades in its life. Today it’s one of the most popular blogging tools on the Internet; it’s easy to use, powerful, and very versatile. It also has a very active base of skilled users who are eager to improve the product and to help out those who haven’t tried it before.\nThough the Strayhorn 1.5 version is the favorite for many, it is not as stable or as secure as the newest version 2.0.3. The best part of the new version is the security patch; the new “nonce” security key reduces the chances of a malicious hacker finding a way into your admin panel.",
+      "details_quotes": "Though a major upgrade to 2.1 is due out soon, the 2.0.3 is something you should definitely download and install if only",
+      "details_desc": "In addition to the 2.0.3 install, you should be aware that some bugs have already been found, and that a plugin will need to be\r\n      installed to repair those bugs. If you modify any of the files that this patch plugin fixes, you'll need to either merge the changes with the new files or make those changes manually once again. You can find these issues by running a diff to locate changes; if the only changes you find are your own, then you're fine, and otherwise you\u2019ll need to merge them manually into the"
+    },
+    {
+      "id": 2,
+      "image": "https://preview.colorlib.com/theme/hvac/img/latest-blog/lb-2.jpg",
+      "writer": "Mattie Ramirez",
+      "date": "Dec 19, 2018",
+
+      "title": "How To Set Intentions That Energize You",
+      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Risus commodo viverra maecenas accumsan lacus vel facilisis.",
+      "comment": 0
+    },
+    {
+      "id": 3,
+      "image": "https://preview.colorlib.com/theme/hvac/img/latest-blog/lb-3.jpg",
+      "writer": "Nicholas Brewer",
+      "date": "Dec 19, 2018",
+
+      "title": "Burning Desire Golden Key Or Red Herring",
+      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Risus commodo viverra maecenas accumsan lacus vel facilisis.",
+      "comment": 0
+    },
+    {
+      "id": 4,
+      "image": "https://preview.colorlib.com/theme/hvac/img/blog/blog-2.jpg",
+      "writer": "Evelyn Lane",
+      "date": "Dec 17, 2018",
+
+      "title": "Where To Look For Cheap Brochure",
+      "content": "Usually potential customers will visit home for business dealing. Print good amount of fliers and give it to anyone who is visiting home like family...",
+      "comment": 0
+    },
+    {
+      "id": 5,
+      "image": "https://preview.colorlib.com/theme/hvac/img/blog/blog-3.jpg",
+      "writer": "Jessie Palmer",
+      "date": "Dec 19, 2018",
+
+      "title": "Promotional Advertising Specialty",
+      "content": "For those who work outside home, employ college students to distribute fliers at supermarkets, community centers...",
+      "comment": 0
+    },
+    {
+      "id": 6,
+      "image": "https://preview.colorlib.com/theme/hvac/img/blog/blog-4.jpg",
+      "writer": "Don Townsend",
+      "date": "Dec 22, 2018",
+
+      "title": "Using Banner Stands To Increase",
+      "content": "Spread the word by the mouth. Talk to everyone about the product and ask them to talk about it to others...",
+      "comment": 0
+    },
+    {
+      "id": 7,
+
+      "image": "https://preview.colorlib.com/theme/hvac/img/blog/blog-5.jpg",
+      "writer": " Isabella Mann",
+      "date": "Dec 25, 2018",
+
+      "title": "3 Smart Reasons Why You Should",
+      "content": "It's a very powerful tool to increase the network and doesn't even cost anything. When receiving a casual call from family members and friends...",
+      "comment": 2
+    },
+    {
+      "id": 8,
+      "image": "https://preview.colorlib.com/theme/hvac/img/blog/blog-6.jpg",
+      "writer": "Polly Williams",
+      "date": "Dec 27, 2018",
+
+      "title": "Search Engine Optimization And",
+      "content": "Some businesses place a jar at the reception counter where the business cards can be dropped for future reference, while visiting them...",
+      "comment": 6
+    }
+  ]
+}

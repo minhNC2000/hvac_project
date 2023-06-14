@@ -26,6 +26,7 @@ const getConfigurableProps = () => ({
   interval: number("interval", 1500, {}, valuesGroupId),
   transitionTime: number("transitionTime", 500, {}, valuesGroupId),
   swipeScrollTolerance: number("swipeScrollTolerance", 5, {}, valuesGroupId),
+
   ariaLabel: text("ariaLabel", undefined),
 });
 
@@ -46,7 +47,11 @@ const TestimonialSection = () => {
             </p>
           </div>
         </Grid>
-        <Carousel showArrows={true} {...getConfigurableProps()} className="testimonial_carousel">
+        <Carousel
+          showArrows={true}
+          {...getConfigurableProps()}
+          className="testimonial_carousel"
+        >
           <div className="testimonial__item">
             <div className="testimonial__item__author">
               <div className="testimonial__item__author__pic">

@@ -5,7 +5,7 @@ import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 const Sidebar = () => {
   return (
     <div className="blog__sidebar">
-      <form action="/" class="blog__sidebar__search">
+      <form action="/" className="blog__sidebar__search">
         <input type="text" placeholder="Search..." />
         <button type="submit">
           <FontAwesomeIcon icon={faMagnifyingGlass} />
