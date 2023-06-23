@@ -11,9 +11,7 @@ export const Contact = () => {
       <Breadcrumbs currentPath={"contact us"} />
       <section className="contact spad">
         <Container maxWidth="lg">
-          <div className="row">
-            <Form />
-          </div>
+          <Form />
         </Container>
       </section>
       <ShowRoomSection />

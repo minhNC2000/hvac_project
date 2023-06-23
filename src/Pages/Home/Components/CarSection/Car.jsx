@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from "react";
 import Container from "@mui/material/Container";
-import Grid from "@mui/material/Unstable_Grid2";
+
 import { Carousel } from "react-responsive-carousel";
 import { boolean, number, text } from "@storybook/addon-knobs";
 import toCurrency from "../../../../Services/Utilities/toCurrency";
 import "./car.scss";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { useAPI } from "../../../../Services/Hooks";
+import { Link } from "react-router-dom";
+import { Grid } from "@mui/material";
 const tooglesGroupId = "Toggles";
 const valuesGroupId = "Values";
 
@@ -41,74 +43,70 @@ const Car = () => {
 
   return (
     <section className="car spad">
-      <Container className="lg">
-        <Grid container spacing={1}>
-          <Grid lg={12}>
-            <div className="section-title">
-              <span>Our Car</span>
-              <h2>Best Vehicle Offers</h2>
-            </div>
+      <Container maxWidth="lg">
+        <Grid container spacing={1} className="section-title">
+          <Grid item xs={12} sm={12} md={12} lg={12}>
+            <span>Our Car</span>
+            <h2>Best Vehicle Offers</h2>
+
             <ul className="filter__controls">
               <li className="active mixitup-control-active" data-filter="*">
                 Most Researched
               </li>
-              <li data-filter=".sale" className="">
-                Latest on sale
-              </li>
+              <li data-filter=".sale">Latest on sale</li>
             </ul>
           </Grid>
-
-          <div className="row car-filter">
-            <Grid container spacing={1}>
-              {records.map((record) => (
-                <Grid lg={3} md={4} sm={6} key={record.id}>
-                  <div className="car__item">
-                    <Carousel {...getConfigurableProps()}>
-                      {record.image.map((img, index) => (
-                        <img src={img} alt={`slide${index}`} key={index}></img>
-                      ))}
-                    </Carousel>
-                  </div>
-                  <div className="car__item__text">
-                    <div className="car__item__text__inner">
-                      <div className="label-date">{record.year}</div>
-                      <h5>
-                        <a href="#">{record.name}</a>
-                      </h5>
-                      <ul>
-                        <li>
-                          <span>{record.speed}</span> mi
-                        </li>
-                        <li>{record.category}</li>
-                        <li>
-                          <span>{record.HorsePower}</span> hp
-                        </li>
-                      </ul>
-                    </div>
-                    <div className="car__item__price">
-                      {record.status == "rent" ? (
-                        <span className="car-option">For {record.status}</span>
-                      ) : (
-                        <span className="car-option sale">
-                          For {record.status}
-                        </span>
-                      )}
-                      <h6>
-                        {record.status == "rent" ? (
-                          <>
-                            {toCurrency(record.price)} <span>/Month</span>
-                          </>
-                        ) : (
-                          <>{toCurrency(record.price)}</>
-                        )}
-                      </h6>
-                    </div>
-                  </div>
-                </Grid>
-              ))}
-            </Grid>
-          </div>
         </Grid>
+        <div className=" car-filter">
+          <Grid container spacing={1}>
+            {records.map((record) => (
+              <Grid item lg={3} md={4} sm={6} key={record.id}>
+                <div className="car__item">
+                  <Carousel {...getConfigurableProps()}>
+                    {record.image.map((img, index) => (
+                      <img src={img} alt={`slide${index}`} key={index}></img>
+                    ))}
+                  </Carousel>
+                </div>
+                <div className="car__item__text">
+                  <div className="car__item__text__inner">
+                    <div className="label-date">{record.year}</div>
+                    <h5>
+                      <Link to="/">{record.name}</Link>
+                    </h5>
+                    <ul>
+                      <li>
+                        <span>{record.speed}</span> mi
+                      </li>
+                      <li>{record.category}</li>
+                      <li>
+                        <span>{record.HorsePower}</span> hp
+                      </li>
+                    </ul>
+                  </div>
+                  <div className="car__item__price">
+                    {record.status === "rent" ? (
+                      <span className="car-option">For {record.status}</span>
+                    ) : (
+                      <span className="car-option sale">
+                        For {record.status}
+                      </span>
+                    )}
+                    <h6>
+                      {record.status === "rent" ? (
+                        <>
+                          {toCurrency(record.price)} <span>/Month</span>
+                        </>
+                      ) : (
+                        <>{toCurrency(record.price)}</>
+                      )}
+                    </h6>
+                  </div>
+                </div>
+              </Grid>
+            ))}
+          </Grid>
+        </div>
       </Container>
     </section>
   );

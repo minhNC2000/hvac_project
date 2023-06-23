@@ -1,14 +1,18 @@
 import React, { useRef, useState } from "react";
-import Container from "@mui/material/Container";
 
-import Grid from "@mui/material/Grid";
-import FormControl from "@mui/material/FormControl";
-import MenuItem from "@mui/material/MenuItem";
-import Select from "@mui/material/Select";
 import emailjs from "@emailjs/browser";
 import { toast } from "react-toastify";
 import "./call.scss";
-import { Box, TextField } from "@mui/material";
+import {
+  Box,
+  Container,
+  FormControl,
+  Grid,
+  MenuItem,
+  Select,
+  TextField,
+} from "@mui/material";
+import { Link } from "react-router-dom";
 const Call = () => {
   const [option, setOption] = useState("");
   const form = useRef();
@@ -44,7 +48,7 @@ const Call = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    if (value.name.text == "") {
+    if (value.name.text === "") {
       setValue({
         ...value,
         name: {
@@ -53,7 +57,7 @@ const Call = () => {
           helperText: "Vui lòng nhập Tên",
         },
       });
-    } else if (value.email.text == "") {
+    } else if (value.email.text === "") {
       setValue({
         ...value,
         email: {
@@ -62,7 +66,7 @@ const Call = () => {
           helperText: "Vui lòng nhập Email",
         },
       });
-    } else if (value.phone.text == "") {
+    } else if (value.phone.text === "") {
       setValue({
         ...value,
         phone: {
@@ -86,6 +90,9 @@ const Call = () => {
               progress: undefined,
               theme: "colored",
             });
+            value.name.text = "";
+            value.email.text = "";
+            value.phone.text = "";
           },
           (error) => {
             toast.error("Thất bại", {
@@ -101,8 +108,8 @@ const Call = () => {
     <>
       <section className="call spad set-bg-call">
         <Container maxWidth="lg">
-          <div className="row">
-            <Grid container lg={5} md={6}>
+          <Grid container spacing={1}>
+            <Grid item sm={5} md={5} lg={5}>
               <div className="call__text">
                 <div className="section-title">
                   <h2>Request A Call Back</h2>
@@ -112,79 +119,77 @@ const Call = () => {
                     customer's
                   </p>
                 </div>
-                <a href="/lien-he">Contact Us</a>
+                <Link to="/lien-he">Contact Us</Link>
               </div>
             </Grid>
-            <Grid
-              container
-              lg={6}
-              md={6}
-              style={{ marginLeft: "95px", paddingLeft: "60px" }}
-            >
-              <div className="call__form">
-                <Box component="form" ref={form} onSubmit={handleSubmit}>
-                  <div className="row ">
-                    <Grid item lg={6}>
-                      <TextField
-                        error={value.name.isRequired}
-                        helperText={value.name.helperText}
-                        id="outlined-required"
-                        label="Name"
-                        name="user_name"
-                        onChange={handleNameChange}
-                      />
-                    </Grid>
-                    <Grid item lg={6} className="mb-25">
-                      <TextField
-                        error={value.email.isRequired}
-                        helperText={value.email.helperText}
-                        id="outlined-required"
-                        label="Email"
-                        name="user_email"
-                        onChange={handleEmailChange}
-                      />
-                    </Grid>
-                    <Grid item lg={6}>
-                      <TextField
-                        error={value.phone.isRequired}
-                        helperText={value.phone.helperText}
-                        id="outlined-required"
-                        label="Phone"
-                        name="user_phone"
-                        onChange={handlePhoneChange}
-                        inputProps={{ inputMode: "numeric", pattern: "[0-9]*" }}
-                      />
-                    </Grid>
-                    <Grid item lg={6} className="selection_form">
-                      <FormControl
-                        sx={{ m: 1, minWidth: 150 }}
-                        className="select_service_form"
+
+            <Grid item sm={6} md={6} lg={6} className="call__form">
+              <Box component="form" ref={form} onSubmit={handleSubmit}>
+                <Grid container spacing={1}>
+                  <Grid item xs={6} sm={6} md={6} lg={6} className="mb-25">
+                    <TextField
+                      error={value.name.isRequired}
+                      helperText={value.name.helperText}
+                      id="outlined-required"
+                      label="Name"
+                      name="user_name"
+                      onChange={handleNameChange}
+                    />
+                  </Grid>
+                  <Grid item xs={6} sm={6} md={6} lg={6}>
+                    <TextField
+                      error={value.email.isRequired}
+                      helperText={value.email.helperText}
+                      id="outlined-required"
+                      label="Email"
+                      name="user_email"
+                      onChange={handleEmailChange}
+                    />
+                  </Grid>
+                  <Grid item xs={6} sm={6} md={6} lg={6}>
+                    <TextField
+                      error={value.phone.isRequired}
+                      helperText={value.phone.helperText}
+                      id="outlined-required"
+                      label="Phone"
+                      name="user_phone"
+                      onChange={handlePhoneChange}
+                      inputProps={{
+                        inputMode: "numeric",
+                        pattern: "[0-9]*",
+                      }}
+                    />
+                  </Grid>
+                  <Grid item sm={6} md={6} lg={6} className="selection_form">
+                    <FormControl
+                      sx={{ m: 1, minWidth: 150 }}
+                      className="select_service_form"
+                    >
+                      <Select
+                        required
+                        name="select_subject"
+                        value={option}
+                        onChange={handleSelectChange}
+                        displayEmpty
+                        inputProps={{ "aria-label": "Without label" }}
                       >
-                        <Select
-                          required
-                          name="select_subject"
-                          value={option}
-                          onChange={handleSelectChange}
-                          displayEmpty
-                          inputProps={{ "aria-label": "Without label" }}
-                        >
-                          <MenuItem value="">
-                            <em>Choose Our Services</em>
-                          </MenuItem>
-                          <MenuItem value="Buy Cars">Buy Cars</MenuItem>
-                          <MenuItem value="Sell Cars">Sell Cars</MenuItem>
-                          <MenuItem value="Wash Cars">Wash Cars</MenuItem>
-                        </Select>
-                      </FormControl>
-                    </Grid>
-                  </div>
-                  <button type="submit" className="site-btn">
-                    Send
-                  </button>
-                </Box>
-              </div>
+                        <MenuItem value="">
+                          <em>Choose Our Services</em>
+                        </MenuItem>
+                        <MenuItem value="Buy Cars">Buy Cars</MenuItem>
+                        <MenuItem value="Sell Cars">Sell Cars</MenuItem>
+                        <MenuItem value="Wash Cars">Wash Cars</MenuItem>
+                      </Select>
+                    </FormControl>
+                  </Grid>
+                </Grid>
+
+                <button type="submit" className="site-btn">
+                  Send
+                </button>
+              </Box>
             </Grid>
-          </div>
+          </Grid>
         </Container>
       </section>
     </>

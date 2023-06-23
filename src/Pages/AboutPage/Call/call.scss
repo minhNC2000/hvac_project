@@ -28,19 +28,20 @@
       font-weight: 700;
       text-transform: uppercase;
       padding: 6px 0;
-      border-bottom: 2px solid red;
-      position: relative;
+
+      display: block;
+      &:hover {
+        border-bottom: 2px solid red;
+      }
     }
   }
   .call__form {
-  
+  margin-left: 95px;
+  padding-left: 60px;
     #outlined-required {
       background-color: #ffffff;
       border-radius: 5px;
       width: 200px;
-    }
-    .mb-25{
-      margin-bottom: 25px;
     }
 
     .site-btn {
@@ -53,6 +54,10 @@
       border-radius: 5px;
       margin: 25px 0 0;
       cursor: pointer;
+    }
+
+    .mb-25{
+      margin-bottom: 25px;
     }
     .selection_form {
       .select_service_form {

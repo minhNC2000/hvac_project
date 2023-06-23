@@ -1,7 +1,7 @@
 .chooseus {
   background: #f7f7f7;
   position: relative;
-    height: 530px;
+  height: 530px;
   padding-bottom: 85px;
   .chooseus__text {
     position: relative;
@@ -41,8 +41,8 @@
       background-color: #db2d2e;
       font-weight: 700;
       text-transform: capitalize;
-      a{
-        color:#f7f7f7
+      a {
+        color: #f7f7f7;
       }
     }
   }
@@ -52,6 +52,7 @@
     position: absolute;
     right: 0;
     top: 0;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 20% 100%);
     img {
       height: 100%;
       width: 100%;
@@ -77,7 +78,7 @@
         position: relative;
         left: 3px;
         top: -1px;
-    }
+      }
     }
   }
 }

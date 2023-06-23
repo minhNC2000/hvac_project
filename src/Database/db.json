@@ -9,6 +9,8 @@
       "speed": 35000,
       "price": 218,
       "status": "rent",
+      "stock": "K99D10459934",
+      "vin": "3VWKM245686",
       "image": [
         "https://preview.colorlib.com/theme/hvac/img/cars/car-1.jpg",
         "https://preview.colorlib.com/theme/hvac/img/cars/car-2.jpg",
@@ -39,8 +41,11 @@
       "category": "Auto",
       "HorsePower": 700,
       "speed": 35000,
-      "price": 299,
+      "discount":3000,
+      "price": 120000,
       "status": "rent",
+      "stock": "K99D10459934",
+      "vin": "3VWKM245686",
       "image": [
         "https://preview.colorlib.com/theme/hvac/img/cars/car-1.jpg",
         "https://preview.colorlib.com/theme/hvac/img/cars/car-2.jpg",
@@ -171,9 +176,9 @@
       "title": "Benjamin Franklin S Method Of Habit Formation ",
       "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Risus commodo viverra maecenas accumsan lacus vel facilisis.",
       "comment": 8,
-      "detail_text": "WordPress, the premier free open-source blogging utility, has gone through several upgrades in its life. Today it’s one of the most popular blogging tools on the Internet; it’s easy to use, powerful, and very versatile. It also has a very active base of skilled users who are eager to improve the product and to help out those who haven’t tried it before.\nThough the Strayhorn 1.5 version is the favorite for many, it is not as stable or as secure as the newest version 2.0.3. The best part of the new version is the security patch; the new “nonce” security key reduces the chances of a malicious hacker finding a way into your admin panel.",
-      "details_quotes": "Though a major upgrade to 2.1 is due out soon, the 2.0.3 is something you should definitely download and install if only",
-      "details_desc": "In addition to the 2.0.3 install, you should be aware that some bugs have already been found, and that a plugin will need to be\r\n      installed to repair those bugs. If you modify any of the files that this patch plugin fixes, you'll need to either merge the changes with the new files or make those changes manually once again. You can find these issues by running a diff to locate changes; if the only changes you find are your own, then you're fine, and otherwise you\u2019ll need to merge them manually into the"
+      "detail_text": "WordPress, the premier free open-source blogging utility, has gone through several upgrades in its life. Today it\u2019s one of the most popular blogging tools on the Internet; it\u2019s easy to use, powerful, and very versatile. It also has a very active base of skilled users who are eager to improve the product and to help out those who haven\u2019t tried it before.\r\n\r\nThough the Strayhorn 1.5 version is the favorite for many, it is not as stable or as secure as the newest version 2.0.3. The best part of the new version is the security patch; the new \u201Cnonce\u201D security key reduces the chances of a malicious hacker finding a way into your admin panel.",
+      "detail_quotes": "Though a major upgrade to 2.1 is due out soon, the 2.0.3 is something you should definitely download and install if only",
+      "detail_desc": "In addition to the 2.0.3 install, you should be aware that some bugs have already been found, and that a plugin will need to be\r\n      installed to repair those bugs. If you modify any of the files that this patch plugin fixes, you'll need to either merge the changes with the new files or make those changes manually once again. You can find these issues by running a diff to locate changes; if the only changes you find are your own, then you're fine, and otherwise you\u2019ll need to merge them manually into the"
     },
     {
       "id": 2,

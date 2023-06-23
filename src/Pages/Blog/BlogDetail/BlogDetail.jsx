@@ -14,18 +14,23 @@ const BlogDetail = () => {
     API.get().then(({ data }) => setDetailblog(data));
   }, []);
   if (detailblog == undefined) {
-    console.log(1);
     return <div>Chưa có dữ liệu</div>;
-    
   } else {
-    const { title } = detailblog;
-    const { detail_text, details_desc, details_quotes } = detailblog;
-    console.log(detail_text);
+    const {
+      title,
+      detail_text,
+      detail_desc,
+      detail_quotes,
+      writer,
+      date,
+      comment,
+    } = detailblog;
+
     return (
       <>
-        <Hero data={title} />
+        <Hero data={{ title, writer, date, comment }} />
 
-        <Content data={{ detail_text, details_desc, details_quotes }} />
+        <Content data={{ detail_text, detail_desc, detail_quotes }} />
       </>
     );
   }

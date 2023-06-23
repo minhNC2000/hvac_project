@@ -8,13 +8,19 @@ import { Blog } from "../Pages/Blog/Blog";
 
 import Content from "../Pages/Blog/BlogDetail/BlogDetailContent/Content";
 import BlogDetail from "../Pages/Blog/BlogDetail/BlogDetail";
+import CarDetail from "../Pages/Cars/CarDetail/CarDetail";
 
 export const publicRoutes = (
   <>
     <Route path="/" element={<Home />} />
-    <Route path="/cars" element={<Cars />} />
+    <Route path="/cars">
+      <Route path="" element={<Cars />} />
+      <Route path="car-detail">
+        <Route path=":id" element={<CarDetail />} />
+      </Route>
+    </Route>
     <Route path="/blog">
-    <Route  path="" element={<Blog />}/>
+      <Route path="" element={<Blog />} />
       <Route path="blog-details">
         <Route path=":id" element={<BlogDetail />} />
       </Route>

@@ -6,30 +6,24 @@
     .contact__body {
       padding: 15px;
       width: 33%;
-      margin: 0 auto;
     }
-    .row {
-      display: flex;
-      flex-wrap: wrap;
-      margin-right: -15px;
-      margin-left: -15px;
-      .contact__address__item {
-        margin-bottom: 30px;
-        h2 {
-          color: #353535;
-          font-weight: 700;
-          margin-bottom: 18px;
-        }
-        p {
-          line-height: 32px;
-          margin-bottom: 5px;
-        }
-        span {
-          display: block;
-          font-size: 18px;
-          color: #353535;
-          font-weight: 700;
-        }
+
+    .contact__address__item {
+      margin-bottom: 30px;
+      h2 {
+        color: #353535;
+        font-weight: 700;
+        margin-bottom: 18px;
+      }
+      p {
+        line-height: 32px;
+        margin-bottom: 5px;
+      }
+      span {
+        display: block;
+        font-size: 18px;
+        color: #353535;
+        font-weight: 700;
       }
     }
   }

@@ -30,7 +30,7 @@ export const Blog = () => {
                   {newblogs.map((newblog, index) => (
                     <Grid item lg={6} md={6} sm={6} key={index}>
                       <div className="blog__item">
-                        <Link to={`/blog/blog-details/${newblog.id}`} className="navigate"></Link>
+                        <Link to={`/blog/blog-details/${newblog.id}`} className="navigate" />
                           <div className="blog__item__pic">
                             <img src={newblog.image} alt="" />
                             <ul>

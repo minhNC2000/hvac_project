@@ -1,15 +1,14 @@
 import React, { useState } from "react";
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Unstable_Grid2";
-import Tabs from '@mui/material/Tabs';
-import Tab from '@mui/material/Tab';
+import Tabs from "@mui/material/Tabs";
+import Tab from "@mui/material/Tab";
 
 import Box from "@mui/material/Box";
 import PropTypes from "prop-types";
 
 import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";
-import FormHelperText from "@mui/material/FormHelperText";
 import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 
@@ -26,11 +25,7 @@ function TabPanel(props) {
       aria-labelledby={`simple-tab-${index}`}
       {...other}
     >
-      {value === index && (
-        <Box sx={{ p: 3 }}>
-          {children}
-        </Box>
-      )}
+      {value === index && <Box sx={{ p: 3 }}>{children}</Box>}
     </div>
   );
 }
@@ -50,16 +45,30 @@ function a11yProps(index) {
 
 const Hero = () => {
   const [value, setValue] = useState(0);
-  const [year, setYear] = useState("");
-  const [brand, setBrand] = useState("");
-  const [model, setModel] = useState("");
-  const [mileage, setMileage] = useState("");
+
+  const [select, setSelect] = useState({
+    year: "",
+    brand: "",
+    model: "",
+    mileage: "",
+  });
+  const handleChangeYear = (e) => {
+    setSelect({ ...select, year: e.target.value });
+  };
+  const handleChangeBrand = (e) => {
+    setSelect({ ...select, brand: e.target.value });
+  };
+  const handleChangeModel = (e) => {
+    setSelect({ ...select, model: e.target.value });
+  };
+  const handleChangeMileage = (e) => {
+    setSelect({ ...select, mileage: e.target.value });
+  };
+
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
-  const handleSelectYear = (e) => {
-    setYear(e.target.value);
-  };
+
   return (
     <>
       <div className="hero spad set-bg">
@@ -112,12 +121,7 @@ const Hero = () => {
                         />
                       </Tabs>
                     </Box>
-                    <TabPanel
-                      value={value}
-                      index={0}
-                      className="tab-content"
-                    
-                    >
+                    <TabPanel value={value} index={0} className="tab-content">
                       <div className="hero__tab__form">
                         <h2>Find Your Dream Car</h2>
                         <form className="select-list">
@@ -129,8 +133,8 @@ const Hero = () => {
                               Year
                             </InputLabel>
                             <Select
-                              value={year}
-                              onChange={handleSelectYear}
+                              value={select.year}
+                              onChange={handleChangeYear}
                               displayEmpty
                               labelId="demo-simple-select-helper-label"
                               id="demo-simple-select-helper"
@@ -152,8 +156,8 @@ const Hero = () => {
                               Brand
                             </InputLabel>
                             <Select
-                              value={brand}
-                              onChange={handleSelectYear}
+                              value={select.brand}
+                              onChange={handleChangeBrand}
                               displayEmpty
                               labelId="demo-simple-select-helper-label"
                               id="demo-simple-select-helper"
@@ -174,8 +178,8 @@ const Hero = () => {
                               Model
                             </InputLabel>
                             <Select
-                              value={model}
-                              onChange={handleSelectYear}
+                              value={select.model}
+                              onChange={handleChangeModel}
                               displayEmpty
                               labelId="demo-simple-select-helper-label"
                               id="demo-simple-select-helper"
@@ -194,8 +198,8 @@ const Hero = () => {
                               Mileage
                             </InputLabel>
                             <Select
-                              value={mileage}
-                              onChange={handleSelectYear}
+                              value={select.mileage}
+                              onChange={handleChangeMileage}
                               displayEmpty
                               labelId="demo-simple-select-helper-label"
                               id="demo-simple-select-helper"
@@ -207,7 +211,7 @@ const Hero = () => {
                               <MenuItem value={10}>10</MenuItem>
                             </Select>
                           </FormControl>
-                          <button type="submit" class="site-btn">
+                          <button type="submit" className="site-btn">
                             Searching
                           </button>
                         </form>
@@ -225,8 +229,8 @@ const Hero = () => {
                               Year
                             </InputLabel>
                             <Select
-                              value={year}
-                              onChange={handleSelectYear}
+                              value={select.year}
+                              onChange={handleChangeYear}
                               displayEmpty
                               labelId="demo-simple-select-helper-label"
                               id="demo-simple-select-helper"
@@ -248,8 +252,8 @@ const Hero = () => {
                               Brand
                             </InputLabel>
                             <Select
-                              value={brand}
-                              onChange={handleSelectYear}
+                              value={select.brand}
+                              onChange={handleChangeBrand}
                               displayEmpty
                               labelId="demo-simple-select-helper-label"
                               id="demo-simple-select-helper"
@@ -270,8 +274,8 @@ const Hero = () => {
                               Model
                             </InputLabel>
                             <Select
-                              value={model}
-                              onChange={handleSelectYear}
+                              value={select.model}
+                              onChange={handleChangeModel}
                               displayEmpty
                               labelId="demo-simple-select-helper-label"
                               id="demo-simple-select-helper"
@@ -290,8 +294,8 @@ const Hero = () => {
                               Mileage
                             </InputLabel>
                             <Select
-                              value={mileage}
-                              onChange={handleSelectYear}
+                              value={select.mileage}
+                              onChange={handleChangeMileage}
                               displayEmpty
                               labelId="demo-simple-select-helper-label"
                               id="demo-simple-select-helper"
@@ -303,7 +307,7 @@ const Hero = () => {
                               <MenuItem value={10}>10</MenuItem>
                             </Select>
                           </FormControl>
-                          <button type="submit" class="site-btn">
+                          <button type="submit" className="site-btn">
                             Searching
                           </button>
                         </form>

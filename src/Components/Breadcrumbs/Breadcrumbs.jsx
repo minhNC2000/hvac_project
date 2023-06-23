@@ -1,17 +1,19 @@
 import React from "react";
 
 import { Breadcrumbs, Container, Typography, Grid } from "@mui/material";
-
-import { Link } from "react-router-dom";
+import { stringToArray } from "../../Services/Utilities";
+import { Link, useLocation } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHouse } from "@fortawesome/free-solid-svg-icons";
 import "./breadcrumb.scss";
-const breadcrumbs = ({ currentPath }) => {
+const Breadcrumb = ({ currentPath }) => {
+  const { pathname } = useLocation();
+  const locateArr = stringToArray(pathname);
   return (
     <div className="breadcumb-option">
       <Container maxWidth="lg">
         <Grid container spacing={1}>
-          <Grid item lg={12}>
+          <Grid item xs={12} sm={12} md={12} lg={12}>
             <div className="breadcrumb__text">
               <h1>{currentPath}</h1>
               <Breadcrumbs
@@ -36,7 +38,7 @@ const breadcrumbs = ({ currentPath }) => {
                     textTransform: "capitalize",
                   }}
                 >
-                  {currentPath}
+                  {` ${locateArr[0]} > ${currentPath}`}
                 </Typography>
               </Breadcrumbs>
             </div>
@@ -47,4 +49,4 @@ const breadcrumbs = ({ currentPath }) => {
   );
 };
 
-export default breadcrumbs;
+export default Breadcrumb;

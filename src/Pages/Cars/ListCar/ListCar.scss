@@ -1,0 +1,44 @@
+.car__filter__option {
+  background: #f7f7f7;
+  padding: 12px 30px;
+  margin-bottom: 30px;
+  .select_option {
+    background: #fff;
+  }
+  .car__filter__option__item {
+    display: flex;
+    align-items: center;
+    h6 {
+      font-size: 15px;
+      color: #353535;
+      font-weight: 700;
+      display: inline-block;
+      margin-right: 15px;
+    }
+  }
+  .car__filter__option__item--right {
+    justify-content: flex-end;
+  }
+}
+.car-filter {
+  .car__item {
+    .navigate {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      cursor: pointer;
+      z-index: 9;
+    }
+    .car__item__text {
+      border: 1px solid #ebebeb;
+
+      .car__item__text__inner {
+        ul {
+          li {
+            font-size: 13px !important;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,16 +1,14 @@
 import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
-import Button from "@mui/material/Button";
-import Grid from "@mui/material/Grid";
-import Box from "@mui/material/Box";
+
 import TextareaAutosize from "@mui/base/TextareaAutosize";
-import { TextField } from "@mui/material";
+import { Box, Button, Grid, TextField } from "@mui/material";
 import { styled } from "@mui/system";
 import InputAdornment from "@mui/material/InputAdornment";
 import AccountCircle from "@mui/icons-material/AccountCircle";
 import EmailIcon from "@mui/icons-material/Email";
 import SubjectIcon from "@mui/icons-material/Subject";
-import {  toast } from "react-toastify";
+import { toast } from "react-toastify";
 import "./Form.scss";
 
 const blue = {
@@ -87,7 +85,7 @@ const Form = () => {
   });
   const handleSubmit = (e) => {
     e.preventDefault();
-    
+
     if (value.name.text == "") {
       setValue({
         ...value,
@@ -165,7 +163,7 @@ const Form = () => {
   };
   return (
     <Grid container spacing={1}>
-      <Grid item lg={6} md={6}>
+      <Grid item xs={12} sm={12} md={12} lg={6}>
         <div className="contact__text">
           <div className="section-title">
             <h2>Let's Work Together</h2>
@@ -187,12 +185,13 @@ const Form = () => {
           </ul>
         </div>
       </Grid>
-      <Grid item lg={6} md={6} style={{ paddingLeft: "70px" }}>
+      <Grid item xs={12} sm={12} md={12} lg={6}>
         <div className="contact__form">
           <Box component="form" ref={form} onSubmit={handleSubmit}>
-            <div className="row" style={{ marginBottom: "20px" }}>
-              <Grid item lg={6}>
+            <Grid container spacing={1} style={{ marginBottom: "20px" }}>
+              <Grid item xs={12} sm={12} md={12} lg={6}>
                 <TextField
+                  fullWidth
                   error={value.name.isRequired}
                   helperText={value.name.helperText}
                   id="outlined-required"
@@ -208,8 +207,9 @@ const Form = () => {
                   }}
                 />
               </Grid>
-              <Grid item lg={6} style={{ textAlign: "right" }}>
+              <Grid item xs={12} sm={12} md={12} lg={6}>
                 <TextField
+                  fullWidth
                   error={value.email.isRequired}
                   helperText={value.email.helperText}
                   id="outlined-required"
@@ -226,7 +226,7 @@ const Form = () => {
                   onChange={handleEmailChange}
                 />
               </Grid>
-            </div>
+            </Grid>
 
             <TextField
               fullWidth

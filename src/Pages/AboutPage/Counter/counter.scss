@@ -1,49 +1,47 @@
 .counter {
-    background: url("https://preview.colorlib.com/theme/hvac/img/counter-bg.jpg") no-repeat center  center/cover  ;
-    position: relative;
-    z-index: 1;
+  background: url("https://preview.colorlib.com/theme/hvac/img/counter-bg.jpg")
+    no-repeat center center/cover;
+  position: relative;
+  z-index: 1;
 
-    &::after {
-      position: absolute;
-      left: 0;
-      top: 0;
-      height: 100%;
-      width: 100%;
-      background: rgba(0, 0, 0, 0.3);
-      content: "";
-      z-index: -1;
+  &::after {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    content: "";
+    z-index: -1;
+  }
+
+  .counter__wrap {
+    padding: 0 15px;
+    width: 22%;
+  }
+  .counter__item {
+    text-align: center;
+    margin-bottom: 30px;
+    .counter-num {
+      font-size: 50px;
+      font-weight: 700;
+      color: #ffffff;
+      display: inline-block;
     }
-    .row {
-      justify-content: center;
-      .counter__wrap {
-        margin: 0 15px;
-        padding: 0 15px;
-        width: 22%;
-      }
-      .counter__item {
-        text-align: center;
-        margin-bottom: 30px;
-        .counter-num {
-          font-size: 60px;
-          font-weight: 700;
-          color: #ffffff;
-          display: inline-block;
-        }
-        strong {
-          font-size: 60px;
-          font-weight: 600;
-          color: #ffffff;
-          display: inline-block;
-          line-height: 72px;
-        }
-        p {
-          font-size: 20px;
-          margin-bottom: 0;
-          text-transform: uppercase;
-          margin-top: 5px;
-          font-weight: 500;
-          color: #ffffff;
-        }
-      }
+    strong {
+      font-size: 50px;
+      font-weight: 600;
+      color: #ffffff;
+      display: inline-block;
+      line-height: 72px;
+    }
+    p {
+      font-size: 20px;
+      margin-bottom: 0;
+      text-transform: uppercase;
+      margin-top: 5px;
+      font-weight: 500;
+      color: #ffffff;
     }
   }
+}

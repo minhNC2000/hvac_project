@@ -16,7 +16,7 @@ const Services = () => {
       .then((data) => setServices(data))
       .catch((err) => console.log(err));
   }, []);
-  
+
   useEffect(() => {
     fetch(API_servicesList)
       .then((response) => response.json())
@@ -27,36 +27,30 @@ const Services = () => {
   return (
     <section className="services spad">
       <Container className="lg">
-        <div className="row">
-          <Grid item lg={12} >
-            <div className="section-title">
-              <span>Our Services</span>
-              {services.map((service,index) => (
-                <div key={index}>
-                  <h2 >{service.title}</h2>
-                  <p >{service.description}</p>
-                </div>
-              ))}
+        <Grid item xs={12} sm={12} md={12} lg={12} className="section-title">
+          <span>Our Services</span>
+          {services.map((service, index) => (
+            <div key={index}>
+              <h2>{service.title}</h2>
+              <p>{service.description}</p>
             </div>
-          </Grid>
-        </div>
-        <div className="row">
-          <Grid container spacing={2}>
-            {serviceslist.map((servicelist,index) => (
-              <Grid item lg={3} md={6} sm={6} key={index} >
-                <div className="services__item" >
-                  <img src={servicelist.image} alt="" />
-                  <h5>{servicelist.title}</h5>
-                  <p>{servicelist.text}</p>
-                  <a href={servicelist.link}>
+          ))}
+        </Grid>
+
+        <Grid container spacing={2}>
+          {serviceslist.map((servicelist, index) => (
+            <Grid item xs={12} sm={6} md={6} lg={3} key={index}>
+              <div className="services__item">
+                <img src={servicelist.image} alt="" />
+                <h5>{servicelist.title}</h5>
+                <p>{servicelist.text}</p>
+                <a href={servicelist.link}>
                   <FontAwesomeIcon icon={faArrowRightLong} />
                 </a>
-                </div>
-              </Grid>
-            ))}
-            
-          </Grid>
-        </div>
+              </div>
+            </Grid>
+          ))}
+        </Grid>
       </Container>
     </section>
   );

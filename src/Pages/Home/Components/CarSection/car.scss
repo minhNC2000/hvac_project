@@ -1,5 +1,8 @@
 .car {
   .section-title {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
     margin-bottom: 20px;
     span {
       font-size: 15px;
@@ -58,7 +61,7 @@
             position: relative;
             display: inline-block;
             margin-right: 40px;
-            &:nth-child(-n+2)::after {
+            &:nth-child(-n + 2)::after {
               position: absolute;
               right: -23px;
               top: 3px;
@@ -89,14 +92,14 @@
           padding-left: 120px;
           padding-top: 14px;
           padding-bottom: 7px;
-          span{
+          span {
             color: #727171;
             font-size: 13px;
             font-weight: 400;
           }
         }
         .car-option {
-          text-transform:capitalize;
+          text-transform: capitalize;
           font-size: 15px;
           color: #ffffff;
           font-weight: 600;
@@ -107,9 +110,9 @@
           position: absolute;
           left: 0;
           top: 0;
-        &.sale {
-          background-color: #db2d2e;
-        }
+          &.sale {
+            background-color: #db2d2e;
+          }
         }
       }
     }

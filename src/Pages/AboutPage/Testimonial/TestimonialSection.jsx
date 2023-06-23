@@ -38,7 +38,7 @@ const TestimonialSection = () => {
     <section className="testimonial spad">
       <Container className="lg">
         <Grid item lg={12}>
-          <div class="section-title testimonial-title">
+          <div className="section-title testimonial-title">
             <span>Testimonials</span>
             <h2>What People Say About Us</h2>
             <p>

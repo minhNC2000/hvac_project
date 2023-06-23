@@ -3,7 +3,7 @@ import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
 import Button from "@mui/material/Button";
 
-import "../../Assets/Styles/_header.scss";
+import "./HeaderDesktop.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faClock, faEnvelope } from "@fortawesome/free-regular-svg-icons";
 import {
@@ -18,8 +18,9 @@ import {
   faGoogle,
   faInstagram,
 } from "@fortawesome/free-brands-svg-icons";
+import { NavLink } from "react-router-dom";
 
-const Header = () => {
+const HeaderDesktop = () => {
   return (
     <header className="header">
       <div className="header__top">
@@ -81,7 +82,7 @@ const Header = () => {
       <Container maxWidth="lg">
         <div className="row">
           <Grid container spacing={1}>
-            <Grid item lg={2}>
+            <Grid item xs={6} md={2} lg={2}>
               <div className="header__logo">
                 <a href="#">
                   <img
@@ -91,38 +92,25 @@ const Header = () => {
                 </a>
               </div>
             </Grid>
-            <Grid item lg={10}>
+            <Grid item xs={6} md={10} lg={10}>
               <div className="header__nav">
                 <div className="header__menu">
                   <ul>
                     <li>
-                      <a href="/">Home</a>
+                      <NavLink to="/">Home</NavLink>
                     </li>
                     <li>
-                      <a href="/cars">Cars</a>
+                      <NavLink to="/cars">Cars</NavLink>
                     </li>
                     <li>
-                      <a href="/blog">Blog</a>
+                      <NavLink to="/blog">Blog</NavLink>
+                    </li>
+
+                    <li>
+                      <NavLink to="/gioi-thieu">About</NavLink>
                     </li>
                     <li>
-                      <a href="/pages">Pages</a>
-                      <ul className="dropdown">
-                        <li>
-                          <a href="/gioi-thieu">About Us</a>
-                        </li>
-                        <li>
-                          <a href="./car-details.html">Car Details</a>
-                        </li>
-                        <li>
-                          <a href="/blog-details">Blog Details</a>
-                        </li>
-                      </ul>
-                    </li>
-                    <li>
-                      <a href="/gioi-thieu">About</a>
-                    </li>
-                    <li>
-                      <a href="/lien-he">Contact</a>
+                      <NavLink to="/lien-he">Contact</NavLink>
                     </li>
                   </ul>
                 </div>
@@ -155,4 +143,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default HeaderDesktop;
