@@ -63,9 +63,7 @@ footer {
       }
     }
   }
-  .footer_link-offset {
-    margin-left: 8.33%;
-  }
+
   .footer__widget {
     margin-bottom: 30px;
     line-height: 36px;
@@ -101,6 +99,8 @@ footer {
       width: 50%;
       float: left;
       li {
+        width: 100px;
+        display: block;
         a {
           color: #8d8d8d;
         }

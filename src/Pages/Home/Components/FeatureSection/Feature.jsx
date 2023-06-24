@@ -3,6 +3,8 @@ import Container from "@mui/material/Container";
 import Grid from "@mui/material/Unstable_Grid2";
 
 import "./feature.scss";
+import { Link } from "react-router-dom";
+import { AboutPage } from "../../../AboutPage/AboutPage";
 const Feature = () => {
   return (
     <section className="feature spad">
@@ -27,12 +29,12 @@ const Feature = () => {
                 </p>
               </div>
               <div className="feature__text__btn">
-                <a className="primary-btn" href="/gioi-thieu">
+                <Link className="primary-btn" to="/gioi-thieu">
                   About Us
-                </a>
-                <a href="#" className="primary-btn partner-btn">
+                </Link>
+                <Link to="/" className="primary-btn partner-btn">
                   Our Partners
-                </a>
+                </Link>
               </div>
             </div>
           </Grid>

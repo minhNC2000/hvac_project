@@ -57,7 +57,7 @@ const Car = () => {
             </ul>
           </Grid>
         </Grid>
-        <div className=" car-filter">
+        <div className="car-filter">
           <Grid container spacing={1}>
             {records.map((record) => (
               <Grid item lg={3} md={4} sm={6} key={record.id}>
@@ -69,6 +69,10 @@ const Car = () => {
                   </Carousel>
                 </div>
                 <div className="car__item__text">
+                  <Link
+                    to={`/cars/car-detail/${record.id}`}
+                    className="navigate"
+                  />
                   <div className="car__item__text__inner">
                     <div className="label-date">{record.year}</div>
                     <h5>

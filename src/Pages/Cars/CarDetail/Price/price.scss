@@ -1,0 +1,65 @@
+.car__details__sidebar {
+  padding: 25px 30px 20px;
+  background: #f7f7f7;
+
+  .primary-btn {
+    display: block;
+    text-align: center;
+    border-radius: 0;
+    padding: 12px 20px;
+    margin-bottom: 10px;
+    svg {
+      margin-right: 5px;
+    }
+  }
+  .car__details__sidebar__model {
+    margin-bottom: 5px;
+    ul {
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+      padding-bottom: 6px;
+      margin-bottom: 20px;
+      li {
+        width: 100%;
+        font-size: 15px;
+        color: #727171;
+        line-height: 36px;
+        overflow: hidden;
+        span {
+          color: #353535;
+          font-weight: 700;
+          float: right;
+        }
+      }
+    }
+    p {
+      color: #353535;
+      padding: 10px 0;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+      text-align: center;
+      margin-bottom: 0;
+    }
+  }
+  .car__details__sidebar__payment {
+    .sidebar-btn {
+      background: #ffffff;
+      color: #727171;
+      border: 1px solid #ebebeb;
+    }
+    ul {
+      margin-bottom: 30px;
+      li {
+        width: 100%;
+        list-style: none;
+        font-size: 15px;
+        color: #727171;
+        line-height: 36px;
+        overflow: hidden;
+        span {
+          color: #353535;
+          font-weight: 700;
+          float: right;
+        }
+      }
+    }
+  }
+}

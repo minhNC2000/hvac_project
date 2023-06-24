@@ -4,7 +4,7 @@ import { Breadcrumbs, Container, Typography, Grid } from "@mui/material";
 import { stringToArray } from "../../Services/Utilities";
 import { Link, useLocation } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faHouse } from "@fortawesome/free-solid-svg-icons";
+import { faArrowRight, faHouse } from "@fortawesome/free-solid-svg-icons";
 import "./breadcrumb.scss";
 const Breadcrumb = ({ currentPath }) => {
   const { pathname } = useLocation();
@@ -17,7 +17,7 @@ const Breadcrumb = ({ currentPath }) => {
             <div className="breadcrumb__text">
               <h1>{currentPath}</h1>
               <Breadcrumbs
-                separator=">"
+                separator=<FontAwesomeIcon icon={faArrowRight} />
                 aria-label="breadcrumb"
                 className="navigate"
               >
@@ -38,7 +38,10 @@ const Breadcrumb = ({ currentPath }) => {
                     textTransform: "capitalize",
                   }}
                 >
-                  {` ${locateArr[0]} > ${currentPath}`}
+                  <Link to={`/${locateArr[0]}`}>
+                    <span>{locateArr[0]}</span>
+                  </Link>{" "}
+                  <FontAwesomeIcon icon={faArrowRight} /> {currentPath}
                 </Typography>
               </Breadcrumbs>
             </div>

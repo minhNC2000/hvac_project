@@ -13,10 +13,10 @@ export const Cars = () => {
       <section className="car spad">
         <Container className="lg">
           <Grid container spacing={2}>
-            <Grid item lg={3}>
+            <Grid item xs={12} sm={12} md={12} lg={3}>
               <Sidebar />
             </Grid>
-            <Grid item lg={9}>
+            <Grid item xs={12} sm={12} md={12} lg={9}>
               <ListCar />
             </Grid>
           </Grid>

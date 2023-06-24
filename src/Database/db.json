@@ -8,6 +8,7 @@
       "HorsePower": 700,
       "speed": 35000,
       "price": 218,
+      "discount": 3000,
       "status": "rent",
       "stock": "K99D10459934",
       "vin": "3VWKM245686",
@@ -26,6 +27,11 @@
       "HorsePower": 700,
       "speed": 35000,
       "price": 73900,
+      "msrp":120000,
+      "discount": 3000,
+      "stock": "K99D10459934",
+      "vin": "3VWKM245686",
+      "pricein":"11/26/2018",
       "status": "sale",
       "image": [
         "https://preview.colorlib.com/theme/hvac/img/cars/car-1.jpg",
@@ -41,7 +47,7 @@
       "category": "Auto",
       "HorsePower": 700,
       "speed": 35000,
-      "discount":3000,
+      "discount": 3000,
       "price": 120000,
       "status": "rent",
       "stock": "K99D10459934",
@@ -61,6 +67,8 @@
       "HorsePower": 700,
       "speed": 35000,
       "price": 120000,
+      "stock": "K99D10459934",
+      "vin": "3VWKM245686",
       "status": "sale",
       "image": [
         "https://preview.colorlib.com/theme/hvac/img/cars/car-1.jpg",
@@ -77,6 +85,8 @@
       "HorsePower": 700,
       "speed": 35000,
       "price": 319,
+      "stock": "K99D10459934",
+      "vin": "3VWKM245686",
       "status": "rent",
       "image": [
         "https://preview.colorlib.com/theme/hvac/img/cars/car-1.jpg",
@@ -93,6 +103,8 @@
       "HorsePower": 700,
       "speed": 35000,
       "price": 730900,
+      "stock": "K99D10459934",
+      "vin": "3VWKM245686",
       "status": "sale",
       "image": [
         "https://preview.colorlib.com/theme/hvac/img/cars/car-1.jpg",
@@ -109,6 +121,8 @@
       "HorsePower": 700,
       "speed": 35000,
       "price": 422,
+      "stock": "K99D10459934",
+      "vin": "3VWKM245686",
       "status": "rent",
       "image": [
         "https://preview.colorlib.com/theme/hvac/img/cars/car-1.jpg",
@@ -125,6 +139,8 @@
       "HorsePower": 700,
       "speed": 35000,
       "price": 322,
+      "stock": "K99D10459934",
+      "vin": "3VWKM245686",
       "status": "rent",
       "image": [
         "https://preview.colorlib.com/theme/hvac/img/cars/car-1.jpg",

@@ -49,7 +49,7 @@ const Chooseus = () => {
             url="https://www.youtube.com/watch?v=Xd0Ok-MkqoE"
             width="100%"
             height="100%"
-            controls={true}
+            
           />
         </div>
       </Container>

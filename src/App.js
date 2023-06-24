@@ -1,4 +1,5 @@
-import { ThemeProvider, createTheme } from "@mui/material";
+import { ThemeProvider } from "@mui/material";
+import { createTheme } from "@mui/material/styles";
 import DefaultLayout from "./Layout/DefaultLayout/DefaultLayout";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -14,10 +15,17 @@ function App() {
         xl: 1536,
       },
     },
+    palette: {
+      secondary: {
+        light: "#ff7961",
+        main: "#f44336",
+        dark: "#ba000d",
+        contrastText: "#000",
+      },
+    },
   });
-  
+
   return (
-  
     <ThemeProvider theme={theme}>
       <DefaultLayout />
       <ToastContainer
@@ -32,8 +40,7 @@ function App() {
         pauseOnHover
         theme="colored"
       />
-      </ThemeProvider>
-  
+    </ThemeProvider>
   );
 }
 

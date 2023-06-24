@@ -14,20 +14,22 @@ const CarDetail = () => {
   useEffect(() => {
     API.get().then(({ data }) => setInfo(data));
   }, []);
-  const { image, price, name } = info;
-  console.log(name);
+  const { image, price, pricein, name, discount, stock, vin, msrp } = info;
+
   if (info == undefined) {
     return <div>Chưa có dữ liệu</div>;
   } else {
     return (
       <>
         <Breadcrumbs currentPath={`${name}`} />
-        <Container className="lg">
-          <Grid container spacing={1}>
-            <Info data={{ image }} />
-            <Price />
-          </Grid>
-        </Container>
+        <div className="car-details spad" style={{ paddingBottom: "70px" }}>
+          <Container maxWidth="lg">
+            <Grid container spacing={3}>
+              <Info data={{ image }} />
+              <Price data={{ price, pricein, discount, stock, vin, msrp }} />
+            </Grid>
+          </Container>
+        </div>
       </>
     );
   }

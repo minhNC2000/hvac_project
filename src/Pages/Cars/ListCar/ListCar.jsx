@@ -17,7 +17,7 @@ const getConfigurableProps = () => ({
   showIndicators: boolean("showIndicators", false, tooglesGroupId),
   infiniteLoop: boolean("infiniteLoop", true, tooglesGroupId),
   showThumbs: boolean("showThumbs", false, tooglesGroupId),
-  useKeyboardArrows: boolean("useKeyboardArrows", true, tooglesGroupId),
+  useKeyboardArrows: boolean("useKeyboardArrows", false, tooglesGroupId),
   autoPlay: boolean("autoPlay", true, tooglesGroupId),
   stopOnHover: boolean("stopOnHover", true, tooglesGroupId),
   swipeable: boolean("swipeable", true, tooglesGroupId),
@@ -26,7 +26,7 @@ const getConfigurableProps = () => ({
   autoFocus: boolean("autoFocus", false, tooglesGroupId),
   thumbWidth: number("thumbWidth", 100, {}, valuesGroupId),
   selectedItem: number("selectedItem", 0, {}, valuesGroupId),
-  interval: number("interval", 3000, {}, valuesGroupId),
+  interval: number("interval", 2000, {}, valuesGroupId),
   transitionTime: number("transitionTime", 500, {}, valuesGroupId),
   swipeScrollTolerance: number("swipeScrollTolerance", 5, {}, valuesGroupId),
   ariaLabel: text("ariaLabel", undefined),
@@ -35,7 +35,7 @@ const getConfigurableProps = () => ({
 const ListCar = () => {
   const [select, setSelect] = useState({
     quantity: "",
-    order: "asc",
+    order: "",
   });
   const [filters, setFilter] = useState([]);
   const API = useAPI("cars");
@@ -113,7 +113,6 @@ const ListCar = () => {
               key={filter.id}
               className="car__item"
             >
-            <Link to={`/cars/car-detail/${filter.id}`} className="navigate" />
               <div className="car__item_slider">
                 <Carousel {...getConfigurableProps()}>
                   {filter.image.map((img, index) => (
@@ -122,6 +121,10 @@ const ListCar = () => {
                 </Carousel>
               </div>
               <div className="car__item__text">
+                <Link
+                  to={`/cars/car-detail/${filter.id}`}
+                  className="navigate"
+                />
                 <div className="car__item__text__inner">
                   <div className="label-date">{filter.year}</div>
                   <h5>
