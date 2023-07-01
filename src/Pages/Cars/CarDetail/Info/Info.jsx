@@ -1,6 +1,6 @@
 import React from "react";
 import { Box, Grid, Tab, Tabs, Typography } from "@mui/material";
-import { boolean, number, text } from "@storybook/addon-knobs";
+
 import { Carousel } from "react-responsive-carousel";
 import PropTypes from "prop-types";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -16,11 +16,7 @@ const TabPanel = (props) => {
       aria-labelledby={`simple-tab-${index}`}
       {...other}
     >
-      {value === index && (
-        <Box sx={{ p: 3 }}>
-          <Typography>{children}</Typography>
-        </Box>
-      )}
+      {value === index && <Box sx={{ p: 3 }}>{children}</Box>}
     </div>
   );
 };
@@ -40,29 +36,9 @@ function a11yProps(index) {
 
 const Info = ({ data }) => {
   const [value, setValue] = React.useState(0);
-  const tooglesGroupId = "Toggles";
-  const valuesGroupId = "Values";
+
   const images = data.image;
-  const getConfigurableProps = () => ({
-    showArrows: boolean("showArrows", false, tooglesGroupId),
-    showStatus: boolean("showStatus", false, tooglesGroupId),
-    showIndicators: boolean("showIndicators", false, tooglesGroupId),
-    infiniteLoop: boolean("infiniteLoop", true, tooglesGroupId),
-    showThumbs: boolean("showThumbs", true, tooglesGroupId),
-    useKeyboardArrows: boolean("useKeyboardArrows", true, tooglesGroupId),
-    autoPlay: boolean("autoPlay", true, tooglesGroupId),
-    stopOnHover: boolean("stopOnHover", true, tooglesGroupId),
-    swipeable: boolean("swipeable", true, tooglesGroupId),
-    dynamicHeight: boolean("dynamicHeight", true, tooglesGroupId),
-    emulateTouch: boolean("emulateTouch", true, tooglesGroupId),
-    autoFocus: boolean("autoFocus", false, tooglesGroupId),
-    thumbWidth: number("thumbWidth", 100, {}, valuesGroupId),
-    selectedItem: number("selectedItem", 0, {}, valuesGroupId),
-    interval: number("interval", 1500, {}, valuesGroupId),
-    transitionTime: number("transitionTime", 500, {}, valuesGroupId),
-    swipeScrollTolerance: number("swipeScrollTolerance", 5, {}, valuesGroupId),
-    ariaLabel: text("ariaLabel", undefined),
-  });
+
   const handleChange = (e, newValue) => {
     setValue(newValue);
   };
@@ -73,7 +49,11 @@ const Info = ({ data }) => {
       <>
         <Grid item xs={12} sm={12} md={12} lg={9}>
           <div className="car-carousel">
-            <Carousel {...getConfigurableProps()}>
+            <Carousel
+              showArrows={false}
+              showStatus={false}
+              showIndicators={false}
+            >
               {images.map((image, index) => (
                 <img src={image} alt={`slide${index}`} key={index}></img>
               ))}

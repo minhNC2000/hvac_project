@@ -8,8 +8,11 @@
       "HorsePower": 700,
       "speed": 35000,
       "price": 218,
-      "discount": 3000,
+      "discount": 10,
       "status": "rent",
+      "brand":"bentley",
+      "color":"yellow",
+      "pricein":"11/26/2018",
       "stock": "K99D10459934",
       "vin": "3VWKM245686",
       "image": [
@@ -26,12 +29,15 @@
       "category": "Auto",
       "HorsePower": 700,
       "speed": 35000,
-      "price": 73900,
-      "msrp":120000,
-      "discount": 3000,
+      
+      "price": 120000,
+      "discount": 10,
+      "brand":"bentley",
+      "color":"yellow",
+    
       "stock": "K99D10459934",
       "vin": "3VWKM245686",
-      "pricein":"11/26/2018",
+      "pricein": "11/26/2018",
       "status": "sale",
       "image": [
         "https://preview.colorlib.com/theme/hvac/img/cars/car-1.jpg",
@@ -47,9 +53,12 @@
       "category": "Auto",
       "HorsePower": 700,
       "speed": 35000,
-      "discount": 3000,
-      "price": 120000,
+      "discount": 15,
+      "price": 299,
       "status": "rent",
+      "color":"white",
+      "brand":"bentley",
+      "pricein":"11/26/2023",
       "stock": "K99D10459934",
       "vin": "3VWKM245686",
       "image": [
@@ -66,7 +75,12 @@
       "category": "Auto",
       "HorsePower": 700,
       "speed": 35000,
-      "price": 120000,
+      
+      "discount": 5,
+      "price": 600000,
+      "brand":"Audi",
+      "color":"blue",
+      "pricein":"11/26/2016",
       "stock": "K99D10459934",
       "vin": "3VWKM245686",
       "status": "sale",
@@ -84,7 +98,11 @@
       "category": "Auto",
       "HorsePower": 700,
       "speed": 35000,
+      "discount": 8,
       "price": 319,
+      "brand":"Audi",
+      "color":"blue",
+      "pricein":"11/26/2008",
       "stock": "K99D10459934",
       "vin": "3VWKM245686",
       "status": "rent",
@@ -102,7 +120,12 @@
       "category": "Auto",
       "HorsePower": 700,
       "speed": 35000,
+      
+      "discount": 30,
       "price": 730900,
+      "brand":"Acura",
+      "color":"white",
+      "pricein":"11/26/1918",
       "stock": "K99D10459934",
       "vin": "3VWKM245686",
       "status": "sale",
@@ -121,6 +144,10 @@
       "HorsePower": 700,
       "speed": 35000,
       "price": 422,
+      "discount":10,
+      "brand":"Acura",
+      "color":"red",
+      "pricein":"12/20/2018",
       "stock": "K99D10459934",
       "vin": "3VWKM245686",
       "status": "rent",
@@ -139,6 +166,52 @@
       "HorsePower": 700,
       "speed": 35000,
       "price": 322,
+      "discount": 20,
+      "brand":"buggati",
+      "color":"red",
+      "pricein":"11/20/2000",
+      "stock": "K99D10459934",
+      "vin": "3VWKM245686",
+      "status": "rent",
+      "image": [
+        "https://preview.colorlib.com/theme/hvac/img/cars/car-1.jpg",
+        "https://preview.colorlib.com/theme/hvac/img/cars/car-2.jpg",
+        "https://preview.colorlib.com/theme/hvac/img/cars/car-3.jpg",
+        "https://preview.colorlib.com/theme/hvac/img/cars/car-4.jpg"
+      ]
+    },
+    {
+      "id": 9,
+      "name": "Buggati Aventador",
+      "year": 2017,
+      "category": "Auto",
+      "HorsePower": 700,
+      "speed": 35000,
+      "price": 322,
+      "discount": 20,
+      "brand":"buggati",
+      "pricein":"01/21/2012",
+      "stock": "K99D10459934",
+      "vin": "3VWKM245686",
+      "status": "rent",
+      "image": [
+        "https://preview.colorlib.com/theme/hvac/img/cars/car-1.jpg",
+        "https://preview.colorlib.com/theme/hvac/img/cars/car-2.jpg",
+        "https://preview.colorlib.com/theme/hvac/img/cars/car-3.jpg",
+        "https://preview.colorlib.com/theme/hvac/img/cars/car-4.jpg"
+      ]
+    },
+    {
+      "id": 10,
+      "name": "Acura",
+      "year": 2017,
+      "category": "Auto",
+      "HorsePower": 700,
+      "speed": 35000,
+      "price": 322,
+      "discount": 20,
+      "brand":"buggati",
+      "pricein":"01/21/2012",
       "stock": "K99D10459934",
       "vin": "3VWKM245686",
       "status": "rent",
@@ -185,7 +258,7 @@
   "blog-item": [
     {
       "id": 1,
-      "image": "https://preview.colorlib.com/theme/hvac/img/latest-blog/lb-1.jpg",
+      "image": "https://preview.colorlib.com/theme/hvac/img/blog/blog-1.jpg",
       "writer": "Polly Williams",
       "date": "Dec 19, 2018",
 
@@ -198,23 +271,29 @@
     },
     {
       "id": 2,
-      "image": "https://preview.colorlib.com/theme/hvac/img/latest-blog/lb-2.jpg",
+      "image": "https://preview.colorlib.com/theme/hvac/img/blog/blog-2.jpg",
       "writer": "Mattie Ramirez",
       "date": "Dec 19, 2018",
 
       "title": "How To Set Intentions That Energize You",
       "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Risus commodo viverra maecenas accumsan lacus vel facilisis.",
-      "comment": 0
+      "comment": 0,
+      "detail_text": "WordPress, the premier free open-source blogging utility, has gone through several upgrades in its life. Today it\u2019s one of the most popular blogging tools on the Internet; it\u2019s easy to use, powerful, and very versatile. It also has a very active base of skilled users who are eager to improve the product and to help out those who haven\u2019t tried it before.\r\n\r\nThough the Strayhorn 1.5 version is the favorite for many, it is not as stable or as secure as the newest version 2.0.3. The best part of the new version is the security patch; the new \u201Cnonce\u201D security key reduces the chances of a malicious hacker finding a way into your admin panel.",
+      "detail_quotes": "Though a major upgrade to 2.1 is due out soon, the 2.0.3 is something you should definitely download and install if only",
+      "detail_desc": "In addition to the 2.0.3 install, you should be aware that some bugs have already been found, and that a plugin will need to be\r\n      installed to repair those bugs. If you modify any of the files that this patch plugin fixes, you'll need to either merge the changes with the new files or make those changes manually once again. You can find these issues by running a diff to locate changes; if the only changes you find are your own, then you're fine, and otherwise you\u2019ll need to merge them manually into the"
     },
     {
       "id": 3,
-      "image": "https://preview.colorlib.com/theme/hvac/img/latest-blog/lb-3.jpg",
+      "image": "https://preview.colorlib.com/theme/hvac/img/blog/blog-3.jpg",
       "writer": "Nicholas Brewer",
       "date": "Dec 19, 2018",
 
       "title": "Burning Desire Golden Key Or Red Herring",
       "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Risus commodo viverra maecenas accumsan lacus vel facilisis.",
-      "comment": 0
+      "comment": 1,
+      "detail_text": "WordPress, the premier free open-source blogging utility, has gone through several upgrades in its life. Today it\u2019s one of the most popular blogging tools on the Internet; it\u2019s easy to use, powerful, and very versatile. It also has a very active base of skilled users who are eager to improve the product and to help out those who haven\u2019t tried it before.\r\n\r\nThough the Strayhorn 1.5 version is the favorite for many, it is not as stable or as secure as the newest version 2.0.3. The best part of the new version is the security patch; the new \u201Cnonce\u201D security key reduces the chances of a malicious hacker finding a way into your admin panel.",
+      "detail_quotes": "Though a major upgrade to 2.1 is due out soon, the 2.0.3 is something you should definitely download and install if only",
+      "detail_desc": "In addition to the 2.0.3 install, you should be aware that some bugs have already been found, and that a plugin will need to be\r\n      installed to repair those bugs. If you modify any of the files that this patch plugin fixes, you'll need to either merge the changes with the new files or make those changes manually once again. You can find these issues by running a diff to locate changes; if the only changes you find are your own, then you're fine, and otherwise you\u2019ll need to merge them manually into the"
     },
     {
       "id": 4,
@@ -223,8 +302,11 @@
       "date": "Dec 17, 2018",
 
       "title": "Where To Look For Cheap Brochure",
-      "content": "Usually potential customers will visit home for business dealing. Print good amount of fliers and give it to anyone who is visiting home like family...",
-      "comment": 0
+      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Risus commodo viverra maecenas accumsan lacus vel facilisis.",
+      "comment": 0,
+      "detail_text": "WordPress, the premier free open-source blogging utility, has gone through several upgrades in its life. Today it\u2019s one of the most popular blogging tools on the Internet; it\u2019s easy to use, powerful, and very versatile. It also has a very active base of skilled users who are eager to improve the product and to help out those who haven\u2019t tried it before.\r\n\r\nThough the Strayhorn 1.5 version is the favorite for many, it is not as stable or as secure as the newest version 2.0.3. The best part of the new version is the security patch; the new \u201Cnonce\u201D security key reduces the chances of a malicious hacker finding a way into your admin panel.",
+      "detail_quotes": "Though a major upgrade to 2.1 is due out soon, the 2.0.3 is something you should definitely download and install if only",
+      "detail_desc": "In addition to the 2.0.3 install, you should be aware that some bugs have already been found, and that a plugin will need to be\r\n      installed to repair those bugs. If you modify any of the files that this patch plugin fixes, you'll need to either merge the changes with the new files or make those changes manually once again. You can find these issues by running a diff to locate changes; if the only changes you find are your own, then you're fine, and otherwise you\u2019ll need to merge them manually into the"
     },
     {
       "id": 5,
@@ -233,8 +315,11 @@
       "date": "Dec 19, 2018",
 
       "title": "Promotional Advertising Specialty",
-      "content": "For those who work outside home, employ college students to distribute fliers at supermarkets, community centers...",
-      "comment": 0
+      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Risus commodo viverra maecenas accumsan lacus vel facilisis.",
+      "comment": 2,
+      "detail_text": "WordPress, the premier free open-source blogging utility, has gone through several upgrades in its life. Today it\u2019s one of the most popular blogging tools on the Internet; it\u2019s easy to use, powerful, and very versatile. It also has a very active base of skilled users who are eager to improve the product and to help out those who haven\u2019t tried it before.\r\n\r\nThough the Strayhorn 1.5 version is the favorite for many, it is not as stable or as secure as the newest version 2.0.3. The best part of the new version is the security patch; the new \u201Cnonce\u201D security key reduces the chances of a malicious hacker finding a way into your admin panel.",
+      "detail_quotes": "Though a major upgrade to 2.1 is due out soon, the 2.0.3 is something you should definitely download and install if only",
+      "detail_desc": "In addition to the 2.0.3 install, you should be aware that some bugs have already been found, and that a plugin will need to be\r\n      installed to repair those bugs. If you modify any of the files that this patch plugin fixes, you'll need to either merge the changes with the new files or make those changes manually once again. You can find these issues by running a diff to locate changes; if the only changes you find are your own, then you're fine, and otherwise you\u2019ll need to merge them manually into the"
     },
     {
       "id": 6,
@@ -243,8 +328,11 @@
       "date": "Dec 22, 2018",
 
       "title": "Using Banner Stands To Increase",
-      "content": "Spread the word by the mouth. Talk to everyone about the product and ask them to talk about it to others...",
-      "comment": 0
+      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Risus commodo viverra maecenas accumsan lacus vel facilisis.",
+      "comment": 66,
+      "detail_text": "WordPress, the premier free open-source blogging utility, has gone through several upgrades in its life. Today it\u2019s one of the most popular blogging tools on the Internet; it\u2019s easy to use, powerful, and very versatile. It also has a very active base of skilled users who are eager to improve the product and to help out those who haven\u2019t tried it before.\r\n\r\nThough the Strayhorn 1.5 version is the favorite for many, it is not as stable or as secure as the newest version 2.0.3. The best part of the new version is the security patch; the new \u201Cnonce\u201D security key reduces the chances of a malicious hacker finding a way into your admin panel.",
+      "detail_quotes": "Though a major upgrade to 2.1 is due out soon, the 2.0.3 is something you should definitely download and install if only",
+      "detail_desc": "In addition to the 2.0.3 install, you should be aware that some bugs have already been found, and that a plugin will need to be\r\n      installed to repair those bugs. If you modify any of the files that this patch plugin fixes, you'll need to either merge the changes with the new files or make those changes manually once again. You can find these issues by running a diff to locate changes; if the only changes you find are your own, then you're fine, and otherwise you\u2019ll need to merge them manually into the"
     },
     {
       "id": 7,
@@ -254,8 +342,11 @@
       "date": "Dec 25, 2018",
 
       "title": "3 Smart Reasons Why You Should",
-      "content": "It's a very powerful tool to increase the network and doesn't even cost anything. When receiving a casual call from family members and friends...",
-      "comment": 2
+      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Risus commodo viverra maecenas accumsan lacus vel facilisis.",
+      "comment": 2,
+      "detail_text": "WordPress, the premier free open-source blogging utility, has gone through several upgrades in its life. Today it\u2019s one of the most popular blogging tools on the Internet; it\u2019s easy to use, powerful, and very versatile. It also has a very active base of skilled users who are eager to improve the product and to help out those who haven\u2019t tried it before.\r\n\r\nThough the Strayhorn 1.5 version is the favorite for many, it is not as stable or as secure as the newest version 2.0.3. The best part of the new version is the security patch; the new \u201Cnonce\u201D security key reduces the chances of a malicious hacker finding a way into your admin panel.",
+      "detail_quotes": "Though a major upgrade to 2.1 is due out soon, the 2.0.3 is something you should definitely download and install if only",
+      "detail_desc": "In addition to the 2.0.3 install, you should be aware that some bugs have already been found, and that a plugin will need to be\r\n      installed to repair those bugs. If you modify any of the files that this patch plugin fixes, you'll need to either merge the changes with the new files or make those changes manually once again. You can find these issues by running a diff to locate changes; if the only changes you find are your own, then you're fine, and otherwise you\u2019ll need to merge them manually into the"
     },
     {
       "id": 8,
@@ -264,8 +355,11 @@
       "date": "Dec 27, 2018",
 
       "title": "Search Engine Optimization And",
-      "content": "Some businesses place a jar at the reception counter where the business cards can be dropped for future reference, while visiting them...",
-      "comment": 6
+      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Risus commodo viverra maecenas accumsan lacus vel facilisis.",
+      "comment": 6,
+      "detail_text": "WordPress, the premier free open-source blogging utility, has gone through several upgrades in its life. Today it\u2019s one of the most popular blogging tools on the Internet; it\u2019s easy to use, powerful, and very versatile. It also has a very active base of skilled users who are eager to improve the product and to help out those who haven\u2019t tried it before.\r\n\r\nThough the Strayhorn 1.5 version is the favorite for many, it is not as stable or as secure as the newest version 2.0.3. The best part of the new version is the security patch; the new \u201Cnonce\u201D security key reduces the chances of a malicious hacker finding a way into your admin panel.",
+      "detail_quotes": "Though a major upgrade to 2.1 is due out soon, the 2.0.3 is something you should definitely download and install if only",
+      "detail_desc": "In addition to the 2.0.3 install, you should be aware that some bugs have already been found, and that a plugin will need to be\r\n      installed to repair those bugs. If you modify any of the files that this patch plugin fixes, you'll need to either merge the changes with the new files or make those changes manually once again. You can find these issues by running a diff to locate changes; if the only changes you find are your own, then you're fine, and otherwise you\u2019ll need to merge them manually into the"
     }
   ]
 }

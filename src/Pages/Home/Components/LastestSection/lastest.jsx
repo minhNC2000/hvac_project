@@ -9,7 +9,7 @@ import { Link } from "react-router-dom";
 const Lastest = () => {
   const [newblogs, setNewblog] = useState([]);
 
-  const API = useAPI("blog-item");
+  const API = useAPI("blog-item?_limit=3");
   useEffect(() => {
     API.get().then(({ data }) => setNewblog(data));
   }, []);

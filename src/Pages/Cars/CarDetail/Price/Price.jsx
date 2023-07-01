@@ -12,7 +12,8 @@ import {
 import { toCurrency } from "../../../../Services/Utilities";
 
 const Price = ({ data }) => {
-  const dprice = data.msrp - data.discount;
+  const dprice = (data.price * data.discount) / 100;
+  const total = data.price - dprice;
   return (
     <Grid
       item
@@ -40,13 +41,13 @@ const Price = ({ data }) => {
         <div className="car__details__sidebar__payment">
           <ul>
             <li>
-              MSRP <span>{toCurrency(data.msrp)}</span>
+              MSRP <span>{toCurrency(data.price)}</span>
             </li>
             <li>
-              Dealer Discounts <span>{toCurrency(data.discount)}</span>
+              Dealer Discounts <span>{toCurrency(dprice)} </span>
             </li>
             <li>
-              Price <span>{toCurrency(dprice)}</span>
+              Price <span>{toCurrency(total)}</span>
             </li>
           </ul>
 

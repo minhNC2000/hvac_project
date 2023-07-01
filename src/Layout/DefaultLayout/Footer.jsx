@@ -22,39 +22,34 @@ const Footer = () => {
     <footer>
       <Container maxWidth="lg">
         <div className="footer__contact">
-          <div className="row">
-            <Grid container spacing={1}>
-              <Grid item xs={12} sm={12} md={6} lg={6}>
-                <div className="footer__contact__title">
-                  <h2>Contact Us Now!</h2>
-                </div>
-              </Grid>
-              <Grid item xs={12} sm={12} md={6} lg={6}>
-                <div className="footer__contact__option">
-                  <a
-                    className="option__item__phone"
-                    href="tel:(+12) 345 678 910"
-                  >
-                    <FontAwesomeIcon
-                      icon={faPhone}
-                      style={{ color: "#ffffff" }}
-                    />
-                    (+12) 345 678 910
-                  </a>
-                  <a
-                    className="option__item__email"
-                    href="mailto:Colorlib@gmail.com"
-                  >
-                    <FontAwesomeIcon
-                      icon={faEnvelope}
-                      style={{ color: "#db2d2e" }}
-                    />
-                    Colorlib@gmail.com
-                  </a>
-                </div>
-              </Grid>
+          <Grid container spacing={1}>
+            <Grid item xs={12} sm={12} md={6} lg={6}>
+              <div className="footer__contact__title">
+                <h2>Contact Us Now!</h2>
+              </div>
             </Grid>
-          </div>
+            <Grid item xs={12} sm={12} md={6} lg={6}>
+              <div className="footer__contact__option">
+                <a className="option__item__phone" href="tel:(+12) 345 678 910">
+                  <FontAwesomeIcon
+                    icon={faPhone}
+                    style={{ color: "#ffffff" }}
+                  />
+                  (+12) 345 678 910
+                </a>
+                <a
+                  className="option__item__email"
+                  href="mailto:Colorlib@gmail.com"
+                >
+                  <FontAwesomeIcon
+                    icon={faEnvelope}
+                    style={{ color: "#db2d2e" }}
+                  />
+                  Colorlib@gmail.com
+                </a>
+              </div>
+            </Grid>
+          </Grid>
         </div>
 
         <Grid container spacing={3}>

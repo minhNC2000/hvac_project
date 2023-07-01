@@ -37,21 +37,12 @@ const generateUrl = (obj) => {
   return url;
 };
 export default function useAPI(path) {
-  /**
-   *
-   * @param {string} method Set method to call api. Require* UPPERCASE.
-   * @param {{
-   * id?: string | number,
-   * data: string | object,
-   * extraUrl?: string
-   * }} requestObject Set object data to call api.
-   * @returns Promise
-   */
   const send = async (method, requestObject) => {
     let responsive = {};
     const defData = requestObject.data ?? null;
     const defExUrl = requestObject.extraUrl ?? "";
     const defUrl = host + path + defExUrl;
+
     let initFetch = {
       method,
       "content-type": "application/json",

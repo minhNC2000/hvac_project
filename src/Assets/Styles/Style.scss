@@ -25,6 +25,9 @@ body {
 .spad {
   padding-top: 100px;
   padding-bottom: 100px;
+
+  animation: fadeIn;
+  animation-duration: 2s;
 }
 
 img {
@@ -72,6 +75,6 @@ h2 {
   background-size: cover;
   background-position: top center;
 }
-.thumbs-wrapper{
+.thumbs-wrapper {
   margin: 20px 0 !important;
 }

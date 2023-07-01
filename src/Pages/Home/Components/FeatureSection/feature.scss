@@ -4,13 +4,12 @@
   z-index: 1;
   padding-bottom: 55px;
   .feature_body {
-    display: flex;
-    justify-content: space-between;
     .feature_body-content {
       margin-bottom: 25px;
     }
   }
   .feature__text {
+    z-index: 1;
     .section-title {
       text-align: left;
       margin-bottom: 34px;
@@ -71,17 +70,27 @@
       font-weight: 700;
     }
   }
-  &:after {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    width: 605px;
-    height: 404px;
-    background-image: url("https://preview.colorlib.com/theme/hvac/img/feature/car.png");
-    content: "";
-    -webkit-transform: translate(-300px, -202px);
-    -ms-transform: translate(-300px, -202px);
-    transform: translate(-300px, -202px);
+  .feature_image {
+    display: flex;
+    align-items: center;
     z-index: -1;
+
+    img {
+      min-width: 100%;
+    }
   }
+
+  // &:after {
+  //   position: absolute;
+  //   left: 50%;
+  //   top: 50%;
+  //   width: 605px;
+  //   height: 404px;
+  //   background-image: url("https://preview.colorlib.com/theme/hvac/img/feature/car.png");
+  //   content: "";
+  //   -webkit-transform: translate(-300px, -202px);
+  //   -ms-transform: translate(-300px, -202px);
+  //   transform: translate(-300px, -202px);
+  //   z-index: -1;
+  // }
 }

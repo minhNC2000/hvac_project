@@ -2,6 +2,7 @@ import { ThemeProvider } from "@mui/material";
 import { createTheme } from "@mui/material/styles";
 import DefaultLayout from "./Layout/DefaultLayout/DefaultLayout";
 import { ToastContainer } from "react-toastify";
+import "animate.css";
 import "react-toastify/dist/ReactToastify.css";
 
 function App() {

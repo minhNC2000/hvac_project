@@ -2,47 +2,23 @@ import React from "react";
 import "./ListCar.scss";
 import { FormControl, Grid, InputLabel, MenuItem, Select } from "@mui/material";
 import { useState } from "react";
-import { useAPI } from "../../../Services/Hooks";
 import { useEffect } from "react";
 import toCurrency from "../../../Services/Utilities/toCurrency";
 import { Carousel } from "react-responsive-carousel";
-import { boolean, number, text } from "@storybook/addon-knobs";
 import { Link } from "react-router-dom";
-const tooglesGroupId = "Toggles";
-const valuesGroupId = "Values";
 
-const getConfigurableProps = () => ({
-  showArrows: boolean("showArrows", false, tooglesGroupId),
-  showStatus: boolean("showStatus", false, tooglesGroupId),
-  showIndicators: boolean("showIndicators", false, tooglesGroupId),
-  infiniteLoop: boolean("infiniteLoop", true, tooglesGroupId),
-  showThumbs: boolean("showThumbs", false, tooglesGroupId),
-  useKeyboardArrows: boolean("useKeyboardArrows", false, tooglesGroupId),
-  autoPlay: boolean("autoPlay", true, tooglesGroupId),
-  stopOnHover: boolean("stopOnHover", true, tooglesGroupId),
-  swipeable: boolean("swipeable", true, tooglesGroupId),
-  dynamicHeight: boolean("dynamicHeight", true, tooglesGroupId),
-  emulateTouch: boolean("emulateTouch", true, tooglesGroupId),
-  autoFocus: boolean("autoFocus", false, tooglesGroupId),
-  thumbWidth: number("thumbWidth", 100, {}, valuesGroupId),
-  selectedItem: number("selectedItem", 0, {}, valuesGroupId),
-  interval: number("interval", 2000, {}, valuesGroupId),
-  transitionTime: number("transitionTime", 500, {}, valuesGroupId),
-  swipeScrollTolerance: number("swipeScrollTolerance", 5, {}, valuesGroupId),
-  ariaLabel: text("ariaLabel", undefined),
-});
-
-const ListCar = () => {
+const ListCar = ({ products, changeOption }) => {
   const [select, setSelect] = useState({
-    quantity: "",
-    order: "",
+    quantity: 9,
+    order: "asc",
   });
-  const [filters, setFilter] = useState([]);
-  const API = useAPI("cars");
+  const [data, setData] = useState([]);
   useEffect(() => {
-    API.get().then(({ data }) => setFilter(data));
-  }, []);
-
+    setData(products);
+    changeOption(1, select.quantity, select.order);
+  
+  }, [products,select]);
+  console.log("listcar", products);
   const handleChangeQuantity = (e) => {
     setSelect({ ...select, quantity: e.target.value });
   };
@@ -51,10 +27,10 @@ const ListCar = () => {
   };
   return (
     <>
-      <div className="car__filter__option">
-        <Grid container spacing={2}>
-          <Grid item md={6} lg={6}>
-            <div className="car__filter__option__item">
+      <div className="car__product__option">
+        <Grid container spacing={1}>
+          <Grid item xs={6} sm={12} md={6} lg={6}>
+            <div className="car__product__option__item">
               <h6>Show On Page</h6>
               <FormControl
                 sx={{ m: 1, minWidth: 120 }}
@@ -70,15 +46,15 @@ const ListCar = () => {
                   className="select_option"
                   label="Quantity"
                 >
+                  <MenuItem value={2}>2 Car</MenuItem>
                   <MenuItem value={9}>9 Car</MenuItem>
-                  <MenuItem value={15}>15 Car</MenuItem>
                   <MenuItem value={20}>20 Car</MenuItem>
                 </Select>
               </FormControl>
             </div>
           </Grid>
-          <Grid item md={6} lg={6}>
-            <div className="car__filter__option__item car__filter__option__item--right">
+          <Grid item xs={6} sm={12} md={6} lg={6}>
+            <div className="car__product__option__item order ">
               <h6>Sort By</h6>
               <FormControl
                 sx={{ m: 1, minWidth: 120 }}
@@ -95,64 +71,73 @@ const ListCar = () => {
                   label="Order"
                 >
                   <MenuItem value="asc">Price: Highest First</MenuItem>
-                  <MenuItem value="desc">Price: Lowhest First</MenuItem>
+                  <MenuItem value="desc">Price: Lowest First</MenuItem>
                 </Select>
               </FormControl>
             </div>
           </Grid>
         </Grid>
       </div>
-      <div className="car-filter">
+      <div className="car-product">
         <Grid container spacing={3}>
-          {filters.map((filter) => (
+          {products.map((product) => (
             <Grid
               item
               lg={4}
               md={4}
               sm={4}
-              key={filter.id}
+              key={product.id}
               className="car__item"
             >
               <div className="car__item_slider">
-                <Carousel {...getConfigurableProps()}>
-                  {filter.image.map((img, index) => (
+                <Carousel
+                  showThumbs={false}
+                  swipeable={true}
+                  showArrows={false}
+                  showIndicators={false}
+                  showStatus={false}
+                >
+                  {product.image.map((img, index) => (
                     <img src={img} alt={`slide${index}`} key={index}></img>
                   ))}
                 </Carousel>
               </div>
               <div className="car__item__text">
-                <Link
-                  to={`/cars/car-detail/${filter.id}`}
-                  className="navigate"
-                />
                 <div className="car__item__text__inner">
-                  <div className="label-date">{filter.year}</div>
+                  <div className="label-date">{product.year}</div>
                   <h5>
-                    <a href="#">{filter.name}</a>
+                    <Link
+                      to={`/cars/car-detail/${product.id}`}
+                      className="navigate"
+                    >
+                      {product.name}
+                    </Link>
                   </h5>
                   <ul>
                     <li>
-                      <span>{filter.speed}</span> mi
+                      <span>{product.speed}</span> mi
                     </li>
-                    <li>{filter.category}</li>
+                    <li>{product.category}</li>
                     <li>
-                      <span>{filter.HorsePower}</span> hp
+                      <span>{product.HorsePower}</span> hp
                     </li>
                   </ul>
                 </div>
                 <div className="car__item__price">
-                  {filter.status == "rent" ? (
-                    <span className="car-option">For {filter.status}</span>
+                  {product.status == "rent" ? (
+                    <span className="car-option">For {product.status}</span>
                   ) : (
-                    <span className="car-option sale">For {filter.status}</span>
+                    <span className="car-option sale">
+                      For {product.status}
+                    </span>
                   )}
                   <h6>
-                    {filter.status == "rent" ? (
+                    {product.status == "rent" ? (
                       <>
-                        {toCurrency(filter.price)} <span>/Month</span>
+                        {toCurrency(product.price)} <span>/Month</span>
                       </>
                     ) : (
-                      <>{toCurrency(filter.price)}</>
+                      <>{toCurrency(product.price)}</>
                     )}
                   </h6>
                 </div>

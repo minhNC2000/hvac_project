@@ -14,7 +14,7 @@ const CarDetail = () => {
   useEffect(() => {
     API.get().then(({ data }) => setInfo(data));
   }, []);
-  const { image, price, pricein, name, discount, stock, vin, msrp } = info;
+  const { image, price, pricein, name, discount, stock, vin } = info;
 
   if (info == undefined) {
     return <div>Chưa có dữ liệu</div>;
@@ -26,7 +26,7 @@ const CarDetail = () => {
           <Container maxWidth="lg">
             <Grid container spacing={3}>
               <Info data={{ image }} />
-              <Price data={{ price, pricein, discount, stock, vin, msrp }} />
+              <Price data={{ price, pricein, discount, stock, vin  }} />
             </Grid>
           </Container>
         </div>

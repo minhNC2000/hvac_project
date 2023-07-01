@@ -6,40 +6,39 @@ footer {
     padding-bottom: 60px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
     margin-bottom: 65px;
-    .row {
-      padding-top: 40px;
-      .footer__contact__title {
-        font-size: 25px;
+    padding-top: 40px;
+    .footer__contact__title {
+      font-size: 25px;
+      color: #ffffff;
+      font-weight: 700;
+    }
+    .footer__contact__option {
+      
+      .option__item__phone {
+        svg {
+          margin: 0 5px;
+        }
+        font-size: 15px;
         color: #ffffff;
+        background: #db2d2e;
+        display: inline-block;
         font-weight: 700;
+        padding: 14px 18px 14px 24px;
+        margin-right: 16px;
+        margin-bottom: 16px;
+        border-radius: 2px;
       }
-      .footer__contact__option {
-        text-align: right;
-        .option__item__phone {
-          svg {
-            margin: 0 5px;
-          }
-          font-size: 15px;
-          color: #ffffff;
-          background: #db2d2e;
-          display: inline-block;
-          font-weight: 700;
-          padding: 14px 18px 14px 24px;
-          margin-right: 16px;
-          border-radius: 2px;
+      .option__item__email {
+        svg {
+          margin: 0 5px;
         }
-        .option__item__email {
-          svg {
-            margin: 0 5px;
-          }
-          color: #323232;
-          background: #ffffff;
-          display: inline-block;
-          font-weight: 700;
-          padding: 14px 18px 14px 24px;
-          margin-right: 16px;
-          border-radius: 2px;
-        }
+        color: #323232;
+        background: #ffffff;
+        display: inline-block;
+        font-weight: 700;
+        padding: 14px 18px 14px 24px;
+        margin-right: 16px;
+        border-radius: 2px;
       }
     }
   }

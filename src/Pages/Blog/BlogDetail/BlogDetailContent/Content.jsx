@@ -12,7 +12,7 @@ import "./content.scss";
 const Content = ({ data }) => {
   return (
     <section className="blog-details spad">
-      <Container className="lg">
+      <Container maxWidth="lg">
         <Grid container spacing={1}>
           <Grid item lg={12}>
             <div className="blog__details__pic">

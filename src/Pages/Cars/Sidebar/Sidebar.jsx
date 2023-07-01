@@ -1,15 +1,19 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./Sidebar.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import { FormControl, InputLabel, MenuItem, Select } from "@mui/material";
 import { useState } from "react";
-const Sidebar = () => {
+import { useAPI } from "../../../Services/Hooks";
+const Sidebar = ({ clearSearchData, callSearch }) => {
   const [select, setSelect] = useState({
     brand: "",
     color: "",
     milage: "",
   });
+  const [search, setSearch] = useState([]);
+  const [value, setValue] = useState("");
+
   const handleChangeBrand = (e) => {
     setSelect({ ...select, brand: e.target.value });
   };
@@ -19,12 +23,28 @@ const Sidebar = () => {
   const handleChangeMilage = (e) => {
     setSelect({ ...select, milage: e.target.value });
   };
+  const handleChange = (e) => {
+    setValue(e.target.value);
+    if (e.target.value == "") {
+      clearSearchData.apply();
+    }
+  };
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    return callSearch(value);
+    // getSearch.get().then(({ data }) => console.log(data));
+  };
   return (
     <div className="car__sidebar">
       <div className="car__search">
         <h5>Car Search</h5>
-        <form action="#">
-          <input type="text" placeholder="Search..." />
+        <form onSubmit={handleSubmit}>
+          <input
+            type="text"
+            placeholder="Search..."
+            value={value}
+            onChange={handleChange}
+          />
           <button type="submit">
             <FontAwesomeIcon icon={faMagnifyingGlass} />
           </button>
@@ -52,6 +72,7 @@ const Sidebar = () => {
               <MenuItem value="Buggati">Buggati</MenuItem>
             </Select>
           </FormControl>
+
           <FormControl
             sx={{ m: 1, minWidth: 120 }}
             className="select-list-item"
@@ -70,6 +91,7 @@ const Sidebar = () => {
               <MenuItem value="Yellow">Yellow</MenuItem>
             </Select>
           </FormControl>
+
           <FormControl
             sx={{ m: 1, minWidth: 120 }}
             className="select-list-item"
