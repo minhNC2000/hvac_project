@@ -4,24 +4,15 @@ import Grid from "@mui/material/Grid";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRightLong } from "@fortawesome/free-solid-svg-icons";
 import "./services.scss";
+import { useAPI } from "../../../../Services/Hooks";
 const Services = () => {
   const [services, setServices] = useState([]);
   const [serviceslist, setServiceslist] = useState([]);
-  const API = "http://localhost:3004/";
-  const API_services = API + "services";
-  const API_servicesList = API + "services-list";
+  const API_servicesList = useAPI("services-list");
+  const API = useAPI("services");
   useEffect(() => {
-    fetch(API_services)
-      .then((response) => response.json())
-      .then((data) => setServices(data))
-      .catch((err) => console.log(err));
-  }, []);
-
-  useEffect(() => {
-    fetch(API_servicesList)
-      .then((response) => response.json())
-      .then((data) => setServiceslist(data))
-      .catch((err) => console.log(err));
+    API.get().then(({ data }) => setServices(data));
+    API_servicesList.get().then(({ data }) => setServiceslist(data));
   }, []);
 
   return (
