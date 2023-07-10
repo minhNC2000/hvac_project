@@ -111,7 +111,7 @@ const Hero = () => {
                   <img
                     src="https://preview.colorlib.com/theme/hvac/img/wheel.png"
                     alt=""
-                  />{" "}
+                  />
                   Test Drive
                 </a>
                 <a href="#" className="primary-btn more-btn">

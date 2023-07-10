@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Grid, Tab, Tabs, Typography } from "@mui/material";
+import { Box, Grid, Tab, Tabs } from "@mui/material";
 
 import { Carousel } from "react-responsive-carousel";
 import PropTypes from "prop-types";
@@ -42,7 +42,7 @@ const Info = ({ data }) => {
   const handleChange = (e, newValue) => {
     setValue(newValue);
   };
-  if (images == undefined) {
+  if (images === undefined) {
     return <h1>Chưa có dữ liệu</h1>;
   } else {
     return (
@@ -288,7 +288,7 @@ const Info = ({ data }) => {
                   </div>
                 </TabPanel>
                 <TabPanel value={value} index={1}>
-                <div className="car__details__tab__info">
+                  <div className="car__details__tab__info">
                     <Grid container spacing={3}>
                       <Grid
                         item
@@ -485,7 +485,7 @@ const Info = ({ data }) => {
                   </div>
                 </TabPanel>
                 <TabPanel value={value} index={2}>
-                <div className="car__details__tab__info">
+                  <div className="car__details__tab__info">
                     <Grid container spacing={3}>
                       <Grid
                         item
@@ -682,7 +682,7 @@ const Info = ({ data }) => {
                   </div>
                 </TabPanel>
                 <TabPanel value={value} index={3}>
-                <div className="car__details__tab__info">
+                  <div className="car__details__tab__info">
                     <Grid container spacing={3}>
                       <Grid
                         item

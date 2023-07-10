@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import "./Sidebar.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
@@ -12,7 +12,6 @@ import {
 } from "@mui/material";
 import { useState } from "react";
 import { toCurrency } from "../../../Services/Utilities";
-import { debounce } from "lodash";
 
 function valuetext(value) {
   return new Intl.NumberFormat("en-US", {
@@ -54,7 +53,7 @@ const Sidebar = ({ clearSearchData, callSearch }) => {
   };
   const handleChange = (e) => {
     setValue(e.target.value);
-    if (e.target.value == "") {
+    if (e.target.value === "") {
       clearSearchData.apply();
     } else {
       callSearch(e.target.value);
