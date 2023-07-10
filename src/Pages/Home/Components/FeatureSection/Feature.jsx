@@ -48,9 +48,9 @@ const Feature = () => {
             <Grid container spacing={3}>
               <Grid
                 item
-                xs={12}
+                xs={6}
                 sm={4}
-                md={6}
+                md={4}
                 lg={6}
                 className="feature_body-content"
               >
@@ -66,9 +66,9 @@ const Feature = () => {
               </Grid>
               <Grid
                 item
-                xs={12}
+                xs={6}
                 sm={4}
-                md={6}
+                md={4}
                 lg={6}
                 className="feature_body-content"
               >
@@ -84,9 +84,9 @@ const Feature = () => {
               </Grid>
               <Grid
                 item
-                xs={12}
+                xs={6}
                 sm={4}
-                md={6}
+                md={4}
                 lg={6}
                 className="feature_body-content"
               >
@@ -102,9 +102,9 @@ const Feature = () => {
               </Grid>
               <Grid
                 item
-                xs={12}
+                xs={6}
                 sm={4}
-                md={6}
+                md={4}
                 lg={6}
                 className="feature_body-content"
               >
@@ -118,7 +118,14 @@ const Feature = () => {
                   <h6>Suspension</h6>
                 </div>
               </Grid>
-              <Grid item xs={12} sm={4} md={4} lg={6}>
+              <Grid
+                item
+                xs={6}
+                sm={4}
+                md={4}
+                lg={6}
+                className="feature_body-content"
+              >
                 <div className="feature__item">
                   <div className="feature__item__icon">
                     <img
@@ -129,7 +136,14 @@ const Feature = () => {
                   <h6>Electricial</h6>
                 </div>
               </Grid>
-              <Grid item xs={12} sm={4} md={4} lg={6}>
+              <Grid
+                item
+                xs={6}
+                sm={4}
+                md={4}
+                lg={6}
+                className="feature_body-content"
+              >
                 <div className="feature__item">
                   <div className="feature__item__icon">
                     <img

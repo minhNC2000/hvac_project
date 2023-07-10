@@ -11,6 +11,7 @@ const BlogDetail = () => {
 
   const API = useAPI(`blog-item/${id}`);
   useEffect(() => {
+    window.scrollTo(0, 0);
     API.get().then(({ data }) => setDetailblog(data));
   }, []);
   if (detailblog == undefined) {

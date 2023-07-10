@@ -12,7 +12,7 @@ export const Cars = () => {
   const API = useAPI("cars");
   // const getSearch = useAPI(`cars?q=${value}`);
   const [data, setData] = useState([]);
-  const [searchedData, setSearchedData] = useState([]);
+  const [search, setSearch] = useState([]);
   const [url, setUrl] = useState({
     page: 1,
     limit: 9,
@@ -20,26 +20,23 @@ export const Cars = () => {
     order: "asc",
   });
   const clearSearchData = () => {
-    setSearchedData([]);
+    setSearch([]);
   };
   const callSearchAPI = (keyword) => {
     setUrl({ ...url, search: keyword });
     API.get().then(({ data }) => {
-      console.log(`Search Data`);
-      setSearchedData(data);
+      setSearch(data);
     });
   };
   const handleChangeOption = (page, limit, order) => {
     setUrl({ ...url, page, limit, order });
-  
-    console.log(url);
   };
   useEffect(() => {
     API.get(url).then(({ data }) => {
       setData(data);
-      console.log("Hi");
     });
   }, []);
+
   return (
     <>
       <Breadcrumbs currentPath={"car listing"} />
@@ -54,7 +51,7 @@ export const Cars = () => {
             </Grid>
             <Grid item xs={12} sm={12} md={12} lg={9}>
               <ListCar
-                products={isEmpty(searchedData) ? data : searchedData}
+                products={isEmpty(search) ? data : search}
                 changeOption={handleChangeOption}
               />
             </Grid>

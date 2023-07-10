@@ -2,18 +2,47 @@ import React, { useEffect } from "react";
 import "./Sidebar.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
-import { FormControl, InputLabel, MenuItem, Select } from "@mui/material";
+import {
+  Box,
+  FormControl,
+  InputLabel,
+  MenuItem,
+  Select,
+  Slider,
+} from "@mui/material";
 import { useState } from "react";
-import { useAPI } from "../../../Services/Hooks";
+import { toCurrency } from "../../../Services/Utilities";
+import { debounce } from "lodash";
+
+function valuetext(value) {
+  return new Intl.NumberFormat("en-US", {
+    style: "currency",
+    currency: "USD",
+  }).format(value);
+}
+
+const minDistance = 250000;
+
 const Sidebar = ({ clearSearchData, callSearch }) => {
   const [select, setSelect] = useState({
     brand: "",
     color: "",
     milage: "",
   });
-  const [search, setSearch] = useState([]);
-  const [value, setValue] = useState("");
 
+  const [value, setValue] = useState("");
+  const [range, setRange] = useState([8000, 25000]);
+  const handleChangeRange = (event, newValue, activeThumb) => {
+    if (!Array.isArray(newValue)) {
+      return;
+    }
+
+    if (activeThumb === 0) {
+      setRange([Math.min(newValue[0], range[1] - minDistance), range[1]]);
+    } else {
+      setRange([range[0], Math.max(newValue[1], range[0] + minDistance)]);
+    }
+  };
   const handleChangeBrand = (e) => {
     setSelect({ ...select, brand: e.target.value });
   };
@@ -27,18 +56,26 @@ const Sidebar = ({ clearSearchData, callSearch }) => {
     setValue(e.target.value);
     if (e.target.value == "") {
       clearSearchData.apply();
+    } else {
+      callSearch(e.target.value);
     }
   };
-  const handleSubmit = (e) => {
+
+  const handleSearch = (e) => {
     e.preventDefault();
+
     return callSearch(value);
     // getSearch.get().then(({ data }) => console.log(data));
   };
+
+  const brands = ["Acura", "Audi", "Bentley", "BWM", "Buggati"];
+  const colors = ["Red", "Blue", "White", "Yellow"];
+  const milages = [27, 20, 15, 10];
   return (
     <div className="car__sidebar">
       <div className="car__search">
         <h5>Car Search</h5>
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSearch} className="search-form">
           <input
             type="text"
             placeholder="Search..."
@@ -65,11 +102,11 @@ const Sidebar = ({ clearSearchData, callSearch }) => {
               className="select_option"
               label="Brand"
             >
-              <MenuItem value="Acura">Acura</MenuItem>
-              <MenuItem value="Audi">Audi</MenuItem>
-              <MenuItem value="Bentley">Bentley</MenuItem>
-              <MenuItem value="BWM">BWM</MenuItem>
-              <MenuItem value="Buggati">Buggati</MenuItem>
+              {brands.map((brand) => (
+                <MenuItem key={brand} value={brand}>
+                  {brand}
+                </MenuItem>
+              ))}
             </Select>
           </FormControl>
 
@@ -85,10 +122,11 @@ const Sidebar = ({ clearSearchData, callSearch }) => {
               className="select_option"
               label="Color"
             >
-              <MenuItem value="Red">Red</MenuItem>
-              <MenuItem value="Blue">Blue</MenuItem>
-              <MenuItem value="White">White</MenuItem>
-              <MenuItem value="Yellow">Yellow</MenuItem>
+              {colors.map((color) => (
+                <MenuItem key={color} value={color}>
+                  {color}
+                </MenuItem>
+              ))}
             </Select>
           </FormControl>
 
@@ -104,12 +142,34 @@ const Sidebar = ({ clearSearchData, callSearch }) => {
               className="select_option"
               label="Milage"
             >
-              <MenuItem value={27}>27</MenuItem>
-              <MenuItem value={20}>20</MenuItem>
-              <MenuItem value={15}>15</MenuItem>
-              <MenuItem value={10}>10</MenuItem>
+              {milages.map((milage) => (
+                <MenuItem key={milage} value={milage}>
+                  {milage}
+                </MenuItem>
+              ))}
             </Select>
           </FormControl>
+          <Box sx={{ width: 230 }}>
+            <p>
+              Price Range:
+              <b>
+                {toCurrency(range[0])} - {toCurrency(range[1])}
+              </b>
+            </p>
+            <Slider
+              value={range}
+              onChange={handleChangeRange}
+              valueLabelDisplay="auto"
+              getAriaValueText={valuetext}
+              color="secondary"
+              disableSwap
+              min={0}
+              max={1200000}
+            />
+          </Box>
+          <button type="submit" className="site-btn">
+            Searching
+          </button>
         </form>
       </div>
     </div>

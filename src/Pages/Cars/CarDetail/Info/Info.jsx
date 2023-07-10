@@ -288,13 +288,595 @@ const Info = ({ data }) => {
                   </div>
                 </TabPanel>
                 <TabPanel value={value} index={1}>
-                  Item Two
+                <div className="car__details__tab__info">
+                    <Grid container spacing={3}>
+                      <Grid
+                        item
+                        xs={12}
+                        sm={12}
+                        md={6}
+                        lg={6}
+                        className="tab__info-wrapper"
+                      >
+                        <div className="car__details__tab__info__item">
+                          <h5>General Information 2</h5>
+                          <ul>
+                            <li>
+                              <FontAwesomeIcon icon={faCheck} /> Pellentesque
+                              lacus urna, feugiat non consectetur nec
+                            </li>
+                            <li>
+                              <FontAwesomeIcon icon={faCheck} /> Aliquam sem
+                              neque, efficitur atero lectus vitae.
+                            </li>
+                            <li>
+                              <FontAwesomeIcon icon={faCheck} /> Pellentesque
+                              erat libero, eleifend sit amet felis ido.
+                            </li>
+                            <li>
+                              <FontAwesomeIcon icon={faCheck} /> Maecenas eget
+                              consectetur quam. Vestibulum ligula.
+                            </li>
+                            <li>
+                              <FontAwesomeIcon icon={faCheck} /> Praesent lorem
+                              sapien, vestibulum eget aliquet et.
+                            </li>
+                          </ul>
+                        </div>
+                      </Grid>
+                      <Grid
+                        item
+                        xs={12}
+                        sm={12}
+                        md={6}
+                        lg={6}
+                        className="tab__info-wrapper"
+                      >
+                        <div className="car__details__tab__info__item">
+                          <h5>General Information</h5>
+                          <ul>
+                            <li>
+                              <FontAwesomeIcon icon={faCheck} /> Pellentesque
+                              lacus urna, feugiat non consectetur nec
+                            </li>
+                            <li>
+                              <FontAwesomeIcon icon={faCheck} /> Aliquam sem
+                              neque, efficitur atero lectus vitae.
+                            </li>
+                            <li>
+                              <FontAwesomeIcon icon={faCheck} /> Pellentesque
+                              erat libero, eleifend sit amet felis ido.
+                            </li>
+                            <li>
+                              <FontAwesomeIcon icon={faCheck} /> Maecenas eget
+                              consectetur quam. Vestibulum ligula.
+                            </li>
+                            <li>
+                              <FontAwesomeIcon icon={faCheck} /> Praesent lorem
+                              sapien, vestibulum eget aliquet et.
+                            </li>
+                          </ul>
+                        </div>
+                      </Grid>
+                    </Grid>
+                  </div>
+
+                  <div className="car__details__tab__feature">
+                    <Grid container spacing={2}>
+                      <Grid
+                        item
+                        xs={6}
+                        sm={6}
+                        md={6}
+                        lg={3}
+                        className="tab__info-wrapper"
+                      >
+                        <div className="car__details__tab__feature__item">
+                          <h5>Interior Design</h5>
+                          <ul>
+                            <li>
+                              <FontAwesomeIcon icon={faCircleCheck} /> Auxiliary
+                              heating
+                            </li>
+                            <li>
+                              <FontAwesomeIcon icon={faCircleCheck} /> Bluetooth
+                            </li>
+                            <li>
+                              <FontAwesomeIcon icon={faCircleCheck} /> CD player
+                            </li>
+                            <li>
+                              <FontAwesomeIcon icon={faCircleCheck} /> Central
+                              locking
+                            </li>
+                          </ul>
+                        </div>
+                      </Grid>
+                      <Grid
+                        item
+                        xs={6}
+                        sm={6}
+                        md={6}
+                        lg={3}
+                        className="tab__info-wrapper"
+                      >
+                        <div className="car__details__tab__feature__item">
+                          <h5>Safety Design</h5>
+                          <ul>
+                            <li>
+                              <FontAwesomeIcon icon={faCircleCheck} /> Head-up
+                              display
+                            </li>
+                            <li>
+                              <FontAwesomeIcon icon={faCircleCheck} /> MP3
+                              interface
+                            </li>
+                            <li>
+                              <FontAwesomeIcon icon={faCircleCheck} />{" "}
+                              Navigation system
+                            </li>
+                            <li>
+                              <FontAwesomeIcon icon={faCircleCheck} /> Panoramic
+                              roof
+                            </li>
+                          </ul>
+                        </div>
+                      </Grid>
+                      <Grid
+                        item
+                        xs={6}
+                        sm={6}
+                        md={6}
+                        lg={3}
+                        className="tab__info-wrapper"
+                      >
+                        <div className="car__details__tab__feature__item">
+                          <h5>Extra Design</h5>
+                          <ul>
+                            <li>
+                              <FontAwesomeIcon icon={faCircleCheck} /> Alloy
+                              wheels
+                            </li>
+                            <li>
+                              <FontAwesomeIcon icon={faCircleCheck} /> Electric
+                              side mirror
+                            </li>
+                            <li>
+                              <FontAwesomeIcon icon={faCircleCheck} /> Sports
+                              package
+                            </li>
+                            <li>
+                              <FontAwesomeIcon icon={faCircleCheck} /> Sports
+                              suspension
+                            </li>
+                          </ul>
+                        </div>
+                      </Grid>
+                      <Grid
+                        item
+                        xs={6}
+                        sm={6}
+                        md={6}
+                        lg={3}
+                        className="tab__info-wrapper"
+                      >
+                        <div className="car__details__tab__feature__item">
+                          <h5>Extra Design</h5>
+                          <ul>
+                            <li>
+                              <FontAwesomeIcon icon={faCircleCheck} /> MP3
+                              interface
+                            </li>
+                            <li>
+                              <FontAwesomeIcon icon={faCircleCheck} />{" "}
+                              Navigation system
+                            </li>
+                            <li>
+                              <FontAwesomeIcon icon={faCircleCheck} /> Panoramic
+                              roof
+                            </li>
+                            <li>
+                              <FontAwesomeIcon icon={faCircleCheck} /> Parking
+                              sensors
+                            </li>
+                          </ul>
+                        </div>
+                      </Grid>
+                    </Grid>
+                  </div>
                 </TabPanel>
                 <TabPanel value={value} index={2}>
-                  Item Three
+                <div className="car__details__tab__info">
+                    <Grid container spacing={3}>
+                      <Grid
+                        item
+                        xs={12}
+                        sm={12}
+                        md={6}
+                        lg={6}
+                        className="tab__info-wrapper"
+                      >
+                        <div className="car__details__tab__info__item">
+                          <h5>General Information 3</h5>
+                          <ul>
+                            <li>
+                              <FontAwesomeIcon icon={faCheck} /> Pellentesque
+                              lacus urna, feugiat non consectetur nec
+                            </li>
+                            <li>
+                              <FontAwesomeIcon icon={faCheck} /> Aliquam sem
+                              neque, efficitur atero lectus vitae.
+                            </li>
+                            <li>
+                              <FontAwesomeIcon icon={faCheck} /> Pellentesque
+                              erat libero, eleifend sit amet felis ido.
+                            </li>
+                            <li>
+                              <FontAwesomeIcon icon={faCheck} /> Maecenas eget
+                              consectetur quam. Vestibulum ligula.
+                            </li>
+                            <li>
+                              <FontAwesomeIcon icon={faCheck} /> Praesent lorem
+                              sapien, vestibulum eget aliquet et.
+                            </li>
+                          </ul>
+                        </div>
+                      </Grid>
+                      <Grid
+                        item
+                        xs={12}
+                        sm={12}
+                        md={6}
+                        lg={6}
+                        className="tab__info-wrapper"
+                      >
+                        <div className="car__details__tab__info__item">
+                          <h5>General Information</h5>
+                          <ul>
+                            <li>
+                              <FontAwesomeIcon icon={faCheck} /> Pellentesque
+                              lacus urna, feugiat non consectetur nec
+                            </li>
+                            <li>
+                              <FontAwesomeIcon icon={faCheck} /> Aliquam sem
+                              neque, efficitur atero lectus vitae.
+                            </li>
+                            <li>
+                              <FontAwesomeIcon icon={faCheck} /> Pellentesque
+                              erat libero, eleifend sit amet felis ido.
+                            </li>
+                            <li>
+                              <FontAwesomeIcon icon={faCheck} /> Maecenas eget
+                              consectetur quam. Vestibulum ligula.
+                            </li>
+                            <li>
+                              <FontAwesomeIcon icon={faCheck} /> Praesent lorem
+                              sapien, vestibulum eget aliquet et.
+                            </li>
+                          </ul>
+                        </div>
+                      </Grid>
+                    </Grid>
+                  </div>
+
+                  <div className="car__details__tab__feature">
+                    <Grid container spacing={2}>
+                      <Grid
+                        item
+                        xs={6}
+                        sm={6}
+                        md={6}
+                        lg={3}
+                        className="tab__info-wrapper"
+                      >
+                        <div className="car__details__tab__feature__item">
+                          <h5>Interior Design</h5>
+                          <ul>
+                            <li>
+                              <FontAwesomeIcon icon={faCircleCheck} /> Auxiliary
+                              heating
+                            </li>
+                            <li>
+                              <FontAwesomeIcon icon={faCircleCheck} /> Bluetooth
+                            </li>
+                            <li>
+                              <FontAwesomeIcon icon={faCircleCheck} /> CD player
+                            </li>
+                            <li>
+                              <FontAwesomeIcon icon={faCircleCheck} /> Central
+                              locking
+                            </li>
+                          </ul>
+                        </div>
+                      </Grid>
+                      <Grid
+                        item
+                        xs={6}
+                        sm={6}
+                        md={6}
+                        lg={3}
+                        className="tab__info-wrapper"
+                      >
+                        <div className="car__details__tab__feature__item">
+                          <h5>Safety Design</h5>
+                          <ul>
+                            <li>
+                              <FontAwesomeIcon icon={faCircleCheck} /> Head-up
+                              display
+                            </li>
+                            <li>
+                              <FontAwesomeIcon icon={faCircleCheck} /> MP3
+                              interface
+                            </li>
+                            <li>
+                              <FontAwesomeIcon icon={faCircleCheck} />{" "}
+                              Navigation system
+                            </li>
+                            <li>
+                              <FontAwesomeIcon icon={faCircleCheck} /> Panoramic
+                              roof
+                            </li>
+                          </ul>
+                        </div>
+                      </Grid>
+                      <Grid
+                        item
+                        xs={6}
+                        sm={6}
+                        md={6}
+                        lg={3}
+                        className="tab__info-wrapper"
+                      >
+                        <div className="car__details__tab__feature__item">
+                          <h5>Extra Design</h5>
+                          <ul>
+                            <li>
+                              <FontAwesomeIcon icon={faCircleCheck} /> Alloy
+                              wheels
+                            </li>
+                            <li>
+                              <FontAwesomeIcon icon={faCircleCheck} /> Electric
+                              side mirror
+                            </li>
+                            <li>
+                              <FontAwesomeIcon icon={faCircleCheck} /> Sports
+                              package
+                            </li>
+                            <li>
+                              <FontAwesomeIcon icon={faCircleCheck} /> Sports
+                              suspension
+                            </li>
+                          </ul>
+                        </div>
+                      </Grid>
+                      <Grid
+                        item
+                        xs={6}
+                        sm={6}
+                        md={6}
+                        lg={3}
+                        className="tab__info-wrapper"
+                      >
+                        <div className="car__details__tab__feature__item">
+                          <h5>Extra Design</h5>
+                          <ul>
+                            <li>
+                              <FontAwesomeIcon icon={faCircleCheck} /> MP3
+                              interface
+                            </li>
+                            <li>
+                              <FontAwesomeIcon icon={faCircleCheck} />{" "}
+                              Navigation system
+                            </li>
+                            <li>
+                              <FontAwesomeIcon icon={faCircleCheck} /> Panoramic
+                              roof
+                            </li>
+                            <li>
+                              <FontAwesomeIcon icon={faCircleCheck} /> Parking
+                              sensors
+                            </li>
+                          </ul>
+                        </div>
+                      </Grid>
+                    </Grid>
+                  </div>
                 </TabPanel>
                 <TabPanel value={value} index={3}>
-                  Item Four
+                <div className="car__details__tab__info">
+                    <Grid container spacing={3}>
+                      <Grid
+                        item
+                        xs={12}
+                        sm={12}
+                        md={6}
+                        lg={6}
+                        className="tab__info-wrapper"
+                      >
+                        <div className="car__details__tab__info__item">
+                          <h5>General Information 4</h5>
+                          <ul>
+                            <li>
+                              <FontAwesomeIcon icon={faCheck} /> Pellentesque
+                              lacus urna, feugiat non consectetur nec
+                            </li>
+                            <li>
+                              <FontAwesomeIcon icon={faCheck} /> Aliquam sem
+                              neque, efficitur atero lectus vitae.
+                            </li>
+                            <li>
+                              <FontAwesomeIcon icon={faCheck} /> Pellentesque
+                              erat libero, eleifend sit amet felis ido.
+                            </li>
+                            <li>
+                              <FontAwesomeIcon icon={faCheck} /> Maecenas eget
+                              consectetur quam. Vestibulum ligula.
+                            </li>
+                            <li>
+                              <FontAwesomeIcon icon={faCheck} /> Praesent lorem
+                              sapien, vestibulum eget aliquet et.
+                            </li>
+                          </ul>
+                        </div>
+                      </Grid>
+                      <Grid
+                        item
+                        xs={12}
+                        sm={12}
+                        md={6}
+                        lg={6}
+                        className="tab__info-wrapper"
+                      >
+                        <div className="car__details__tab__info__item">
+                          <h5>General Information</h5>
+                          <ul>
+                            <li>
+                              <FontAwesomeIcon icon={faCheck} /> Pellentesque
+                              lacus urna, feugiat non consectetur nec
+                            </li>
+                            <li>
+                              <FontAwesomeIcon icon={faCheck} /> Aliquam sem
+                              neque, efficitur atero lectus vitae.
+                            </li>
+                            <li>
+                              <FontAwesomeIcon icon={faCheck} /> Pellentesque
+                              erat libero, eleifend sit amet felis ido.
+                            </li>
+                            <li>
+                              <FontAwesomeIcon icon={faCheck} /> Maecenas eget
+                              consectetur quam. Vestibulum ligula.
+                            </li>
+                            <li>
+                              <FontAwesomeIcon icon={faCheck} /> Praesent lorem
+                              sapien, vestibulum eget aliquet et.
+                            </li>
+                          </ul>
+                        </div>
+                      </Grid>
+                    </Grid>
+                  </div>
+
+                  <div className="car__details__tab__feature">
+                    <Grid container spacing={2}>
+                      <Grid
+                        item
+                        xs={6}
+                        sm={6}
+                        md={6}
+                        lg={3}
+                        className="tab__info-wrapper"
+                      >
+                        <div className="car__details__tab__feature__item">
+                          <h5>Interior Design</h5>
+                          <ul>
+                            <li>
+                              <FontAwesomeIcon icon={faCircleCheck} /> Auxiliary
+                              heating
+                            </li>
+                            <li>
+                              <FontAwesomeIcon icon={faCircleCheck} /> Bluetooth
+                            </li>
+                            <li>
+                              <FontAwesomeIcon icon={faCircleCheck} /> CD player
+                            </li>
+                            <li>
+                              <FontAwesomeIcon icon={faCircleCheck} /> Central
+                              locking
+                            </li>
+                          </ul>
+                        </div>
+                      </Grid>
+                      <Grid
+                        item
+                        xs={6}
+                        sm={6}
+                        md={6}
+                        lg={3}
+                        className="tab__info-wrapper"
+                      >
+                        <div className="car__details__tab__feature__item">
+                          <h5>Safety Design</h5>
+                          <ul>
+                            <li>
+                              <FontAwesomeIcon icon={faCircleCheck} /> Head-up
+                              display
+                            </li>
+                            <li>
+                              <FontAwesomeIcon icon={faCircleCheck} /> MP3
+                              interface
+                            </li>
+                            <li>
+                              <FontAwesomeIcon icon={faCircleCheck} />{" "}
+                              Navigation system
+                            </li>
+                            <li>
+                              <FontAwesomeIcon icon={faCircleCheck} /> Panoramic
+                              roof
+                            </li>
+                          </ul>
+                        </div>
+                      </Grid>
+                      <Grid
+                        item
+                        xs={6}
+                        sm={6}
+                        md={6}
+                        lg={3}
+                        className="tab__info-wrapper"
+                      >
+                        <div className="car__details__tab__feature__item">
+                          <h5>Extra Design</h5>
+                          <ul>
+                            <li>
+                              <FontAwesomeIcon icon={faCircleCheck} /> Alloy
+                              wheels
+                            </li>
+                            <li>
+                              <FontAwesomeIcon icon={faCircleCheck} /> Electric
+                              side mirror
+                            </li>
+                            <li>
+                              <FontAwesomeIcon icon={faCircleCheck} /> Sports
+                              package
+                            </li>
+                            <li>
+                              <FontAwesomeIcon icon={faCircleCheck} /> Sports
+                              suspension
+                            </li>
+                          </ul>
+                        </div>
+                      </Grid>
+                      <Grid
+                        item
+                        xs={6}
+                        sm={6}
+                        md={6}
+                        lg={3}
+                        className="tab__info-wrapper"
+                      >
+                        <div className="car__details__tab__feature__item">
+                          <h5>Extra Design</h5>
+                          <ul>
+                            <li>
+                              <FontAwesomeIcon icon={faCircleCheck} /> MP3
+                              interface
+                            </li>
+                            <li>
+                              <FontAwesomeIcon icon={faCircleCheck} />{" "}
+                              Navigation system
+                            </li>
+                            <li>
+                              <FontAwesomeIcon icon={faCircleCheck} /> Panoramic
+                              roof
+                            </li>
+                            <li>
+                              <FontAwesomeIcon icon={faCircleCheck} /> Parking
+                              sensors
+                            </li>
+                          </ul>
+                        </div>
+                      </Grid>
+                    </Grid>
+                  </div>
                 </TabPanel>
               </Box>
             </div>

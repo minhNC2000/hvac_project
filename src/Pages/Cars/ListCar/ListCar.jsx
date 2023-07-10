@@ -12,13 +12,12 @@ const ListCar = ({ products, changeOption }) => {
     quantity: 9,
     order: "asc",
   });
-  const [data, setData] = useState([]);
+  const [datas, setData] = useState([]);
   useEffect(() => {
-    setData(products);
     changeOption(1, select.quantity, select.order);
-  
-  }, [products,select]);
-  console.log("listcar", products);
+    setData(products);
+  }, [products, select]);
+
   const handleChangeQuantity = (e) => {
     setSelect({ ...select, quantity: e.target.value });
   };
@@ -80,15 +79,8 @@ const ListCar = ({ products, changeOption }) => {
       </div>
       <div className="car-product">
         <Grid container spacing={3}>
-          {products.map((product) => (
-            <Grid
-              item
-              lg={4}
-              md={4}
-              sm={4}
-              key={product.id}
-              className="car__item"
-            >
+          {datas.map((data) => (
+            <Grid item sm={4} md={4} lg={4} key={data.id} className="car__item">
               <div className="car__item_slider">
                 <Carousel
                   showThumbs={false}
@@ -97,47 +89,45 @@ const ListCar = ({ products, changeOption }) => {
                   showIndicators={false}
                   showStatus={false}
                 >
-                  {product.image.map((img, index) => (
+                  {data.image.map((img, index) => (
                     <img src={img} alt={`slide${index}`} key={index}></img>
                   ))}
                 </Carousel>
               </div>
               <div className="car__item__text">
                 <div className="car__item__text__inner">
-                  <div className="label-date">{product.year}</div>
+                  <div className="label-date">{data.year}</div>
                   <h5>
                     <Link
-                      to={`/cars/car-detail/${product.id}`}
+                      to={`/cars/car-detail/${data.id}`}
                       className="navigate"
                     >
-                      {product.name}
+                      {data.name}
                     </Link>
                   </h5>
                   <ul>
                     <li>
-                      <span>{product.speed}</span> mi
+                      <span>{data.speed}</span> mi
                     </li>
-                    <li>{product.category}</li>
+                    <li>{data.category}</li>
                     <li>
-                      <span>{product.HorsePower}</span> hp
+                      <span>{data.HorsePower}</span> hp
                     </li>
                   </ul>
                 </div>
                 <div className="car__item__price">
-                  {product.status == "rent" ? (
-                    <span className="car-option">For {product.status}</span>
+                  {data.status == "rent" ? (
+                    <span className="car-option">For {data.status}</span>
                   ) : (
-                    <span className="car-option sale">
-                      For {product.status}
-                    </span>
+                    <span className="car-option sale">For {data.status}</span>
                   )}
                   <h6>
-                    {product.status == "rent" ? (
+                    {data.status == "rent" ? (
                       <>
-                        {toCurrency(product.price)} <span>/Month</span>
+                        {toCurrency(data.price)} <span>/Month</span>
                       </>
                     ) : (
-                      <>{toCurrency(product.price)}</>
+                      <>{toCurrency(data.price)}</>
                     )}
                   </h6>
                 </div>

@@ -12,6 +12,7 @@ const CarDetail = () => {
 
   const API = useAPI(`cars/${id}`);
   useEffect(() => {
+    window.scrollTo(0, 0);
     API.get().then(({ data }) => setInfo(data));
   }, []);
   const { image, price, pricein, name, discount, stock, vin } = info;
@@ -26,7 +27,7 @@ const CarDetail = () => {
           <Container maxWidth="lg">
             <Grid container spacing={3}>
               <Info data={{ image }} />
-              <Price data={{ price, pricein, discount, stock, vin  }} />
+              <Price data={{ price, pricein, discount, stock, vin }} />
             </Grid>
           </Container>
         </div>
