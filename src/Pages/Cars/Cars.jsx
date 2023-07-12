@@ -23,17 +23,28 @@ export const Cars = () => {
     setSearch([]);
   };
   const callSearchAPI = (keyword) => {
-    setUrl({ ...url, search: keyword });
-    API.get().then(({ data }) => {
+    const newUrl = { ...url, search: keyword };
+    setUrl(newUrl);
+    API.get(newUrl).then(({ data }) => {
       setSearch(data);
     });
   };
-  const handleChangeOption = (page, limit, order) => {
-    setUrl({ ...url, page, limit, order });
+  const callFilterAPI = (keyword) => {
+    const newUrl = { ...url, filter: keyword };
+    setUrl(newUrl);
+    API.get(newUrl).then(({ data }) => {
+      setSearch(data);
+    });
+  };
+
+  const handleChangeOption = (limit, order) => {
+    const newUrl = { ...url, limit, order };
+    setUrl(newUrl);
   };
   useEffect(() => {
     API.get(url).then(({ data }) => {
       setData(data);
+      console.log(data);
     });
   }, []);
 
@@ -47,6 +58,7 @@ export const Cars = () => {
               <Sidebar
                 clearSearchData={clearSearchData}
                 callSearch={callSearchAPI}
+                callFilter={callFilterAPI}
               />
             </Grid>
             <Grid item xs={12} sm={12} md={12} lg={9}>

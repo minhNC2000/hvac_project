@@ -14,7 +14,7 @@ const ListCar = ({ products, changeOption }) => {
   });
   const [datas, setData] = useState([]);
   useEffect(() => {
-    changeOption(1, select.quantity, select.order);
+    changeOption(select.quantity, select.order);
     setData(products);
   }, [products, select]);
 
@@ -69,8 +69,8 @@ const ListCar = ({ products, changeOption }) => {
                   className="select_option"
                   label="Order"
                 >
-                  <MenuItem value="asc">Price: Highest First</MenuItem>
-                  <MenuItem value="desc">Price: Lowest First</MenuItem>
+                  <MenuItem value="desc">Price: Highest First</MenuItem>
+                  <MenuItem value="asc">Price: Lowest First</MenuItem>
                 </Select>
               </FormControl>
             </div>

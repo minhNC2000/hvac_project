@@ -22,7 +22,7 @@ function valuetext(value) {
 
 const minDistance = 250000;
 
-const Sidebar = ({ clearSearchData, callSearch }) => {
+const Sidebar = ({ clearSearchData, callSearch, callFilter }) => {
   const [select, setSelect] = useState({
     brand: "",
     color: "",
@@ -30,7 +30,7 @@ const Sidebar = ({ clearSearchData, callSearch }) => {
   });
 
   const [value, setValue] = useState("");
-  const [range, setRange] = useState([8000, 25000]);
+  const [range, setRange] = useState([8000, 250000]);
   const handleChangeRange = (event, newValue, activeThumb) => {
     if (!Array.isArray(newValue)) {
       return;
@@ -64,9 +64,13 @@ const Sidebar = ({ clearSearchData, callSearch }) => {
     e.preventDefault();
 
     return callSearch(value);
-    // getSearch.get().then(({ data }) => console.log(data));
   };
 
+  const handleSelect = (e) => {
+    e.preventDefault();
+
+    return callFilter(select.brand, select.color, select.milage);
+  };
   const brands = ["Acura", "Audi", "Bentley", "BWM", "Buggati"];
   const colors = ["Red", "Blue", "White", "Yellow"];
   const milages = [27, 20, 15, 10];
@@ -88,7 +92,7 @@ const Sidebar = ({ clearSearchData, callSearch }) => {
       </div>
       <div className="car__filter">
         <h5>Car Filter</h5>
-        <form className="select-list">
+        <form className="select-list" onSubmit={handleSelect}>
           <FormControl
             sx={{ m: 1, minWidth: 120 }}
             className="select-list-item"
