@@ -15,6 +15,7 @@ const ListCar = ({ products, changeOption }) => {
   const [datas, setData] = useState([]);
   useEffect(() => {
     changeOption(select.quantity, select.order);
+    console.log("HI");
     setData(products);
   }, [products, select]);
 
@@ -116,13 +117,13 @@ const ListCar = ({ products, changeOption }) => {
                   </ul>
                 </div>
                 <div className="car__item__price">
-                  {data.status == "rent" ? (
+                  {data.status === "rent" ? (
                     <span className="car-option">For {data.status}</span>
                   ) : (
                     <span className="car-option sale">For {data.status}</span>
                   )}
                   <h6>
-                    {data.status == "rent" ? (
+                    {data.status === "rent" ? (
                       <>
                         {toCurrency(data.price)} <span>/Month</span>
                       </>

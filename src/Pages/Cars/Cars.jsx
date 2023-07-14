@@ -10,7 +10,6 @@ import { isEmpty } from "lodash";
 
 export const Cars = () => {
   const API = useAPI("cars");
-  // const getSearch = useAPI(`cars?q=${value}`);
   const [data, setData] = useState([]);
   const [search, setSearch] = useState([]);
   const [url, setUrl] = useState({
@@ -19,6 +18,7 @@ export const Cars = () => {
     sort: "price",
     order: "asc",
   });
+
   const clearSearchData = () => {
     setSearch([]);
   };
@@ -30,7 +30,7 @@ export const Cars = () => {
     });
   };
   const callFilterAPI = (keyword) => {
-    const newUrl = { ...url, filter: keyword };
+    const newUrl = { ...url, search: keyword };
     setUrl(newUrl);
     API.get(newUrl).then(({ data }) => {
       setSearch(data);
@@ -46,7 +46,7 @@ export const Cars = () => {
       setData(data);
       console.log(data);
     });
-  }, []);
+  }, [url.limit, url.order]);
 
   return (
     <>

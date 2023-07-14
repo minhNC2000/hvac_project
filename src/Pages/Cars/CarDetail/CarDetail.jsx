@@ -14,7 +14,7 @@ const CarDetail = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
     API.get().then(({ data }) => setInfo(data));
-  }, [API]);
+  }, []);
   const { image, price, pricein, name, discount, stock, vin } = info;
 
   if (info === undefined) {

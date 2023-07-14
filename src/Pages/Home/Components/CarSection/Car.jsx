@@ -8,7 +8,7 @@ import "./car.scss";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { useAPI } from "../../../../Services/Hooks";
 import { Link } from "react-router-dom";
-import { Box, Grid, Tab, Tabs, Typography } from "@mui/material";
+import { Box, Grid, Tab, Tabs } from "@mui/material";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -46,7 +46,7 @@ const Car = () => {
   const [sales, setSale] = useState([]);
   const [value, setValue] = React.useState(0);
 
-  const getReserched = useAPI("cars");
+  const getReserched = useAPI("cars?_limit=4");
   const getSale = useAPI("cars?status=sale");
   useEffect(() => {
     getReserched.get().then(({ data }) => setResearched(data));
@@ -80,7 +80,7 @@ const Car = () => {
               </Box>
               <TabPanel value={value} index={0}>
                 <div className="car-filter">
-                  <Grid container spacing={1}>
+                  <Grid container spacing={4}>
                     {researcheds.map((researched) => (
                       <Grid
                         item
