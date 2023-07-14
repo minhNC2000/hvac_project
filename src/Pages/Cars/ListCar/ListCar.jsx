@@ -15,7 +15,6 @@ const ListCar = ({ products, changeOption }) => {
   const [datas, setData] = useState([]);
   useEffect(() => {
     changeOption(select.quantity, select.order);
-    console.log("HI");
     setData(products);
   }, [products, select]);
 

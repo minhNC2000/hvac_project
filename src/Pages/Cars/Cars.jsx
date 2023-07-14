@@ -44,7 +44,7 @@ export const Cars = () => {
   useEffect(() => {
     API.get(url).then(({ data }) => {
       setData(data);
-      console.log(data);
+    
     });
   }, [url.limit, url.order]);
 

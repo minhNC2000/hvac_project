@@ -51,6 +51,7 @@ const Car = () => {
   useEffect(() => {
     getReserched.get().then(({ data }) => setResearched(data));
     getSale.get().then(({ data }) => setSale(data));
+  
   }, []);
 
   const handleChange = (e, newValue) => {
