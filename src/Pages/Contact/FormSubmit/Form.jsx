@@ -86,7 +86,7 @@ const Form = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    if (value.name.text == "") {
+    if (value.name.text === "") {
       setValue({
         ...value,
         name: {
@@ -95,7 +95,7 @@ const Form = () => {
           helperText: "Vui lòng nhập Tên",
         },
       });
-    } else if (value.email.text == "") {
+    } else if (value.email.text === "") {
       setValue({
         ...value,
         email: {
@@ -104,7 +104,7 @@ const Form = () => {
           helperText: "Vui lòng nhập Email",
         },
       });
-    } else if (value.subject.text == "") {
+    } else if (value.subject.text === "") {
       setValue({
         ...value,
         subject: {
@@ -113,7 +113,7 @@ const Form = () => {
           helperText: "Vui lòng nhập Subject",
         },
       });
-    } else if (value.message.text == "") {
+    } else if (value.message.text === "") {
       setValue({
         ...value,
         message: {

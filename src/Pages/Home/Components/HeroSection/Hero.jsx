@@ -107,14 +107,14 @@ const Hero = () => {
                     $399<span>/Month</span>
                   </h2>
                 </div>
-                <a href="#" className="primary-btn">
+                <a href="/#" className="primary-btn">
                   <img
                     src="https://preview.colorlib.com/theme/hvac/img/wheel.png"
                     alt=""
                   />
                   Test Drive
                 </a>
-                <a href="#" className="primary-btn more-btn">
+                <a href="/#" className="primary-btn more-btn">
                   Learn More
                 </a>
               </div>

@@ -10,10 +10,6 @@ const Hero = ({ data }) => {
           <Grid container spacing={2}>
             <Grid item lg={10} className="details-item">
               <div className="details-text">
-                {/* {heros.map((hero,index) => (
-                  <h2>{hero.title}</h2>
-                ))} */}
-
                 <span className="label">Car Dealer, BMW</span>
                 <h2>{data.title}</h2>
                 <ul>

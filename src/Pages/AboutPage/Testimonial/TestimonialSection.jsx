@@ -47,11 +47,7 @@ const TestimonialSection = () => {
             </p>
           </div>
         </Grid>
-        <Carousel
-          showArrows={true}
-          {...getConfigurableProps()}
-          className="testimonial_carousel"
-        >
+        <Carousel {...getConfigurableProps()} className="testimonial_carousel">
           <div className="testimonial__item">
             <div className="testimonial__item__author">
               <div className="testimonial__item__author__pic">

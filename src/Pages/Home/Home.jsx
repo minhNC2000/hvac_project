@@ -1,5 +1,5 @@
 import React from "react";
-import "./home.scss";
+
 import Hero from "./Components/HeroSection/Hero";
 import Services from "./Components/ServicesSection/Services";
 import Feature from "./Components/FeatureSection/Feature";

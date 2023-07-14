@@ -13,7 +13,7 @@ const ClientSection = () => {
 
         <Grid container spacing={1} >
           <Grid item xs={12} sm={6} md={4} lg={3} >
-            <a href="#" className="client__item">
+            <a href="/#" className="client__item">
               <img
                 src="https://preview.colorlib.com/theme/hvac/img/clients/client-1.png"
                 alt=""
@@ -21,7 +21,7 @@ const ClientSection = () => {
             </a>
           </Grid>
           <Grid item xs={12} sm={6} md={4} lg={3}>
-            <a href="#" className="client__item">
+            <a href="/#" className="client__item">
               <img
                 src="https://preview.colorlib.com/theme/hvac/img/clients/client-2.png"
                 alt=""
@@ -29,7 +29,7 @@ const ClientSection = () => {
             </a>
           </Grid>
           <Grid item xs={12} sm={6} md={4} lg={3}>
-            <a href="#" className="client__item">
+            <a href="/#" className="client__item">
               <img
                 src="https://preview.colorlib.com/theme/hvac/img/clients/client-3.png"
                 alt=""
@@ -37,7 +37,7 @@ const ClientSection = () => {
             </a>
           </Grid>
           <Grid item xs={12} sm={6} md={4} lg={3}>
-            <a href="#" className="client__item">
+            <a href="/#" className="client__item">
               <img
                 src="https://preview.colorlib.com/theme/hvac/img/clients/client-2.png"
                 alt=""
@@ -45,7 +45,7 @@ const ClientSection = () => {
             </a>
           </Grid>
           <Grid item xs={12} sm={6} md={4} lg={3}>
-            <a href="#" className="client__item">
+            <a href="/#" className="client__item">
               <img
                 src="https://preview.colorlib.com/theme/hvac/img/clients/client-4.png"
                 alt=""
@@ -53,7 +53,7 @@ const ClientSection = () => {
             </a>
           </Grid>
           <Grid item xs={12} sm={6} md={4} lg={3}>
-            <a href="#" className="client__item">
+            <a href="/#" className="client__item">
               <img
                 src="https://preview.colorlib.com/theme/hvac/img/clients/client-5.png"
                 alt=""
@@ -61,7 +61,7 @@ const ClientSection = () => {
             </a>
           </Grid>
           <Grid item xs={12} sm={6} md={4} lg={3}>
-            <a href="#" className="client__item">
+            <a href="/#" className="client__item">
               <img
                 src="https://preview.colorlib.com/theme/hvac/img/clients/client-6.png"
                 alt=""
@@ -69,7 +69,7 @@ const ClientSection = () => {
             </a>
           </Grid>
           <Grid item xs={12} sm={6} md={4} lg={3}>
-            <a href="#" className="client__item">
+            <a href="/#" className="client__item">
               <img
                 src="https://preview.colorlib.com/theme/hvac/img/clients/client-4.png"
                 alt=""

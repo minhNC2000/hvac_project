@@ -1,8 +1,4 @@
 import React from "react";
-import Container from "@mui/material/Container";
-import Grid from "@mui/material/Grid";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faHouse } from "@fortawesome/free-solid-svg-icons";
 
 import About from "./About/About";
 import Call from "./Call/CallSection";

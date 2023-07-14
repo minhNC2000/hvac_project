@@ -1,5 +1,5 @@
 import { Container, Grid } from "@mui/material";
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import {
@@ -33,19 +33,19 @@ const Content = ({ data }) => {
               <p>{data.detail_desc}</p>
             </div>
             <div className="blog__details__share">
-              <a href="" className="blog__details__share__item facebook">
+              <a href="/#" className="blog__details__share__item facebook">
                 <FontAwesomeIcon icon={faFacebookF} />
                 <span>Share</span>
               </a>
-              <a href="" className="blog__details__share__item twitter">
+              <a href="/#" className="blog__details__share__item twitter">
                 <FontAwesomeIcon icon={faTwitter} />
                 <span>Share</span>
               </a>
-              <a href="" className="blog__details__share__item linkedin">
+              <a href="/#" className="blog__details__share__item linkedin">
                 <FontAwesomeIcon icon={faGoogle} />
                 <span>Share</span>
               </a>
-              <a href="" className="blog__details__share__item google ">
+              <a href="/#" className="blog__details__share__item google ">
                 <FontAwesomeIcon icon={faLinkedinIn} />
                 <span>Share</span>
               </a>
@@ -69,7 +69,7 @@ const Content = ({ data }) => {
             <div className="blog__details__btns">
               <Grid container spacing={4}>
                 <Grid item lg={6}>
-                  <a href="#" className="blog__details__btns__item .set-bg">
+                  <a href="/#" className="blog__details__btns__item .set-bg">
                     <h6>Promotional Advertising Specialty</h6>
                     <ul>
                       <li>By Don Townsend</li>
@@ -78,7 +78,7 @@ const Content = ({ data }) => {
                   </a>
                 </Grid>
                 <Grid item lg={6}>
-                  <a href="#" className="blog__details__btns__item .set-bg">
+                  <a href="/#" className="blog__details__btns__item .set-bg">
                     <h6>Promotional Advertising Specialty</h6>
                     <ul>
                       <li>By Don Townsend</li>
