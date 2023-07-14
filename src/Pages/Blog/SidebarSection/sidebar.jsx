@@ -15,7 +15,7 @@ const Sidebar = () => {
         <h2>Feature News</h2>
         <div className="blog__sidebar__feature__item">
           <h4>
-            <a href="#">Where To Look For Cheap Brochure</a>
+            <a href="/#">Where To Look For Cheap Brochure</a>
           </h4>
           <ul>
             <li>By Polly Williams</li>
@@ -24,7 +24,7 @@ const Sidebar = () => {
         </div>
         <div className="blog__sidebar__feature__item">
           <h4>
-            <a href="#">Using Banner Stands To Increase</a>
+            <a href="/#">Using Banner Stands To Increase</a>
           </h4>
           <ul>
             <li>By Evelyn Lane</li>
@@ -33,7 +33,7 @@ const Sidebar = () => {
         </div>
         <div className="blog__sidebar__feature__item">
           <h4>
-            <a href="#">Promotional Advertising Specialty</a>
+            <a href="/#">Promotional Advertising Specialty</a>
           </h4>
           <ul>
             <li>By Don Townsend</li>
@@ -45,27 +45,27 @@ const Sidebar = () => {
         <h2>Categories</h2>
         <ul>
           <li>
-            <a href="#">Creativity</a>
+            <a href="/#">Creativity</a>
           </li>
           <li>
-            <a href="#">Design</a>
+            <a href="/#">Design</a>
           </li>
           <li>
-            <a href="#">Inspiration</a>
+            <a href="/#">Inspiration</a>
           </li>
           <li>
-            <a href="#">News</a>
+            <a href="/#">News</a>
           </li>
         </ul>
       </div>
       <div className="blog__sidebar__tag">
         <h2>Tag</h2>
-        <a href="#">Car Dealer</a>
-        <a href="#">bmw</a>
-        <a href="#">Chevrolet</a>
-        <a href="#">ferrari</a>
-        <a href="#">Honda</a>
-        <a href="#">Hatchback</a>
+        <a href="/#">Car Dealer</a>
+        <a href="/#">bmw</a>
+        <a href="/#">Chevrolet</a>
+        <a href="/#">ferrari</a>
+        <a href="/#">Honda</a>
+        <a href="/#">Hatchback</a>
       </div>
       <div className="blog__sidebar__newslatter">
         <h2>Newsletter</h2>

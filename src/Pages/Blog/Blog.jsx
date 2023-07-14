@@ -1,4 +1,4 @@
-import process from "process";
+
 import React, { useEffect, useState } from "react";
 
 import Container from "@mui/material/Container";
@@ -37,7 +37,7 @@ export const Blog = () => {
                       <ul>
                         <li>By {newblog.writer}</li>
                         <li>{newblog.date}</li>
-                        {newblog.comment == 0 ? (
+                        {newblog.comment === 0 ? (
                           <li>Comment</li>
                         ) : (
                           <li>{newblog.comment} Comment</li>
@@ -46,7 +46,7 @@ export const Blog = () => {
                     </div>
                     <div className="blog__item__text">
                       <h5>
-                        <a href="#">{newblog.title}</a>
+                        <a href="/#">{newblog.title}</a>
                       </h5>
                       <p>{newblog.content}</p>
                     </div>
