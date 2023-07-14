@@ -12,16 +12,13 @@ import {
   Grid,
   List,
   ListItemButton,
-  ListItemIcon,
   ListItemText,
   SwipeableDrawer,
 } from "@mui/material";
-import InboxIcon from "@mui/icons-material/MoveToInbox";
 import ExpandLess from "@mui/icons-material/ExpandLess";
 import ExpandMore from "@mui/icons-material/ExpandMore";
 import React, { useState } from "react";
 import "./mobile.scss";
-import { StarBorder } from "@mui/icons-material";
 import { faClock, faEnvelope } from "@fortawesome/free-regular-svg-icons";
 import {
   faFacebookF,
@@ -45,7 +42,7 @@ const HeaderMobile = () => {
           <Grid container spacing={1}>
             <Grid item xs={6} md={6} lg={6}>
               <div className="header__logo">
-                <a href="#">
+                <a href="/#">
                   <img
                     src="https://preview.colorlib.com/theme/hvac/img/logo.png"
                     alt="Logo"
@@ -66,13 +63,13 @@ const HeaderMobile = () => {
                 >
                   <div className="canvas-menu-wrapper">
                     <div className="canvas__widget">
-                      <a href="#">
+                      <a href="/#">
                         <FontAwesomeIcon icon={faCartPlus} />
                       </a>
-                      <a href="#" className="search-btn">
+                      <a href="/#" className="search-btn">
                         <FontAwesomeIcon icon={faMagnifyingGlass} />
                       </a>
-                      <a href="#" className="primary-btn">
+                      <a href="/#" className="primary-btn">
                         Add Car
                       </a>
                     </div>
@@ -110,9 +107,6 @@ const HeaderMobile = () => {
                                   <li>
                                     <a href="/lien-he">Contact</a>
                                   </li>
-                                  <li>
-                                    <a href=""></a>
-                                  </li>
                                 </ul>
                               </ListItemText>
                             </ListItemButton>
@@ -137,16 +131,16 @@ const HeaderMobile = () => {
                       </ul>
                     </div>
                     <div className="canvas__social">
-                      <a href="#">
+                      <a href="/#">
                         <FontAwesomeIcon icon={faFacebookF} />
                       </a>
-                      <a href="#">
+                      <a href="/#">
                         <FontAwesomeIcon icon={faTwitter} />
                       </a>
-                      <a href="#">
+                      <a href="/#">
                         <FontAwesomeIcon icon={faGoogle} />
                       </a>
-                      <a href="#">
+                      <a href="/#">
                         <FontAwesomeIcon icon={faInstagram} />
                       </a>
                     </div>

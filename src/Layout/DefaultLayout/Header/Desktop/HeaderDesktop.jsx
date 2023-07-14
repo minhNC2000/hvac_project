@@ -59,16 +59,16 @@ const HeaderDesktop = () => {
                   </div>
 
                   <div className="header__top__social">
-                    <a href="#">
+                    <a href="/#">
                       <FontAwesomeIcon icon={faFacebookF} />
                     </a>
-                    <a href="#">
+                    <a href="/#">
                       <FontAwesomeIcon icon={faTwitter} />
                     </a>
-                    <a href="#">
+                    <a href="/#">
                       <FontAwesomeIcon icon={faGoogle} />
                     </a>
-                    <a href="#">
+                    <a href="/#">
                       <FontAwesomeIcon icon={faInstagram} />
                     </a>
                   </div>
@@ -84,7 +84,7 @@ const HeaderDesktop = () => {
           <Grid container spacing={1}>
             <Grid item xs={6} md={2} lg={2}>
               <div className="header__logo">
-                <a href="#">
+                <a href="/#">
                   <img
                     src="https://preview.colorlib.com/theme/hvac/img/logo.png"
                     alt="Logo"
@@ -116,10 +116,10 @@ const HeaderDesktop = () => {
                 </div>
                 <div className="header__nav_widget">
                   <div className="header__nav__widget__btn">
-                    <a href="#">
+                    <a href="/#">
                       <FontAwesomeIcon icon={faCartPlus} />
                     </a>
-                    <a href="#">
+                    <a href="/#">
                       <FontAwesomeIcon icon={faMagnifyingGlass} />
                     </a>
                     <Button
