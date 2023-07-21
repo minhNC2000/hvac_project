@@ -1,7 +1,7 @@
 .car__sidebar {
   background: #f7f7f7;
   padding: 30px;
-  
+
   .car__search {
     margin-bottom: 40px;
     h5 {
@@ -47,6 +47,13 @@
     .select_option {
       width: 200px;
       background: #fff;
+    }
+    .site-btn {
+      width: 100%;
+    }
+    .clear-btn {
+      width: 100%;
+      margin: 20px 0;
     }
   }
 }

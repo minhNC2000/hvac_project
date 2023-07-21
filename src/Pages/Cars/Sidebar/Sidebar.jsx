@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useReducer } from "react";
 import "./Sidebar.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
@@ -13,6 +13,8 @@ import {
 import { useState } from "react";
 import { toCurrency } from "../../../Services/Utilities";
 
+import { BRANDS, COLORS, MILAGES } from "./constants";
+import { debounce } from "lodash";
 function valuetext(value) {
   return new Intl.NumberFormat("en-US", {
     style: "currency",
@@ -23,7 +25,20 @@ function valuetext(value) {
 const minDistance = 250000;
 
 const Sidebar = ({ clearSearchData, callSearch, callFilter }) => {
-  const [select, setSelect] = useState({
+  const selectReducer = (state, action) => {
+    switch (action.type) {
+      case "SET_BRAND":
+        return { ...state, brand: action.payload };
+      case "SET_COLOR":
+        return { ...state, color: action.payload };
+      case "SET_MILAGE":
+        return { ...state, milage: action.payload };
+      default:
+        return state;
+    }
+  };
+
+  const [select, dispatchSelect] = useReducer(selectReducer, {
     brand: "",
     color: "",
     milage: "",
@@ -31,6 +46,7 @@ const Sidebar = ({ clearSearchData, callSearch, callFilter }) => {
 
   const [value, setValue] = useState("");
   const [range, setRange] = useState([8000, 250000]);
+
   const handleChangeRange = (event, newValue, activeThumb) => {
     if (!Array.isArray(newValue)) {
       return;
@@ -42,15 +58,19 @@ const Sidebar = ({ clearSearchData, callSearch, callFilter }) => {
       setRange([range[0], Math.max(newValue[1], range[0] + minDistance)]);
     }
   };
+
   const handleChangeBrand = (e) => {
-    setSelect({ ...select, brand: e.target.value });
+    dispatchSelect({ type: "SET_BRAND", payload: e.target.value });
   };
+
   const handleChangeColor = (e) => {
-    setSelect({ ...select, color: e.target.value });
+    dispatchSelect({ type: "SET_COLOR", payload: e.target.value });
   };
+
   const handleChangeMilage = (e) => {
-    setSelect({ ...select, milage: e.target.value });
+    dispatchSelect({ type: "SET_MILAGE", payload: e.target.value });
   };
+
   const handleChange = (e) => {
     setValue(e.target.value);
     if (e.target.value === "") {
@@ -59,6 +79,7 @@ const Sidebar = ({ clearSearchData, callSearch, callFilter }) => {
       callSearch(e.target.value);
     }
   };
+  const debounceOnchange = debounce(handleChange, 700, { maxWait: 1000 });
 
   const handleSearch = (e) => {
     e.preventDefault();
@@ -68,12 +89,15 @@ const Sidebar = ({ clearSearchData, callSearch, callFilter }) => {
 
   const handleSelect = (e) => {
     e.preventDefault();
-
-    return callFilter(select.brand, select.color, select.milage);
+    return callFilter(select);
   };
-  const brands = ["Acura", "Audi", "Bentley", "BWM", "Buggati"];
-  const colors = ["Red", "Blue", "White", "Yellow"];
-  const milages = [27, 20, 15, 10];
+
+  const handleClearSelect = (e) => {
+    dispatchSelect({ type: "SET_BRAND", payload: "" });
+    dispatchSelect({ type: "SET_COLOR", payload: "" });
+    dispatchSelect({ type: "SET_MILAGE", payload: "" });
+  };
+
   return (
     <div className="car__sidebar">
       <div className="car__search">
@@ -82,8 +106,7 @@ const Sidebar = ({ clearSearchData, callSearch, callFilter }) => {
           <input
             type="text"
             placeholder="Search..."
-            value={value}
-            onChange={handleChange}
+            onChange={debounceOnchange}
           />
           <button type="submit">
             <FontAwesomeIcon icon={faMagnifyingGlass} />
@@ -105,7 +128,7 @@ const Sidebar = ({ clearSearchData, callSearch, callFilter }) => {
               className="select_option"
               label="Brand"
             >
-              {brands.map((brand) => (
+              {BRANDS.map((brand) => (
                 <MenuItem key={brand} value={brand}>
                   {brand}
                 </MenuItem>
@@ -125,7 +148,7 @@ const Sidebar = ({ clearSearchData, callSearch, callFilter }) => {
               className="select_option"
               label="Color"
             >
-              {colors.map((color) => (
+              {COLORS.map((color) => (
                 <MenuItem key={color} value={color}>
                   {color}
                 </MenuItem>
@@ -145,7 +168,7 @@ const Sidebar = ({ clearSearchData, callSearch, callFilter }) => {
               className="select_option"
               label="Milage"
             >
-              {milages.map((milage) => (
+              {MILAGES.map((milage) => (
                 <MenuItem key={milage} value={milage}>
                   {milage}
                 </MenuItem>
@@ -172,6 +195,13 @@ const Sidebar = ({ clearSearchData, callSearch, callFilter }) => {
           </Box>
           <button type="submit" className="site-btn">
             Searching
+          </button>
+          <button
+            type="reset"
+            className="site-btn clear-btn"
+            onClick={handleClearSelect}
+          >
+            Clear Select
           </button>
         </form>
       </div>

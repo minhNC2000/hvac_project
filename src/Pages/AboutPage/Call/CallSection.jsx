@@ -123,10 +123,10 @@ const Call = () => {
               </div>
             </Grid>
 
-            <Grid item sm={6} md={6} lg={6} className="call__form">
+            <Grid item xs={12} sm={6} md={6} lg={6} className="call__form">
               <Box component="form" ref={form} onSubmit={handleSubmit}>
                 <Grid container spacing={1}>
-                  <Grid item xs={6} sm={6} md={6} lg={6} className="mb-25">
+                  <Grid item xs={12} sm={12} md={6} lg={6}>
                     <TextField
                       error={value.name.isRequired}
                       helperText={value.name.helperText}
@@ -136,7 +136,7 @@ const Call = () => {
                       onChange={handleNameChange}
                     />
                   </Grid>
-                  <Grid item xs={6} sm={6} md={6} lg={6}>
+                  <Grid item xs={12} sm={12} md={6} lg={6}>
                     <TextField
                       error={value.email.isRequired}
                       helperText={value.email.helperText}
@@ -146,7 +146,7 @@ const Call = () => {
                       onChange={handleEmailChange}
                     />
                   </Grid>
-                  <Grid item xs={6} sm={6} md={6} lg={6}>
+                  <Grid item xs={12} sm={12} md={6} lg={6}>
                     <TextField
                       error={value.phone.isRequired}
                       helperText={value.phone.helperText}
@@ -160,7 +160,14 @@ const Call = () => {
                       }}
                     />
                   </Grid>
-                  <Grid item sm={6} md={6} lg={6} className="selection_form">
+                  <Grid
+                    item
+                    xs={12}
+                    sm={12}
+                    md={6}
+                    lg={6}
+                    className="selection_form"
+                  >
                     <FormControl
                       sx={{ m: 1, minWidth: 150 }}
                       className="select_service_form"

@@ -29,8 +29,8 @@ export const Cars = () => {
       setSearch(data);
     });
   };
-  const callFilterAPI = (keyword) => {
-    const newUrl = { ...url, search: keyword };
+  const callFilterAPI = (props) => {
+    const newUrl = { ...url, filter: props };
     setUrl(newUrl);
     API.get(newUrl).then(({ data }) => {
       setSearch(data);
@@ -44,7 +44,6 @@ export const Cars = () => {
   useEffect(() => {
     API.get(url).then(({ data }) => {
       setData(data);
-    
     });
   }, [url.limit, url.order]);
 

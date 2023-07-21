@@ -1,6 +1,7 @@
 import { isEmpty } from "lodash";
 import PropTypes from "prop-types";
 import process from "process";
+
 const host = process.env.REACT_APP_HOST;
 const generateUrl = (obj) => {
   let url = "?";
@@ -31,7 +32,7 @@ const generateUrl = (obj) => {
   }
   if (obj.filter ?? undefined) {
     for (let item in obj.filter) {
-      checkPrefix("filter", obj.filter[item]);
+      url += `${item}="${obj.filter[item]}`;
     }
   }
   return url;

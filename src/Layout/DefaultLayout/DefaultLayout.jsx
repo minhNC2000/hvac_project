@@ -11,7 +11,7 @@ import "../../Assets/Styles/Style.scss"
 
 const DefaultLayout = () => {
   return (
-    <div>
+    <>
       <Header />
       <main>
         <Routes>
@@ -21,7 +21,7 @@ const DefaultLayout = () => {
         </Routes>
         <Footer />
       </main>
-    </div>
+    </>
   );
 };
 
